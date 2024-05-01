@@ -26,7 +26,7 @@ do_Ma_analysis = 0;
 %% Design Trim Point
 
 % Trim to nominal condition: level flight, alpha=3
-mws_designpoint = trimgtm(struct('eas',90,'gamma',0),'elev',1);
+mws_designpoint = trimgtm(struct('eas',75,'gamma',0),'elev',1);
 
 % Load Simulation Variables (at trim condition) into Model Workspace
 loadmws(mws_designpoint);
@@ -39,8 +39,8 @@ fprintf(1,' Done\n');
 %% Open Closed-Loop Diagram
 
 % Open system and load variables
-open_system('gtm_design_baseline2');
-loadmws(mws_designpoint,'gtm_design_baseline2');
+open_system('gtm_design_baseline3');
+loadmws(mws_designpoint,'gtm_design_baseline3');
 
 
 %% Rough Calculations
@@ -79,16 +79,15 @@ a=[0 0.5 0]; % pulse amplitude(deg/sec), [roll, pitch, yaw]
 tfinal = 15;
 
 % Construct doublet sequence
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','timeon','[0 2 0]'); 
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','pulsewidth','[0 2 0]');
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','timeon','[0 2 0]'); 
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','pulsewidth','[0 2 0]');
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
 
 % Simulation Closed Loop GTM
 flag_cmd = 1;
-[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline2',[0 tfinal]);
-
+[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline3',[0 tfinal]);
 % Grab state in ysim First 6 are trim outputs, next 12 are state.
-ysimcl=ysimcl(:,7:18);
+y=ysimcl(:,7:18);
 
 % Simulate Desired Dynamics
 sysdes = sysrate;
@@ -98,27 +97,27 @@ ylin = lsim(sysdes,ulin,tlin);
 
 set(figure(1),'Position',[20 20 900 700]);
 subplot(331),
-plot(tsimcl,ysimcl(:,1)); grid on
+plot(tsimcl,y(:,1)); grid on
 title('Linear Velocity');
 xlabel('Time (sec)');ylabel('u (ft/sec)')
 legend('Simulation');
 subplot(334),
-plot(tsimcl,ysimcl(:,2)); grid on
+plot(tsimcl,y(:,2)); grid on
 xlabel('Time (sec)');ylabel('v (ft/sec)')
 subplot(337),
-plot(tsimcl,ysimcl(:,3)); grid on
+plot(tsimcl,y(:,3)); grid on
 xlabel('Time (sec)');ylabel('w (ft/sec)')
 subplot(332),
-plot(tsimcl,180/pi*ysimcl(:,4)); grid on
-title('Angular Velocity');
+plot(tsimcl,180/pi*y(:,4)); grid on
+title('Angular Rate');
 xlabel('Time (sec)');ylabel('p (deg/sec)')
 subplot(335),
-plot(tsimcl,180/pi*ysimcl(:,5),tlin,ylin,...
+plot(tsimcl,180/pi*y(:,5),tlin,ylin,...
          tlin,ulin,'r'); grid on
 legend('nonlin-sim','des-resp','cmd');     
 xlabel('Time (sec)');ylabel('q (deg/sec)')
 subplot(338),
-plot(tsimcl,180/pi*ysimcl(:,6)); grid on
+plot(tsimcl,180/pi*y(:,6)); grid on
 xlabel('Time (sec)');ylabel('r (deg/sec)')
 subplot(333),
 plot(tsimcl,sout.AILL); grid on
@@ -140,13 +139,13 @@ a=[0.5 0 0]; % pulse amplitude(deg/sec), [roll, pitch, yaw]
 tfinal = 15;
 
 % Construct doublet sequence
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','timeon','[2 0 0]'); 
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','pulsewidth','[2 0 0]');
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','timeon','[2 0 0]'); 
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','pulsewidth','[2 0 0]');
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
 
 % Simulation Closed Loop GTM
 flag_cmd = 1;
-[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline2',[0 tfinal]);
+[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline3',[0 tfinal]);
 
 % Grab state in ysim First 6 are trim outputs, next 12 are state.
 ysimcl=ysimcl(:,7:18);
@@ -172,7 +171,7 @@ subplot(332),
 plot(tsimcl,180/pi*ysimcl(:,4),tlin,ylin,...
          tlin,ulin,'r'); grid on
 legend('nonlin-sim','des-resp','cmd');     
-title('Angular Velocity');
+title('Angular Rate');
 xlabel('Time (sec)');ylabel('p (deg/sec)')
 subplot(335),
 plot(tsimcl,180/pi*ysimcl(:,5)); grid on
@@ -199,13 +198,13 @@ a=[0 0 0.5]; % pulse amplitude(deg/sec), [roll, pitch, yaw]
 tfinal = 15;
 
 % Construct doublet sequence
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','timeon','[0 0 2]'); 
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','pulsewidth','[0 0 2]');
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','timeon','[0 0 2]'); 
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','pulsewidth','[0 0 2]');
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
 
 % Simulation Closed Loop GTM
 flag_cmd = 1;
-[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline2',[0 tfinal]);
+[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline3',[0 tfinal]);
 
 % Grab state in ysim First 6 are trim outputs, next 12 are state.
 ysimcl=ysimcl(:,7:18);
@@ -229,7 +228,7 @@ plot(tsimcl,ysimcl(:,3)); grid on
 xlabel('Time (sec)');ylabel('w (ft/sec)')
 subplot(332),
 plot(tsimcl,180/pi*ysimcl(:,4)); grid on
-title('Angular Velocity');
+title('Angular Rate');
 xlabel('Time (sec)');ylabel('p (deg/sec)')
 subplot(335),
 plot(tsimcl,180/pi*ysimcl(:,5)); grid on
@@ -254,17 +253,17 @@ xlabel('Time (sec)');ylabel('\deltar (deg)')
 %% Run Simulation - theta command
 
 % Construct Command Signal
-a=[0 15 0]; % pulse amplitude(deg), [roll, pitch, yaw]
+a=[0 15*0 0]; % pulse amplitude(deg), [roll, pitch, yaw]
 tfinal = 20;
 
 % Construct doublet sequence
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','timeon','[0 2 0]'); 
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','pulsewidth','[0 8 0]');
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','timeon','[0 2 0]'); 
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','pulsewidth','[0 8 0]');
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
 
 % Simulation Closed Loop GTM
 flag_cmd = 0;
-[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline2',[0 tfinal]);
+[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline3',[0 tfinal]);
 
 % Grab state in ysim First 6 are trim outputs, next 12 are state.
 ysimcl=ysimcl(:,7:18);
@@ -292,7 +291,7 @@ plot(tsimcl,180/pi*ysimcl(:,12)); grid on
 xlabel('Time (sec)');ylabel('\psi (deg)')
 subplot(332),
 plot(tsimcl,180/pi*ysimcl(:,4)); grid on
-title('Angular Velocity');
+title('Angular Rate');
 xlabel('Time (sec)');ylabel('p (deg/sec)')
 subplot(335),
 plot(tsimcl,180/pi*ysimcl(:,5)); grid on
@@ -318,13 +317,13 @@ a=[15 0 0]; % pulse amplitude(deg), [roll, pitch, yaw]
 tfinal = 20;
 
 % Construct doublet sequence
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','timeon','[2 0 0]'); 
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','pulsewidth','[8 0 0]');
-set_param('gtm_design_baseline2/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','timeon','[2 0 0]'); 
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','pulsewidth','[8 0 0]');
+set_param('gtm_design_baseline3/Input Generator/Doublet Generator','amplitude',sprintf('[%f %f %f]',a(1),a(2),a(3)));
 
 % Simulation Closed Loop GTM
 flag_cmd = 0;
-[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline2',[0 tfinal]);
+[tsimcl,xsimcl,ysimcl]=sim('gtm_design_baseline3',[0 tfinal]);
 
 % Grab state in ysim First 6 are trim outputs, next 12 are state.
 ysimcl=ysimcl(:,7:18);
@@ -352,7 +351,7 @@ plot(tsimcl,180/pi*ysimcl(:,12)); grid on
 xlabel('Time (sec)');ylabel('\psi (deg)')
 subplot(332),
 plot(tsimcl,180/pi*ysimcl(:,4)); grid on
-title('Angular Velocity');
+title('Angular Rate');
 xlabel('Time (sec)');ylabel('p (deg/sec)')
 subplot(335),
 plot(tsimcl,180/pi*ysimcl(:,5)); grid on

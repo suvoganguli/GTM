@@ -54,7 +54,7 @@ loadmws(init_design('GTM'),model);
 % debug during call to Mathworks
 
 save_system(model);
-mws2 = trimgtm(struct('eas',75, 'gamma',0));
+mws = trimgtm(struct('eas',75, 'gamma',0));
 
 % -----------------------------
 
