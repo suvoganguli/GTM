@@ -1,0 +1,4400 @@
+Library {
+  Name			  "Displays_Lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "ibm-5348_P100-1997"
+  PostLoadFcn		  ",try, rti_mdl_postloadfcn(bdroot, 'UpdateModel', 26"
+"0, 'rti1005'); catch, disp(lasterr); end, "
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "user"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Sep 24 16:10:47 2007"
+  Creator		  "W.J.Leath"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "cbuttril"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Feb 11 14:05:56 2009"
+  ModelVersionFormat	  "$LastChangedRevision: 1223 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      BusToVector
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SignalSpecification
+      Dimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Displays_Lib"
+    Location		    [649, 228, 1254, 851]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "MOS"
+      Ports		      [5]
+      Position		      [175, 171, 220, 269]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"MOS"
+	Location		[514, 109, 992, 397]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [45, 53, 75, 67]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [45, 88, 75, 102]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [45, 123, 75, 137]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [45, 158, 75, 172]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [45, 193, 75, 207]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "FDRS_MOS"
+	  Ports			  [1]
+	  Position		  [305, 62, 390, 108]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "FDRS_MOS"
+	    Location		    [80, 109, 598, 454]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "UDP_in"
+	      Position		      [25, 138, 55, 152]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DS4502udpbsreceive_B1"
+	      Ports		      []
+	      Position		      [85, 35, 186, 84]
+	      SourceBlock	      "udpbs/DS4502udpbsreceive_B1"
+	      SourceType	      "RTI"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      BoardNo		      "1"
+	      LocalIp10		      "192.168.1.155"
+	      LocalIp11		      "1"
+	      LocalIp12		      "1"
+	      LocalIp13		      "1"
+	      SourceIp20	      "0.0.0.0"
+	      SourceIp21	      "1"
+	      SourceIp22	      "1"
+	      SourceIp23	      "1"
+	      Port		      "5500"
+	      Timeout		      "0"
+	      Sample_time	      "-1"
+	      Overflow_Flush	      "off"
+	      LocalIp		      "1"
+	      SourceIp		      "1"
+	      DSProperties	      "struct('RTI',struct('Version',uint32(3)"
+",'BlockType',struct('isSLSource',logical(0),'isSLSink',logical(0),'isHWSource"
+"',logical(0),'isHWSink',logical(0),'isSetup',logical(0),'isInline',logical(0)"
+",'isNonInline',logical(1),'isInterrupt',logical(0),'isChannelwise',logical(0)"
+"),'Identifier','udpbsreceive','IOBoardType','DS4502','UnitType','UDP','BlockS"
+"et','UDPBS','DialogType','SL','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('OutputPortsActive',0,'OutputPor"
+"tsWidth',int32(0),'MaskDescription',['Receives UDP-based datagrams for a conn"
+"ected socket and stores these data in the port buffer within the correspondin"
+"g port memory structure.'],'BlockDisplay',{{['UDP Receive'],'middle'}},'IconT"
+"ransparency','on','BlockName',struct('Token',{{'DS4502udpbsreceive_B'}},'Bloc"
+"kParam',{{'BoardNo'}}),'InitLevel',3)"
+	      RTIBlockParameters      "struct('BoardNo',{{1,'ON',[1 16]}},'Loc"
+"alIp10',{{'192.168.1.155','OFF',[]}},'LocalIp11',{{'1','OFF',[]}},'LocalIp12'"
+",{{'1','OFF',[]}},'LocalIp13',{{'1','OFF',[]}},'SourceIp20',{{'0.0.0.0','OFF'"
+",[]}},'SourceIp21',{{'1','OFF',[]}},'SourceIp22',{{'1','OFF',[]}},'SourceIp23"
+"',{{'1','OFF',[]}},'Port',{{5500,'ON',[1025 65535]}},'Timeout',{{0,'ON',[0 1]"
+"}},'Sample_time',{{-1,'OFF',[]}},'Overflow_Flush',{{logical(0),'OFF',[]}},'Lo"
+"calIp',{{'1','OFF',[]}},'SourceIp',{{'1','OFF',[]}})"
+	      RTISFcnParameters	      "struct('BoardNo','double','LocalIp10','"
+"char','LocalIp11','double','LocalIp12','double','LocalIp13','double','SourceI"
+"p20','char','SourceIp21','double','SourceIp22','double','SourceIp23','double'"
+",'Port','double','Timeout','double','Sample_time','double','Overflow_Flush','"
+"double','LocalIp','char','SourceIp','char')"
+	      RTIBlockParaDefault     "struct('BoardNo',1,'LocalIp10','192.168"
+".100.1','LocalIp11','1','LocalIp12','1','LocalIp13','1','SourceIp20','192.168"
+".100.2','SourceIp21','1','SourceIp22','1','SourceIp23','1','Port',5000,'Timeo"
+"ut',0.00022,'Sample_time',-1,'Overflow_Flush',0,'LocalIp','1','SourceIp','1')"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DS4502udpbssend_B1"
+	      Ports		      [1]
+	      Position		      [345, 120, 445, 170]
+	      SourceBlock	      "udpbs/DS4502udpbssend_B1"
+	      SourceType	      "RTI"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      BoardNo		      "1"
+	      LocalIp10		      "192.168.1.155"
+	      LocalIp11		      "1"
+	      LocalIp12		      "1"
+	      LocalIp13		      "1"
+	      DestinationIp20	      "255.255.255.255"
+	      DestinationIp21	      "1"
+	      DestinationIp22	      "1"
+	      DestinationIp23	      "1"
+	      Port		      "5500"
+	      Timeout		      "1/250"
+	      sample_time	      "-1"
+	      LocalIp		      "1"
+	      DestinationIp	      "1"
+	      DSProperties	      "struct('RTI',struct('Version',uint32(3)"
+",'BlockType',struct('isSLSource',logical(0),'isSLSink',logical(1),'isHWSource"
+"',logical(0),'isHWSink',logical(1),'isSetup',logical(0),'isInline',logical(0)"
+",'isNonInline',logical(1),'isInterrupt',logical(0),'isChannelwise',logical(0)"
+"),'DialogType','SL','Identifier','udpbssend','IOBoardType','DS4502','UnitType"
+"','UDP','BlockSet','UDPBS','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('MaskDescription',['Sends UDP-ba"
+"sed datagrams for a connected socket to an Ethernet communication partner.'],"
+"'InputPortsActive',1,'InputPortsWidth',{{'DYNAMICALLY_SIZED'}},'InputPortsDat"
+"aType',{{'SS_DOUBLE'}},'InputPortsName',{{'In'}},'BlockDisplay',{{['UDP Send'"
+"],'middle'}},'IconTransparency','on','BlockName',struct('Token',{{'DS4502udpb"
+"ssend_B'}},'BlockParam',{{'BoardNo'}}),'InitLevel',3)"
+	      RTIBlockParameters      "struct('BoardNo',{{1,'ON',[1 16]}},'Loc"
+"alIp10',{{'192.168.1.155','OFF',[]}},'LocalIp11',{{'1','OFF',[]}},'LocalIp12'"
+",{{'1','OFF',[]}},'LocalIp13',{{'1','OFF',[]}},'DestinationIp20',{{'255.255.2"
+"55.255','OFF',[]}},'DestinationIp21',{{'1','OFF',[]}},'DestinationIp22',{{'1'"
+",'OFF',[]}},'DestinationIp23',{{'1','OFF',[]}},'Port',{{5500,'ON',[1025 65535"
+"]}},'Timeout',{{0.004,'ON',[0 1]}},'sample_time',{{-1,'OFF',[]}},'LocalIp',{{"
+"'1','OFF',[]}},'DestinationIp',{{'1','OFF',[]}})"
+	      RTISFcnParameters	      "struct('BoardNo','double','LocalIp10','"
+"char','LocalIp11','double','LocalIp12','double','LocalIp13','double','Destina"
+"tionIp20','char','DestinationIp21','double','DestinationIp22','double','Desti"
+"nationIp23','double','Port','double','Timeout','double','sample_time','double"
+"','LocalIp','char','DestinationIp','char')"
+	      RTIBlockParaDefault     "struct('BoardNo',1,'LocalIp10','192.168"
+".100.1','LocalIp11','1','LocalIp12','1','LocalIp13','1','DestinationIp20','19"
+"2.168.100.2','DestinationIp21','1','DestinationIp22','1','DestinationIp23','1"
+"','Port',5000,'Timeout',0.00022,'sample_time',-1,'LocalIp','1','DestinationIp"
+"','1')"
+	    }
+	    Block {
+	      BlockType		      RateTransition
+	      Name		      "Rate Transition"
+	      Position		      [225, 124, 265, 166]
+	      Deterministic	      off
+	      OutPortSampleTime	      "[Timestep*10.0  0.0]"
+	    }
+	    Line {
+	      SrcBlock		      "UDP_in"
+	      SrcPort		      1
+	      DstBlock		      "Rate Transition"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Rate Transition"
+	      SrcPort		      1
+	      DstBlock		      "DS4502udpbssend_B1"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "UDP Send  Side"
+	      Position		      [191, 190]
+	      HorizontalAlignment     "left"
+	      VerticalAlignment	      "top"
+	      ForegroundColor	      "blue"
+	      FontSize		      15
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "RSRCHR_MOS"
+	  Ports			  [1]
+	  Position		  [305, 157, 390, 203]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "RSRCHR_MOS"
+	    Location		    [80, 97, 598, 442]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "UDP_in"
+	      Position		      [25, 138, 55, 152]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DS4502udpbsreceive_B1"
+	      Ports		      []
+	      Position		      [85, 35, 186, 84]
+	      SourceBlock	      "udpbs/DS4502udpbsreceive_B1"
+	      SourceType	      "RTI"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      BoardNo		      "1"
+	      LocalIp10		      "192.168.1.155"
+	      LocalIp11		      "1"
+	      LocalIp12		      "1"
+	      LocalIp13		      "1"
+	      SourceIp20	      "0.0.0.0"
+	      SourceIp21	      "1"
+	      SourceIp22	      "1"
+	      SourceIp23	      "1"
+	      Port		      "5700"
+	      Timeout		      "0"
+	      Sample_time	      "-1"
+	      Overflow_Flush	      "off"
+	      LocalIp		      "1"
+	      SourceIp		      "1"
+	      DSProperties	      "struct('RTI',struct('Version',uint32(3)"
+",'BlockType',struct('isSLSource',logical(0),'isSLSink',logical(0),'isHWSource"
+"',logical(0),'isHWSink',logical(0),'isSetup',logical(0),'isInline',logical(0)"
+",'isNonInline',logical(1),'isInterrupt',logical(0),'isChannelwise',logical(0)"
+"),'Identifier','udpbsreceive','IOBoardType','DS4502','UnitType','UDP','BlockS"
+"et','UDPBS','DialogType','SL','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('OutputPortsActive',0,'OutputPor"
+"tsWidth',int32(0),'MaskDescription',['Receives UDP-based datagrams for a conn"
+"ected socket and stores these data in the port buffer within the correspondin"
+"g port memory structure.'],'BlockDisplay',{{['UDP Receive'],'middle'}},'IconT"
+"ransparency','on','BlockName',struct('Token',{{'DS4502udpbsreceive_B'}},'Bloc"
+"kParam',{{'BoardNo'}}),'InitLevel',3)"
+	      RTIBlockParameters      "struct('BoardNo',{{1,'ON',[1 16]}},'Loc"
+"alIp10',{{'192.168.1.155','OFF',[]}},'LocalIp11',{{'1','OFF',[]}},'LocalIp12'"
+",{{'1','OFF',[]}},'LocalIp13',{{'1','OFF',[]}},'SourceIp20',{{'0.0.0.0','OFF'"
+",[]}},'SourceIp21',{{'1','OFF',[]}},'SourceIp22',{{'1','OFF',[]}},'SourceIp23"
+"',{{'1','OFF',[]}},'Port',{{5700,'ON',[1025 65535]}},'Timeout',{{0,'ON',[0 1]"
+"}},'Sample_time',{{-1,'OFF',[]}},'Overflow_Flush',{{logical(0),'OFF',[]}},'Lo"
+"calIp',{{'1','OFF',[]}},'SourceIp',{{'1','OFF',[]}})"
+	      RTISFcnParameters	      "struct('BoardNo','double','LocalIp10','"
+"char','LocalIp11','double','LocalIp12','double','LocalIp13','double','SourceI"
+"p20','char','SourceIp21','double','SourceIp22','double','SourceIp23','double'"
+",'Port','double','Timeout','double','Sample_time','double','Overflow_Flush','"
+"double','LocalIp','char','SourceIp','char')"
+	      RTIBlockParaDefault     "struct('BoardNo',1,'LocalIp10','192.168"
+".100.1','LocalIp11','1','LocalIp12','1','LocalIp13','1','SourceIp20','192.168"
+".100.2','SourceIp21','1','SourceIp22','1','SourceIp23','1','Port',5000,'Timeo"
+"ut',0.00022,'Sample_time',-1,'Overflow_Flush',0,'LocalIp','1','SourceIp','1')"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "DS4502udpbssend_B1"
+	      Ports		      [1]
+	      Position		      [345, 120, 445, 170]
+	      SourceBlock	      "udpbs/DS4502udpbssend_B1"
+	      SourceType	      "RTI"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      BoardNo		      "1"
+	      LocalIp10		      "192.168.1.155"
+	      LocalIp11		      "1"
+	      LocalIp12		      "1"
+	      LocalIp13		      "1"
+	      DestinationIp20	      "255.255.255.255"
+	      DestinationIp21	      "1"
+	      DestinationIp22	      "1"
+	      DestinationIp23	      "1"
+	      Port		      "5700"
+	      Timeout		      "1/250"
+	      sample_time	      "-1"
+	      LocalIp		      "1"
+	      DestinationIp	      "1"
+	      DSProperties	      "struct('RTI',struct('Version',uint32(3)"
+",'BlockType',struct('isSLSource',logical(0),'isSLSink',logical(1),'isHWSource"
+"',logical(0),'isHWSink',logical(1),'isSetup',logical(0),'isInline',logical(0)"
+",'isNonInline',logical(1),'isInterrupt',logical(0),'isChannelwise',logical(0)"
+"),'DialogType','SL','Identifier','udpbssend','IOBoardType','DS4502','UnitType"
+"','UDP','BlockSet','UDPBS','SlaveProcessor','NONE'))"
+	      RTIBlockInterface	      "struct('MaskDescription',['Sends UDP-ba"
+"sed datagrams for a connected socket to an Ethernet communication partner.'],"
+"'InputPortsActive',1,'InputPortsWidth',{{'DYNAMICALLY_SIZED'}},'InputPortsDat"
+"aType',{{'SS_DOUBLE'}},'InputPortsName',{{'In'}},'BlockDisplay',{{['UDP Send'"
+"],'middle'}},'IconTransparency','on','BlockName',struct('Token',{{'DS4502udpb"
+"ssend_B'}},'BlockParam',{{'BoardNo'}}),'InitLevel',3)"
+	      RTIBlockParameters      "struct('BoardNo',{{1,'ON',[1 16]}},'Loc"
+"alIp10',{{'192.168.1.155','OFF',[]}},'LocalIp11',{{'1','OFF',[]}},'LocalIp12'"
+",{{'1','OFF',[]}},'LocalIp13',{{'1','OFF',[]}},'DestinationIp20',{{'255.255.2"
+"55.255','OFF',[]}},'DestinationIp21',{{'1','OFF',[]}},'DestinationIp22',{{'1'"
+",'OFF',[]}},'DestinationIp23',{{'1','OFF',[]}},'Port',{{5700,'ON',[1025 65535"
+"]}},'Timeout',{{0.004,'ON',[0 1]}},'sample_time',{{-1,'OFF',[]}},'LocalIp',{{"
+"'1','OFF',[]}},'DestinationIp',{{'1','OFF',[]}})"
+	      RTISFcnParameters	      "struct('BoardNo','double','LocalIp10','"
+"char','LocalIp11','double','LocalIp12','double','LocalIp13','double','Destina"
+"tionIp20','char','DestinationIp21','double','DestinationIp22','double','Desti"
+"nationIp23','double','Port','double','Timeout','double','sample_time','double"
+"','LocalIp','char','DestinationIp','char')"
+	      RTIBlockParaDefault     "struct('BoardNo',1,'LocalIp10','192.168"
+".100.1','LocalIp11','1','LocalIp12','1','LocalIp13','1','DestinationIp20','19"
+"2.168.100.2','DestinationIp21','1','DestinationIp22','1','DestinationIp23','1"
+"','Port',5000,'Timeout',0.00022,'sample_time',-1,'LocalIp','1','DestinationIp"
+"','1')"
+	    }
+	    Block {
+	      BlockType		      RateTransition
+	      Name		      "Rate Transition"
+	      Position		      [225, 124, 265, 166]
+	      Deterministic	      off
+	      OutPortSampleTime	      "[Timestep*10.0  Timestep*3.0]"
+	    }
+	    Line {
+	      SrcBlock		      "Rate Transition"
+	      SrcPort		      1
+	      DstBlock		      "DS4502udpbssend_B1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "UDP_in"
+	      SrcPort		      1
+	      DstBlock		      "Rate Transition"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "5700 socket"
+	      Position		      [133, 113]
+	    }
+	    Annotation {
+	      Name		      "5700 socket"
+	      Position		      [398, 203]
+	    }
+	    Annotation {
+	      Name		      "UDP Send  Side"
+	      Position		      [191, 190]
+	      HorizontalAlignment     "left"
+	      VerticalAlignment	      "top"
+	      ForegroundColor	      "blue"
+	      FontSize		      15
+	      FontWeight	      "bold"
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UDP Variable Select"
+	  Ports			  [5, 2]
+	  Position		  [130, 36, 235, 224]
+	  BackgroundColor	  "cyan"
+	  LinkData {
+	    BlockName		    "UDP_Pack"
+	    DialogParameters {
+	      EndianListNdx	      "Big Endian (dSpace)"
+	    }
+	    BlockName		    "UDP_Pack0"
+	    DialogParameters {
+	      EndianListNdx	      "Big Endian (dSpace)"
+	    }
+	    BlockName		    "UDP_Pack1"
+	    DialogParameters {
+	      EndianListNdx	      "Big Endian (dSpace)"
+	    }
+	    BlockName		    "UDP_Pack2"
+	    DialogParameters {
+	      EndianListNdx	      "Big Endian (dSpace)"
+	    }
+	    BlockName		    "UDP_Pack3"
+	    DialogParameters {
+	      EndianListNdx	      "Big Endian (dSpace)"
+	    }
+	  }
+	  SourceBlock		  "Displays_Lib/UDP Variable Select"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Line {
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "UDP Variable Select"
+	  SrcPort		  1
+	  DstBlock		  "FDRS_MOS"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "UDP Variable Select"
+	  SrcPort		  2
+	  DstBlock		  "RSRCHR_MOS"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [35, 22, 392, 118]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   " Developed using Matlab Release 2007a\n\nSVN:%<"
+"ModelVersion>\nModified: %<ModifiedDate>"
+      MaskDisplayString	      " Developed using Matlab Release 2007a\\n\\nSVN:"
+"$LastChangedRevision: 1223 $\\nModified: Wed Feb 11 14:01:23 2009"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "Displays_Lib"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "None"
+      Ports		      [5]
+      Position		      [375, 170, 425, 270]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"None"
+	Location		[514, 109, 854, 388]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [70, 38, 100, 52]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [70, 78, 100, 92]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [70, 118, 100, 132]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [70, 158, 100, 172]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [70, 198, 100, 212]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [140, 35, 160, 55]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  Position		  [140, 75, 160, 95]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator2"
+	  Position		  [140, 115, 160, 135]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  Position		  [140, 155, 160, 175]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator4"
+	  Position		  [140, 195, 160, 215]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Line {
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  DstBlock		  "Terminator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "Terminator4"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Simulation"
+      Ports		      [5]
+      Position		      [270, 173, 315, 267]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"Simulation"
+	Location		[854, 99, 1417, 452]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [115, 93, 145, 107]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [115, 128, 145, 142]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [115, 163, 145, 177]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [115, 198, 145, 212]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [115, 233, 145, 247]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition"
+	  Position		  [330, 104, 370, 146]
+	  BackgroundColor	  "cyan"
+	  Deterministic		  off
+	  OutPortSampleTime	  "Timestep*4"
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition1"
+	  Position		  [330, 199, 370, 241]
+	  BackgroundColor	  "cyan"
+	  Deterministic		  off
+	  OutPortSampleTime	  "Timestep*4"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UDP Variable Select"
+	  Ports			  [5, 2]
+	  Position		  [200, 76, 305, 264]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Displays_Lib/UDP Variable Select"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UDP_Sender"
+	  Ports			  [1]
+	  Position		  [400, 111, 495, 139]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Displays_Lib/UDP_Sender"
+	  SourceType		  "UDP_Send"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  UDP_Port		  "5500"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UDP_Sender1"
+	  Ports			  [1]
+	  Position		  [400, 206, 495, 234]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Displays_Lib/UDP_Sender"
+	  SourceType		  "UDP_Send"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  UDP_Port		  "5700"
+	}
+	Line {
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "UDP Variable Select"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "UDP Variable Select"
+	  SrcPort		  1
+	  DstBlock		  "Rate Transition"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "UDP Variable Select"
+	  SrcPort		  2
+	  DstBlock		  "Rate Transition1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Sender"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition1"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Sender1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UDP"
+      Ports		      [5]
+      Position		      [45, 159, 90, 271]
+      BackgroundColor	      "cyan"
+      BlockChoice	      "MOS"
+      TemplateBlock	      "self"
+      MemberBlocks	      "MOS,None,Simulation,X-Plane"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"UDP"
+	Location		[148, 182, 646, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [20, 160, 40, 180]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [20, 200, 40, 220]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [20, 120, 40, 140]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [20, 160, 40, 180]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [20, 200, 40, 220]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "MOS"
+	  Ports			  [5]
+	  Position		  [100, 40, 140, 80]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Displays_Lib/MOS"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Line {
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  DstBlock		  "MOS"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "MOS"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  DstBlock		  "MOS"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "MOS"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "MOS"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UDP Variable Select"
+      Ports		      [5, 2]
+      Position		      [310, 355, 415, 545]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"UDP Variable Select"
+	Location		[256, 125, 1265, 940]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"106"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [30, 273, 60, 287]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Downlink"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [30, 308, 60, 322]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Uplink"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [30, 343, 60, 357]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "CP"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [30, 378, 60, 392]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "CW"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [30, 413, 60, 427]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "FCS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  Ports			  [5, 1]
+	  Position		  [155, 262, 160, 438]
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector"
+	  Position		  [270, 130, 280, 170]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector1"
+	  Position		  [270, 535, 280, 575]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector2"
+	  Position		  [270, 195, 280, 235]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector3"
+	  Position		  [270, 260, 280, 300]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector4"
+	  Position		  [270, 405, 280, 445]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector5"
+	  Position		  [270, 470, 280, 510]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion"
+	  Position		  [320, 273, 370, 287]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  OutDataTypeMode	  "uint8"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "Data Type Conversion1"
+	  Position		  [325, 548, 375, 562]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  OutDataTypeMode	  "uint8"
+	  RndMeth		  "Floor"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Display_bool"
+	  Ports			  [1, 1]
+	  Position		  [245, 261, 250, 299]
+	  OutputSignals		  "FCS.RPraw.FTE_mark,FCS.RPraw.TD_mark,FCS.RP"
+"raw.ENG_mark,FCS.RPraw.RES_mark,FCS.SPInput.gear_cmd,FCS.SPInput.handoff_swit"
+"ch,FCS.RPInput.Fuel_Intg,CW.LinkInop"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Display_double"
+	  Ports			  [1, 1]
+	  Position		  [245, 131, 250, 169]
+	  OutputSignals		  "CP.AirData.vc,CP.AirData.vt,CP.CGVanesAcc.g"
+"west,CP.Display.cg_mac,CP.Display.vstall_est_disp,CP.Display.vc_disp,CP.Displ"
+"ay.alpha_disp,CP.Display.beta_disp,CP.Display.baro_alt,CP.Display.nz_disp,CP."
+"Display.vv_fpm_disp,CP.Display.mag_heading_disp,CP.Display.alt_gps_disp,CP.Di"
+"splay.BUSMON1_disp,CP.Display.BUSMON2_disp,CP.Display.BUSMON3_disp,CP.Display"
+".BUSMON4_disp,CP.Display.CPTV_disp,CP.Display.BAROV_disp,CP.Display.MAG3V_dis"
+"p,CP.Display.RSS_disp,CP.Display.DL_RSS_disp,CP.Engine_Fuel.fuel_rem,CP.Engin"
+"e_Fuel.fuel_flow_l,CP.Engine_Fuel.fuel_flow_r,CP.Engine_Fuel.fuel_used,CP.Eng"
+"ine_Fuel.time_rem,CP.Engine_Fuel.rpm_left,CP.Engine_Fuel.rpm_right,CP.Engine_"
+"Fuel.rpml_ATcmd,CP.Engine_Fuel.rpmr_ATcmd,CP.Engine_Fuel.rpml_RPcmd,CP.Engine"
+"_Fuel.rpmr_RPcmd,CP.Engine_Fuel.rpml_SPcmd,CP.Engine_Fuel.rpmr_SPcmd,CP.Nav.v"
+"cdot,CP.Nav.vgnav,CP.Nav.windspd,CP.Nav.winddir,CP.Nav.gammav,CP.Nav.gndtrack"
+",CP.Surfaces.RPele_cmd,CP.Surfaces.aildiff,CP.Surfaces.elevave,CP.Surfaces.ru"
+"dave,CP.CP_constants.altimeter_setting,CP.Offset_Landing.baro_alt_HUD,CP.Offs"
+"et_Landing.mag_heading_disp_HUD,CP.Offset_Landing.gndtrack_HUD,CP.Offset_Land"
+"ing.psideg_HUD,CP.Offset_Landing.latdeg_HUD,CP.Offset_Landing.londeg_HUD,Down"
+"link.ADC.EGTR,Downlink.ADC.EGTL,Downlink.ADC.SSCS,Downlink.ADC.PSL,Downlink.A"
+"DC.PDL,Downlink.ADC.PSR,Downlink.ADC.PDR,Downlink.ADC.AILL,Downlink.ADC.AILR,"
+"Downlink.ADC.ELLOB,Downlink.ADC.ELLIB,Downlink.ADC.ELROB,Downlink.ADC.ELRIB,D"
+"ownlink.ADC.RUDU,Downlink.ADC.RUDL,Downlink.ADC.XACCEL,Downlink.ADC.YACCEL,Do"
+"wnlink.ADC.ZACCEL,Downlink.ADC.XGYRO,Downlink.ADC.YGYRO,Downlink.ADC.ZGYRO,Do"
+"wnlink.ADC.TEMPAMB,Downlink.Health.PacketErrorIndPort0,Downlink.Health.Packet"
+"ErrorIndPort1,Downlink.Health.PacketErrorIndPort2,Downlink.Health.PacketError"
+"IndPort3,Downlink.MIDG.MSG_10.TimeStamp,Downlink.MIDG.MSG_10.pdeg,Downlink.MI"
+"DG.MSG_10.qdeg,Downlink.MIDG.MSG_10.rdeg,Downlink.MIDG.MSG_10.nxbody,Downlink"
+".MIDG.MSG_10.nybody,Downlink.MIDG.MSG_10.nzbody,Downlink.MIDG.MSG_10.phideg,D"
+"ownlink.MIDG.MSG_10.thetadeg,Downlink.MIDG.MSG_10.psideg,Downlink.MIDG.MSG_12"
+".LAT_NAV,Downlink.MIDG.MSG_12.LON_NAV,Downlink.MIDG.MSG_1.MIDG_mode,FCS.AT.sp"
+"d_cmd,FCS.Mode2.beta_cmd,FCS.Mode2.alpha_trim_cmd,FCS.Mode2.alpha_cmd,FCS.RPI"
+"nput.throttle_L,FCS.RPInput.throttle_R,FCS.RPInput.lon_stk,FCS.RPInput.lat_st"
+"k,FCS.RPInput.pedal,FCS.RPInput.hat_lon,FCS.RPInput.hat_lat,FCS.RPInput.flap,"
+"FCS.RPInput.spd_brake,FCS.RPInput.Alpha_select,FCS.RPInput.Beta_select,FCS.RP"
+"Input.DynPress_select,FCS.RPInput.StatPress_select,FCS.Uplink_cmds.ELLOBC,FCS"
+".Uplink_cmds.ELLIBC,FCS.Uplink_cmds.ELROBC,FCS.Uplink_cmds.ELRIBC,FCS.Uplink_"
+"cmds.AILLC,FCS.Uplink_cmds.SPLLOBC,FCS.Uplink_cmds.SPLLIBC,FCS.Uplink_cmds.SP"
+"LRIBC,FCS.Uplink_cmds.SPLROBC,FCS.Uplink_cmds.AILRC,FCS.Uplink_cmds.RUDUPC,FC"
+"S.Uplink_cmds.RUDLOC,FCS.Uplink_cmds.FLAPLOC,FCS.Uplink_cmds.FLAPLIC,FCS.Upli"
+"nk_cmds.FLAPRIC,FCS.Uplink_cmds.FLAPROC,FCS.Uplink_cmds.GEARC,FCS.SPInput.thr"
+"ottle_cmd,FCS.SPInput.ail_cmd,FCS.SPInput.ele_cmd,FCS.SPInput.rud_cmd,FCS.SPI"
+"nput.flap_cmd"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Display_double_spec"
+	  Position		  [335, 138, 415, 162]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "130"
+	  DataType		  "double"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Display_uint32"
+	  Ports			  [1, 1]
+	  Position		  [245, 196, 250, 234]
+	  OutputSignals		  "CW.warning_word,CW.caution_word,CW.advisory"
+"_word,FCS.FCS_Engage,FCS.FCS_Arm,FCS.Wavetrain.WT_status.WT_profile,FCS.Mode3"
+".rFCL_select,FCS.MTF.MTF_profile,CW.StallTone"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Display_uint32_spec"
+	  Position		  [335, 203, 415, 227]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "9"
+	  DataType		  "uint32"
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Display_uint8_spec"
+	  Position		  [445, 268, 525, 292]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "8"
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [3, 1]
+	  Position		  [640, 116, 645, 314]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [3, 1]
+	  Position		  [640, 391, 645, 589]
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Researcher_bool"
+	  Ports			  [1, 1]
+	  Position		  [245, 536, 250, 574]
+	  OutputSignals		  "FCS.RPraw.gear"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Researcher_double"
+	  Ports			  [1, 1]
+	  Position		  [245, 406, 250, 444]
+	  OutputSignals		  "Downlink.ADC.ALPHAVL,Downlink.ADC.BETAVL,Do"
+"wnlink.ADC.ALPHAVR,Downlink.ADC.BETAVR,Downlink.ADC.PSL,Downlink.ADC.PDL,Down"
+"link.ADC.PSR,Downlink.ADC.PDR,Downlink.ADC.XACCEL,Downlink.ADC.YACCEL,Downlin"
+"k.ADC.ZACCEL,Downlink.ADC.XGYRO,Downlink.ADC.YGYRO,Downlink.ADC.ZGYRO,Downlin"
+"k.ADC.XMAG,Downlink.ADC.YMAG,Downlink.ADC.ZMAG,Downlink.ADC.XGYROT,Downlink.A"
+"DC.AILL,Downlink.ADC.AILR,Downlink.ADC.ELLOB,Downlink.ADC.ELLIB,Downlink.ADC."
+"ELROB,Downlink.ADC.ELRIB,Downlink.ADC.RUDU,Downlink.ADC.RUDL,Downlink.ADC.FLA"
+"PLOB,Downlink.ADC.FLAPLIB,Downlink.ADC.FLAPRIB,Downlink.ADC.FLAPROB,Downlink."
+"ADC.TEMPAMB,Downlink.ADC.RPML,Downlink.ADC.RPMR,Downlink.MIDG.MSG_10.TimeStam"
+"p,Downlink.MIDG.MSG_10.pdeg,Downlink.MIDG.MSG_10.qdeg,Downlink.MIDG.MSG_10.rd"
+"eg,Downlink.MIDG.MSG_10.nxbody,Downlink.MIDG.MSG_10.nybody,Downlink.MIDG.MSG_"
+"10.nzbody,Downlink.MIDG.MSG_10.phideg,Downlink.MIDG.MSG_10.thetadeg,Downlink."
+"MIDG.MSG_10.psideg,Downlink.MIDG.MSG_10.QW,Downlink.MIDG.MSG_10.QX,Downlink.M"
+"IDG.MSG_10.QY,Downlink.MIDG.MSG_10.QZ,Downlink.MIDG.MSG_12.LAT_NAV,Downlink.M"
+"IDG.MSG_12.LON_NAV,Downlink.MIDG.MSG_12.HELIP_NAV,Downlink.MIDG.MSG_12.VEE_NA"
+"V,Downlink.MIDG.MSG_12.VN_NAV,Downlink.MIDG.MSG_12.VH_NAV,Uplink.AILLC,Uplink"
+".AILRC,Uplink.ELLOBC,Uplink.ELLIBC,Uplink.ELROBC,Uplink.ELRIBC,Uplink.RUDUPC,"
+"Uplink.RUDLOC,Uplink.FLAPLIC,Uplink.FLAPLOC,Uplink.FLAPRIC,Uplink.FLAPROC,Upl"
+"ink.THROTLC,Uplink.THROTRC,Uplink.GEARC,Uplink.SPLLIBC,Uplink.SPLLOBC,Uplink."
+"SPLRIBC,Uplink.SPLROBC,CP.CGVanesAcc.gwest,CP.CGVanesAcc.cgx,CP.CGVanesAcc.cg"
+"y,CP.CGVanesAcc.cgz,CP.CGVanesAcc.ixx,CP.CGVanesAcc.iyy,CP.CGVanesAcc.izz,CP."
+"CGVanesAcc.ixz,CP.CGVanesAcc.MIDG_nxcorr,CP.CGVanesAcc.MIDG_nycorr,CP.CGVanes"
+"Acc.MIDG_nzcorr,CP.CGVanesAcc.nxcorr,CP.CGVanesAcc.nycorr,CP.CGVanesAcc.nzcor"
+"r,CP.CGVanesAcc.alpha_l,CP.CGVanesAcc.beta_l,CP.CGVanesAcc.alpha_r,CP.CGVanes"
+"Acc.beta_r,CP.AirData.vt,CP.AirData.hpic,CP.Nav.windspd,CP.Nav.winddir,CP.Eng"
+"ine_Fuel.fuel_used,CP.Engine_Fuel.rpm_left,CP.Engine_Fuel.rpm_right,CP.Surfac"
+"es.aildiff,CP.Surfaces.elevave,CP.Surfaces.rudave,FCS.RPraw.throttle_L,FCS.RP"
+"raw.throttle_R,FCS.RPraw.lon_stk,FCS.RPraw.lat_stk,FCS.RPraw.pedal,FCS.RPraw."
+"hat_lon,FCS.RPraw.hat_lat,FCS.RPraw.flap,FCS.RPraw.spd_brake,FCS.AT.spd_cmd,F"
+"CS.Mode2.beta_cmd,FCS.Mode2.alpha_trim_cmd,FCS.Mode2.alpha_cmd,FCS.Wavetrain."
+"WT_cmds.dAILLC,FCS.Wavetrain.WT_cmds.dAILRC,FCS.Wavetrain.WT_cmds.dELLOBC,FCS"
+".Wavetrain.WT_cmds.dELLIBC,FCS.Wavetrain.WT_cmds.dELROBC,FCS.Wavetrain.WT_cmd"
+"s.dELRIBC,FCS.Wavetrain.WT_cmds.dRUDUPC,FCS.Wavetrain.WT_cmds.dRUDLOC,FCS.Wav"
+"etrain.WT_cmds.dFLAPLIC,FCS.Wavetrain.WT_cmds.dFLAPLOC,FCS.Wavetrain.WT_cmds."
+"dFLAPRIC,FCS.Wavetrain.WT_cmds.dFLAPROC,FCS.Wavetrain.WT_cmds.dTHROTLC,FCS.Wa"
+"vetrain.WT_cmds.dTHROTRC,FCS.Wavetrain.WT_cmds.dSPLLIBC,FCS.Wavetrain.WT_cmds"
+".dSPLLOBC,FCS.Wavetrain.WT_cmds.dSPLRIBC,FCS.Wavetrain.WT_cmds.dSPLROBC,FCS.M"
+"ode3.UserData.UserData1,FCS.Mode3.UserData.UserData2,FCS.Mode3.UserData.UserD"
+"ata3,FCS.Mode3.UserData.UserData4,FCS.Mode3.UserData.UserData5,FCS.Mode3.User"
+"Data.UserData6,FCS.Mode3.UserData.UserData7,FCS.Mode3.UserData.UserData8,FCS."
+"Mode3.UserData.UserData9,FCS.Mode3.UserData.UserData10,FCS.Mode3.UserData.Use"
+"rData11,FCS.Mode3.UserData.UserData12,FCS.Mode3.UserData.UserData13,FCS.Mode3"
+".UserData.UserData14,FCS.Mode3.UserData.UserData15,FCS.Mode3.UserData.UserDat"
+"a16,FCS.Mode3.UserData.UserData17,FCS.Mode3.UserData.UserData18,FCS.Mode3.Use"
+"rData.UserData19,FCS.Mode3.UserData.UserData20,FCS.Mode3.UserData.UserData21,"
+"FCS.Mode3.UserData.UserData22,FCS.Mode3.UserData.UserData23,FCS.Mode3.UserDat"
+"a.UserData24,FCS.Mode3.UserData.UserData25,FCS.Mode3.UserData.UserData26,FCS."
+"Mode3.UserData.UserData27,FCS.Mode3.UserData.UserData28,FCS.Mode3.UserData.Us"
+"erData29,FCS.Mode3.UserData.UserData30"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Researcher_double_spec"
+	  Position		  [335, 413, 415, 437]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "161"
+	  DataType		  "double"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Researcher_uint32"
+	  Ports			  [1, 1]
+	  Position		  [245, 471, 250, 509]
+	  OutputSignals		  "FCS.FCS_Engage,FCS.FCS_Arm,FCS.Mode3.rFCL_s"
+"elect,FCS.MTF.MTF_profile,FCS.Wavetrain.WT_status.WT_profile"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Researcher_uint32_spec"
+	  Position		  [335, 478, 415, 502]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "5"
+	  DataType		  "uint32"
+	}
+	Block {
+	  BlockType		  SignalSpecification
+	  Name			  "Researcher_uint8_spec"
+	  Position		  [450, 543, 530, 567]
+	  BackgroundColor	  "cyan"
+	  Dimensions		  "1"
+	  DataType		  "uint8"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_Pack0"
+	  Ports			  [1, 1]
+	  Position		  [440, 139, 550, 161]
+	  BackgroundColor	  "cyan"
+	  AncestorBlock		  "Displays_Lib/UDP_Pack"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes vectors of doubles or uint32s and for"
+"ms a packed bytestream suitable for sending via UDP."
+	  MaskPromptString	  "Input datatype      |Native Byte Order "
+	  MaskStyleString	  "popup(uint32|double),popup(Little Endian (I"
+"ntel)|Big Endian (dSpace))"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "DataType=&1;EndianListNdx=@2;"
+	  MaskInitialization	  "IsBigEndian=boolean(EndianListNdx-1);\nswit"
+"ch DataType\n    case 'uint32'\n        vbytes = 4;\n    case 'double'\n     "
+"   vbytes = 8;\nend\n\n"
+	  MaskDisplay		  "port_label('input',1,DataType)\nport_label("
+"'output',1,'ByteStream')\n\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "double|Little Endian (Intel)"
+	  MaskTabNameString	  ","
+	  Port {
+	    PortNumber		    1
+	    Name		    "out1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "UDP_Pack0"
+	    Location		    [699, 417, 1126, 548]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vec"
+	      Position		      [55, 48, 85, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "udppack"
+	      Ports		      [1, 1]
+	      Position		      [130, 35, 275, 75]
+	      BackgroundColor	      "cyan"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('udppack');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"udppack"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "vec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Displays_Lib 1"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "IsBigEndian,vbytes"
+		  PortCounts		  "[1 2]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "outvec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "outvec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 65]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "vec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "outvec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "outvec"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ByteStream"
+	      Position		      [320, 48, 350, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "vec"
+	      SrcPort		      1
+	      DstBlock		      "udppack"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "udppack"
+	      SrcPort		      1
+	      DstBlock		      "ByteStream"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_Pack1"
+	  Ports			  [1, 1]
+	  Position		  [440, 204, 550, 226]
+	  BackgroundColor	  "cyan"
+	  AncestorBlock		  "Displays_Lib/UDP_Pack"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes vectors of doubles or uint32s and for"
+"ms a packed bytestream suitable for sending via UDP."
+	  MaskPromptString	  "Input datatype      |Native Byte Order "
+	  MaskStyleString	  "popup(uint32|double),popup(Little Endian (I"
+"ntel)|Big Endian (dSpace))"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "DataType=&1;EndianListNdx=@2;"
+	  MaskInitialization	  "IsBigEndian=boolean(EndianListNdx-1);\nswit"
+"ch DataType\n    case 'uint32'\n        vbytes = 4;\n    case 'double'\n     "
+"   vbytes = 8;\nend\n\n"
+	  MaskDisplay		  "port_label('input',1,DataType)\nport_label("
+"'output',1,'ByteStream')\n\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "uint32|Little Endian (Intel)"
+	  MaskTabNameString	  ","
+	  Port {
+	    PortNumber		    1
+	    Name		    "out2"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "UDP_Pack1"
+	    Location		    [699, 417, 1126, 548]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vec"
+	      Position		      [55, 48, 85, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "udppack"
+	      Ports		      [1, 1]
+	      Position		      [130, 35, 275, 75]
+	      BackgroundColor	      "cyan"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('udppack');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"udppack"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "vec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Displays_Lib 2"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "IsBigEndian,vbytes"
+		  PortCounts		  "[1 2]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "outvec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "outvec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 65]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "vec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "outvec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "outvec"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ByteStream"
+	      Position		      [320, 48, 350, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "vec"
+	      SrcPort		      1
+	      DstBlock		      "udppack"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "udppack"
+	      SrcPort		      1
+	      DstBlock		      "ByteStream"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_Pack2"
+	  Ports			  [1, 1]
+	  Position		  [445, 414, 555, 436]
+	  BackgroundColor	  "cyan"
+	  AncestorBlock		  "Displays_Lib/UDP_Pack"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes vectors of doubles or uint32s and for"
+"ms a packed bytestream suitable for sending via UDP."
+	  MaskPromptString	  "Input datatype      |Native Byte Order "
+	  MaskStyleString	  "popup(uint32|double),popup(Little Endian (I"
+"ntel)|Big Endian (dSpace))"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "DataType=&1;EndianListNdx=@2;"
+	  MaskInitialization	  "IsBigEndian=boolean(EndianListNdx-1);\nswit"
+"ch DataType\n    case 'uint32'\n        vbytes = 4;\n    case 'double'\n     "
+"   vbytes = 8;\nend\n\n"
+	  MaskDisplay		  "port_label('input',1,DataType)\nport_label("
+"'output',1,'ByteStream')\n\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "double|Little Endian (Intel)"
+	  MaskTabNameString	  ","
+	  Port {
+	    PortNumber		    1
+	    Name		    "out1"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "UDP_Pack2"
+	    Location		    [699, 417, 1126, 548]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vec"
+	      Position		      [55, 48, 85, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "udppack"
+	      Ports		      [1, 1]
+	      Position		      [130, 35, 275, 75]
+	      BackgroundColor	      "cyan"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('udppack');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"udppack"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "vec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Displays_Lib 3"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "IsBigEndian,vbytes"
+		  PortCounts		  "[1 2]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "outvec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "outvec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 65]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "vec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "outvec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "outvec"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ByteStream"
+	      Position		      [320, 48, 350, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "vec"
+	      SrcPort		      1
+	      DstBlock		      "udppack"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "udppack"
+	      SrcPort		      1
+	      DstBlock		      "ByteStream"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_Pack3"
+	  Ports			  [1, 1]
+	  Position		  [440, 479, 550, 501]
+	  BackgroundColor	  "cyan"
+	  AncestorBlock		  "Displays_Lib/UDP_Pack"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes vectors of doubles or uint32s and for"
+"ms a packed bytestream suitable for sending via UDP."
+	  MaskPromptString	  "Input datatype      |Native Byte Order "
+	  MaskStyleString	  "popup(uint32|double),popup(Little Endian (I"
+"ntel)|Big Endian (dSpace))"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskVarAliasString	  ","
+	  MaskVariables		  "DataType=&1;EndianListNdx=@2;"
+	  MaskInitialization	  "IsBigEndian=boolean(EndianListNdx-1);\nswit"
+"ch DataType\n    case 'uint32'\n        vbytes = 4;\n    case 'double'\n     "
+"   vbytes = 8;\nend\n\n"
+	  MaskDisplay		  "port_label('input',1,DataType)\nport_label("
+"'output',1,'ByteStream')\n\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "uint32|Little Endian (Intel)"
+	  MaskTabNameString	  ","
+	  Port {
+	    PortNumber		    1
+	    Name		    "out2"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "UDP_Pack3"
+	    Location		    [699, 417, 1126, 548]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vec"
+	      Position		      [55, 48, 85, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "udppack"
+	      Ports		      [1, 1]
+	      Position		      [130, 35, 275, 75]
+	      BackgroundColor	      "cyan"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('udppack');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"udppack"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "vec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function Displays_Lib 4"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  Parameters		  "IsBigEndian,vbytes"
+		  PortCounts		  "[1 2]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "outvec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "outvec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 65]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "vec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "outvec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "outvec"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ByteStream"
+	      Position		      [320, 48, 350, 62]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "vec"
+	      SrcPort		      1
+	      DstBlock		      "udppack"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "udppack"
+	      SrcPort		      1
+	      DstBlock		      "ByteStream"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DisplayUDP"
+	  Position		  [715, 208, 745, 222]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ResearcherUDP"
+	  Position		  [720, 483, 750, 497]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  Name			  "out1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "UDP_Pack0"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "out2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "UDP_Pack1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Display_uint32_spec"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Pack1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Display_uint8_spec"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Researcher_double_spec"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Pack2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Downlink"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Uplink"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "CP"
+	  Labels		  [0, 0]
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "CW"
+	  Labels		  [0, 0]
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "FCS"
+	  Labels		  [0, 0]
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    Points		    [0, -70]
+	    Branch {
+	      DstBlock		      "Display_bool"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 145]
+	      Branch {
+		DstBlock		"Researcher_double"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 65]
+		Branch {
+		  DstBlock		  "Researcher_uint32"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 65]
+		  DstBlock		  "Researcher_bool"
+		  DstPort		  1
+		}
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -135]
+	    Branch {
+	      Points		      [0, -65]
+	      DstBlock		      "Display_double"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Display_uint32"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Researcher_double"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Display_bool"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Display_uint32"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Display_double"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Researcher_uint32_spec"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Pack3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Researcher_uint32"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "out1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "UDP_Pack2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "out2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "UDP_Pack3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "ResearcherUDP"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "DisplayUDP"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector2"
+	  SrcPort		  1
+	  DstBlock		  "Display_uint32_spec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector3"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector4"
+	  SrcPort		  1
+	  DstBlock		  "Researcher_double_spec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector5"
+	  SrcPort		  1
+	  DstBlock		  "Researcher_uint32_spec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Researcher_bool"
+	  SrcPort		  1
+	  DstBlock		  "Bus to Vector1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector1"
+	  SrcPort		  1
+	  DstBlock		  "Data Type Conversion1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Researcher_uint8_spec"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion"
+	  SrcPort		  1
+	  DstBlock		  "Display_uint8_spec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Data Type Conversion1"
+	  SrcPort		  1
+	  DstBlock		  "Researcher_uint8_spec"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Display_double_spec"
+	  SrcPort		  1
+	  DstBlock		  "UDP_Pack0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector"
+	  SrcPort		  1
+	  DstBlock		  "Display_double_spec"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Libary links are disabled due to dynamicaly"
+" sized ports\nin the Embedded m-files (Simulink limitation)."
+	  Position		  [219, 80]
+	  HorizontalAlignment	  "left"
+	}
+	Annotation {
+	  Name			  "Do not edit signal lists manually!  BusSele"
+"ction blocks are set directly from Excel ICD files \n(UDP_Display_Message.xls"
+" & UDP_Researcher_Message.xls) using config/UDP_xlsupdate.m"
+	  Position		  [97, 34]
+	  HorizontalAlignment	  "left"
+	  FontName		  "Arial"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UDP_Pack"
+      Ports		      [1, 1]
+      Position		      [70, 434, 180, 456]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "UDPPacker"
+      MaskDescription	      "Takes vectors of doubles or uint32s and forms a"
+" packed bytestream suitable for sending via UDP."
+      MaskPromptString	      "Input datatype      |Native Byte Order "
+      MaskStyleString	      "popup(uint32|double),popup(Little Endian (Intel"
+")|Big Endian (dSpace))"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "DataType=&1;EndianListNdx=@2;"
+      MaskInitialization      "IsBigEndian=boolean(EndianListNdx-1);\nswitch D"
+"ataType\n    case 'uint32'\n        vbytes = 4;\n    case 'double'\n        v"
+"bytes = 8;\nend\n\n"
+      MaskDisplay	      "port_label('input',1,DataType)\nport_label('out"
+"put',1,'ByteStream')\n\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "double|Little Endian (Intel)"
+      MaskTabNameString	      ","
+      System {
+	Name			"UDP_Pack"
+	Location		[699, 417, 1126, 548]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "vec"
+	  Position		  [55, 48, 85, 62]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "udppack"
+	  Ports			  [1, 1]
+	  Position		  [130, 35, 275, 75]
+	  BackgroundColor	  "cyan"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "Stateflow"
+	  MaskDescription	  "Embedded MATLAB block"
+	  MaskDisplay		  "disp('udppack');"
+	  MaskSelfModifiable	  on
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "udppack"
+	    Location		    [257, 457, 812, 717]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vec"
+	      Position		      [20, 101, 40, 119]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      Ports		      [1, 1]
+	      Position		      [270, 160, 320, 200]
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      " SFunction "
+	      Tag		      "Stateflow S-Function Displays_Lib 5"
+	      Ports		      [1, 2]
+	      Position		      [180, 100, 230, 160]
+	      FunctionName	      "sf_sfun"
+	      Parameters	      "IsBigEndian,vbytes"
+	      PortCounts	      "[1 2]"
+	      Port {
+		PortNumber		2
+		Name			"outvec"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      Position		      [460, 171, 480, 189]
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "outvec"
+	      Position		      [460, 101, 480, 119]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "vec"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "outvec"
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "outvec"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "ByteStream"
+	  Position		  [320, 48, 350, 62]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "udppack"
+	  SrcPort		  1
+	  DstBlock		  "ByteStream"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "vec"
+	  SrcPort		  1
+	  DstBlock		  "udppack"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UDP_Sender"
+      Ports		      [1]
+      Position		      [75, 476, 170, 504]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "UDP_Send"
+      MaskDescription	      "Sends a uint8 bytesteam to the specified UDP po"
+"rt.  Must be able to open a different port on local machine to estabilish the"
+" socket.  By convention the local socket is opened one port below the destina"
+"tion port.  For example, to send a message to port 5001, this block must be a"
+"ble to open a socket on port 5000 on the local machine."
+      MaskPromptString	      "UDP Port to Send Message to"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "UDP_Port=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "5001"
+      System {
+	Name			"UDP_Sender"
+	Location		[679, 236, 1089, 463]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "ByteStream"
+	  Position		  [80, 38, 110, 52]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [25, 65, 85, 95]
+	  Value			  "UDP_Port"
+	  OutDataTypeMode	  "uint32"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function"
+	  Ports			  [2]
+	  Position		  [185, 28, 300, 97]
+	  FunctionName		  "udpsfcn"
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "S-Function"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "ByteStream"
+	  SrcPort		  1
+	  DstBlock		  "S-Function"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "X-Plane"
+      Ports		      [5]
+      Position		      [480, 170, 530, 270]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"X-Plane"
+	Location		[207, 212, 1039, 834]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Downlink"
+	  Position		  [70, 28, 100, 42]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Uplink"
+	  Position		  [70, 193, 100, 207]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CP"
+	  Position		  [130, 58, 160, 72]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "CW"
+	  Position		  [70, 253, 100, 267]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FCS"
+	  Position		  [70, 293, 100, 307]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector1"
+	  Ports			  [1, 1]
+	  Position		  [190, 54, 195, 76]
+	  ShowName		  off
+	  OutputSignals		  "Display.baro_alt"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<baro_alt>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector2"
+	  Ports			  [1, 3]
+	  Position		  [190, 73, 195, 137]
+	  ShowName		  off
+	  OutputSignals		  "MIDG.MSG_10.phideg,MIDG.MSG_10.thetadeg,MID"
+"G.MSG_10.psideg"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<phideg>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<thetadeg>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<psideg>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector3"
+	  Ports			  [1, 1]
+	  Position		  [275, 143, 280, 167]
+	  ShowName		  off
+	  OutputSignals		  "ADC.AILL,ADC.ELLOB,ADC.RUDU,ADC.FLAPROB"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector4"
+	  Ports			  [1, 1]
+	  Position		  [275, 189, 280, 211]
+	  ShowName		  off
+	  OutputSignals		  "SPLLOBC,GEARC"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector5"
+	  Ports			  [1, 2]
+	  Position		  [190, 14, 195, 56]
+	  ShowName		  off
+	  OutputSignals		  "MIDG.MSG_12.LAT_NAV,MIDG.MSG_12.LON_NAV"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<LAT_NAV>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<LON_NAV>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector6"
+	  Ports			  [1, 1]
+	  Position		  [290, 253, 295, 317]
+	  ShowName		  off
+	  OutputSignals		  "CGVanesAcc.alpha,CGVanesAcc.beta,AirData.vc"
+	  OutputAsBus		  on
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto5"
+	  Position		  [760, 172, 820, 188]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  GotoTag		  "Xlink"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [6, 1]
+	  Position		  [300, 14, 305, 136]
+	  ShowName		  off
+	  Inputs		  "6"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1]
+	  Position		  [325, 134, 330, 221]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [2, 1]
+	  Position		  [720, 71, 725, 284]
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator3"
+	  Position		  [140, 250, 160, 270]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator4"
+	  Position		  [140, 290, 160, 310]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Xlink"
+	  Ports			  [3, 2]
+	  Position		  [470, 25, 600, 335]
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  MaskType		  "Xlink"
+	  MaskDescription	  "Input Positions and Surfaces for X-Plane Vi"
+"sualization.\n  Positions - [ Latitude, Longitude, Altitude, Roll, Pitch, Yaw"
+"] % degrees and ft.\n  Surfaces  - [ Aileron, Elevator, Rudder, Flaps, Spoile"
+"r, GearDown] % deg and 0/1\n\nOutput is Joysick axes and Button pushes.\n  Jo"
+"ystick - First 16 axes\n  Buttons  - 16 buttons as assigned to Xlink in X-Pla"
+"ne\n\n"
+	  MaskPromptString	  "Lables for HUD, (cell array)"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "HUDCell=@1;"
+	  MaskInitialization	  "if isempty(HUDCell) HUDCell=cell(6,1); end"
+"\nHUDTextArray = uint8(zeros(90,1));\n\n% loop through names, assign to strin"
+"g arrays\nfor i=1:min(length(HUDCell),6);\n  if length(HUDCell{i})>14 HUDCell"
+"{i}=HUDCell{i}(1:14); end\n  if length(HUDCell{i}>0),\n    HUDTextArray((i-1)"
+"*15+1:(i-1)*15+length(HUDCell{i})) = uint8(HUDCell{i});\n  end\nend\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "{'alpha','beta','Velocity'}"
+	  System {
+	    Name		    "Xlink"
+	    Location		    [226, 418, 1022, 800]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Positions"
+	      Position		      [25, 53, 55, 67]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Surfaces"
+	      Position		      [25, 103, 55, 117]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Overlay"
+	      Position		      [35, 203, 65, 217]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2]
+	      Position		      [260, 201, 265, 239]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[6 -1]"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Labels"
+	      Position		      [120, 145, 150, 175]
+	      Value		      "HUDTextArray"
+	      OutDataTypeMode	      "uint8"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      Ports		      [2, 1]
+	      Position		      [220, 201, 225, 239]
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [4, 2]
+	      Position		      [325, 36, 540, 234]
+	      ShowName		      off
+	      FunctionName	      "SimulinkToXPlane"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      Position		      [120, 95, 150, 125]
+	      UpperLimit	      "[180*ones(5,1); 1]"
+	      LowerLimit	      "[-180*ones(5,1); 0]"
+	    }
+	    Block {
+	      BlockType		      SignalSpecification
+	      Name		      "Signal Specification3"
+	      Position		      [280, 198, 305, 222]
+	      ShowName		      off
+	      Dimensions	      "6"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [310, 255, 330, 275]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "zeros"
+	      Position		      [55, 267, 155, 303]
+	      Value		      "zeros(6,1)"
+	      OutDataTypeMode	      "double"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Joystick"
+	      Position		      [605, 78, 635, 92]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Buttons"
+	      Position		      [600, 178, 630, 192]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      Points		      [25, 0]
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Signal Specification3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "zeros"
+	      SrcPort		      1
+	      Points		      [5, 0; 0, -55]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Overlay"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Labels"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      2
+	      DstBlock		      "Buttons"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Surfaces"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "Joystick"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Positions"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Signal Specification3"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      4
+	    }
+	    Annotation {
+	      Name		      "Force Input to \ndimension 6"
+	      Position		      [245, 263]
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Bus\nSelector6"
+	  SrcPort		  1
+	  DstBlock		  "Xlink"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Xlink"
+	  SrcPort		  2
+	  Points		  [10, 0; 0, -30]
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Downlink"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 70]
+	    Branch {
+	      Points		      [0, 50]
+	      DstBlock		      "Bus\nSelector3"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "Bus\nSelector2"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Bus\nSelector5"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "CW"
+	  SrcPort		  1
+	  DstBlock		  "Terminator3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "FCS"
+	  SrcPort		  1
+	  DstBlock		  "Terminator4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<phideg>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector2"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "<thetadeg>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector2"
+	  SrcPort		  2
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "CP"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 220]
+	    DstBlock		    "Bus\nSelector6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Bus\nSelector1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Uplink"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nSelector4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nSelector3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Xlink"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "<psideg>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector2"
+	  SrcPort		  3
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "<baro_alt>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "<LAT_NAV>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<LON_NAV>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector5"
+	  SrcPort		  2
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Xlink"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 20]
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "Goto5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nSelector4"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Xlink"
+	  DstPort		  1
+	}
+      }
+    }
+    Annotation {
+      Name		      "Indepent UDP utilities"
+      Position		      [125, 411]
+    }
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.6 (R2007a) dated Jan 30 2007, 03:33:34
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"Displays_Lib"
+		created              		"26-Nov-2008 11:32:20"
+		isLibrary            		1
+		firstTarget          		47
+		sfVersion            		66014000
+	}
+
+	chart {
+		id                                        		2
+		name                                      		"UDP Variable Select/UDP_Pack0/udppack"
+		windowPosition                            		[201.111 235.131 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 2560 1024 1.111111111111111]
+		treeNode                                  		[0 3 0 0]
+		firstTransition                           		5
+		firstJunction                             		4
+		viewObj                                   		2
+		machine                                   		1
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		6
+		chartFileNumber                           		1
+		disableImplicitCasting                    		1
+		eml {
+			name       		"udppack"
+		}
+	}
+
+	state {
+		id                           		3
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		2
+		treeNode                     		[2 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		2
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function outvec = udppack(vec,vbytes,IsBigEndian)\n"
+						"Nv = length(vec); % get sizes of input vectors\n"
+						"outvec=uint8(zeros(Nv*vbytes,1)); % Set output size\n"
+						"\n"
+						"if ~IsBigEndian  % Little Endian: typecast, reshape to colu"
+						"mn-wise, flip, reshape to vector\n"
+						"    cvec = reshape(flipud(reshape(typecast(vec(:),'uint8'),"
+						"vbytes,Nv)),Nv*vbytes,1);\n"
+						"else   % Big Endian: typecast\n"
+						"    cvec = typecast(vec(:),'uint8');\n"
+						"end\n"
+						"\n"
+						"% (:) selector retains size of \"outvec\"\n"
+						"outvec(:) = cvec;"
+			editorLayout             		"100 M4x1[336 217 944 675]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		4
+		position   		[23.5747 49.5747 7]
+		chart      		2
+		linkNode   		[2 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		5
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		4
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		2
+		linkNode       		[2 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		2
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		6
+		name                          		"vec"
+		linkNode                      		[2 0 7]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+			}
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		7
+		name                          		"vbytes"
+		linkNode                      		[2 6 8]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		paramIndexForInitFromWorkspace		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		8
+		name                          		"outvec"
+		linkNode                      		[2 7 9]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_UINT8_TYPE
+			}
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"uint8"
+	}
+
+	data {
+		id                            		9
+		name                          		"IsBigEndian"
+		linkNode                      		[2 8 0]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_BOOLEAN_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"boolean"
+	}
+
+	instance {
+		id     		10
+		name   		"UDP Variable Select/UDP_Pack0/udppack"
+		machine		1
+		chart  		2
+	}
+
+	chart {
+		id                                        		11
+		name                                      		"UDP Variable Select/UDP_Pack1/udppack"
+		windowPosition                            		[201.111 235.131 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 2560 1024 1.111111111111111]
+		treeNode                                  		[0 12 0 0]
+		firstTransition                           		14
+		firstJunction                             		13
+		viewObj                                   		11
+		machine                                   		1
+		toolbarMode                               		LIBRARY_TOOLBAR
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		15
+		chartFileNumber                           		2
+		disableImplicitCasting                    		1
+		eml {
+			name       		"udppack"
+		}
+	}
+
+	state {
+		id                           		12
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		11
+		treeNode                     		[11 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		11
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function outvec = udppack(vec,vbytes,IsBigEndian)\n"
+						"Nv = length(vec); % get sizes of input vectors\n"
+						"outvec=uint8(zeros(Nv*vbytes,1)); % Set output size\n"
+						"\n"
+						"if ~IsBigEndian  % Little Endian: typecast, reshape to colu"
+						"mn-wise, flip, reshape to vector\n"
+						"    cvec = reshape(flipud(reshape(typecast(vec(:),'uint8'),"
+						"vbytes,Nv)),Nv*vbytes,1);\n"
+						"else   % Big Endian: typecast\n"
+						"    cvec = typecast(vec(:),'uint8');\n"
+						"end\n"
+						"\n"
+						"% (:) selector retains size of \"outvec\"\n"
+						"outvec(:) = cvec;"
+			editorLayout             		"100 M4x1[336 217 944 675]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		13
+		position   		[23.5747 49.5747 7]
+		chart      		11
+		linkNode   		[11 0 0]
+		subviewer  		11
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		14
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		13
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		11
+		linkNode       		[11 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		11
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		15
+		name                          		"vec"
+		linkNode                      		[11 0 16]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+			}
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		16
+		name                          		"vbytes"
+		linkNode                      		[11 15 17]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		paramIndexForInitFromWorkspace		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		17
+		name                          		"outvec"
+		linkNode                      		[11 16 18]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_UINT8_TYPE
+			}
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"uint8"
+	}
+
+	data {
+		id                            		18
+		name                          		"IsBigEndian"
+		linkNode                      		[11 17 0]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_BOOLEAN_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"boolean"
+	}
+
+	instance {
+		id     		19
+		name   		"UDP Variable Select/UDP_Pack1/udppack"
+		machine		1
+		chart  		11
+	}
+
+	chart {
+		id                                        		20
+		name                                      		"UDP Variable Select/UDP_Pack2/udppack"
+		windowPosition                            		[201.111 235.131 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 2560 1024 1.111111111111111]
+		treeNode                                  		[0 21 0 0]
+		firstTransition                           		23
+		firstJunction                             		22
+		viewObj                                   		20
+		machine                                   		1
+		toolbarMode                               		LIBRARY_TOOLBAR
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		24
+		chartFileNumber                           		3
+		disableImplicitCasting                    		1
+		eml {
+			name       		"udppack"
+		}
+	}
+
+	state {
+		id                           		21
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		20
+		treeNode                     		[20 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		20
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function outvec = udppack(vec,vbytes,IsBigEndian)\n"
+						"Nv = length(vec); % get sizes of input vectors\n"
+						"outvec=uint8(zeros(Nv*vbytes,1)); % Set output size\n"
+						"\n"
+						"if ~IsBigEndian  % Little Endian: typecast, reshape to colu"
+						"mn-wise, flip, reshape to vector\n"
+						"    cvec = reshape(flipud(reshape(typecast(vec(:),'uint8'),"
+						"vbytes,Nv)),Nv*vbytes,1);\n"
+						"else   % Big Endian: typecast\n"
+						"    cvec = typecast(vec(:),'uint8');\n"
+						"end\n"
+						"\n"
+						"% (:) selector retains size of \"outvec\"\n"
+						"outvec(:) = cvec;"
+			editorLayout             		"100 M4x1[336 217 944 675]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		22
+		position   		[23.5747 49.5747 7]
+		chart      		20
+		linkNode   		[20 0 0]
+		subviewer  		20
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		23
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		22
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		20
+		linkNode       		[20 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		20
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		24
+		name                          		"vec"
+		linkNode                      		[20 0 25]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+			}
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		25
+		name                          		"vbytes"
+		linkNode                      		[20 24 26]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		paramIndexForInitFromWorkspace		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		26
+		name                          		"outvec"
+		linkNode                      		[20 25 27]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_UINT8_TYPE
+			}
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"uint8"
+	}
+
+	data {
+		id                            		27
+		name                          		"IsBigEndian"
+		linkNode                      		[20 26 0]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_BOOLEAN_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"boolean"
+	}
+
+	instance {
+		id     		28
+		name   		"UDP Variable Select/UDP_Pack2/udppack"
+		machine		1
+		chart  		20
+	}
+
+	chart {
+		id                                        		29
+		name                                      		"UDP Variable Select/UDP_Pack3/udppack"
+		windowPosition                            		[201.111 235.131 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 2560 1024 1.111111111111111]
+		treeNode                                  		[0 30 0 0]
+		firstTransition                           		32
+		firstJunction                             		31
+		viewObj                                   		29
+		machine                                   		1
+		toolbarMode                               		LIBRARY_TOOLBAR
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		33
+		chartFileNumber                           		4
+		disableImplicitCasting                    		1
+		eml {
+			name       		"udppack"
+		}
+	}
+
+	state {
+		id                           		30
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		29
+		treeNode                     		[29 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		29
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function outvec = udppack(vec,vbytes,IsBigEndian)\n"
+						"Nv = length(vec); % get sizes of input vectors\n"
+						"outvec=uint8(zeros(Nv*vbytes,1)); % Set output size\n"
+						"\n"
+						"if ~IsBigEndian  % Little Endian: typecast, reshape to colu"
+						"mn-wise, flip, reshape to vector\n"
+						"    cvec = reshape(flipud(reshape(typecast(vec(:),'uint8'),"
+						"vbytes,Nv)),Nv*vbytes,1);\n"
+						"else   % Big Endian: typecast\n"
+						"    cvec = typecast(vec(:),'uint8');\n"
+						"end\n"
+						"\n"
+						"% (:) selector retains size of \"outvec\"\n"
+						"outvec(:) = cvec;"
+			editorLayout             		"100 M4x1[336 217 944 675]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		31
+		position   		[23.5747 49.5747 7]
+		chart      		29
+		linkNode   		[29 0 0]
+		subviewer  		29
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		32
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		31
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		29
+		linkNode       		[29 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		29
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		33
+		name                          		"vec"
+		linkNode                      		[29 0 34]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+			}
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		34
+		name                          		"vbytes"
+		linkNode                      		[29 33 35]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		paramIndexForInitFromWorkspace		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		35
+		name                          		"outvec"
+		linkNode                      		[29 34 36]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_UINT8_TYPE
+			}
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"uint8"
+	}
+
+	data {
+		id                            		36
+		name                          		"IsBigEndian"
+		linkNode                      		[29 35 0]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_BOOLEAN_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"boolean"
+	}
+
+	instance {
+		id     		37
+		name   		"UDP Variable Select/UDP_Pack3/udppack"
+		machine		1
+		chart  		29
+	}
+
+	chart {
+		id                                        		38
+		name                                      		"UDP_Pack/udppack"
+		windowPosition                            		[186.111 250.131 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 1920 1200 1.333333333333333]
+		treeNode                                  		[0 39 0 0]
+		firstTransition                           		41
+		firstJunction                             		40
+		viewObj                                   		38
+		machine                                   		1
+		toolbarMode                               		LIBRARY_TOOLBAR
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		42
+		updateMethod                              		DISCRETE
+		sampleTime                                		"Timestep"
+		chartFileNumber                           		5
+		disableImplicitCasting                    		1
+		eml {
+			name       		"udppack"
+		}
+	}
+
+	state {
+		id                           		39
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		38
+		treeNode                     		[38 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		38
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function outvec = udppack(vec,vbytes,IsBigEndian)\n"
+						"Nv = length(vec); % get sizes of input vectors\n"
+						"outvec=uint8(zeros(Nv*vbytes,1)); % Set output size\n"
+						"\n"
+						"if ~IsBigEndian  % Little Endian: typecast, reshape to colu"
+						"mn-wise, flip, reshape to vector\n"
+						"    cvec = reshape(flipud(reshape(typecast(vec(:),'uint8'),"
+						"vbytes,Nv)),Nv*vbytes,1);\n"
+						"else   % Big Endian: typecast\n"
+						"    cvec = typecast(vec(:),'uint8');\n"
+						"end\n"
+						"\n"
+						"% (:) selector retains size of \"outvec\"\n"
+						"outvec(:) = cvec;"
+			editorLayout             		"100 M4x1[336 217 944 675]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		40
+		position   		[23.5747 49.5747 7]
+		chart      		38
+		linkNode   		[38 0 0]
+		subviewer  		38
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		41
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		40
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		38
+		linkNode       		[38 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		38
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		42
+		name                          		"vec"
+		linkNode                      		[38 0 43]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+			}
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		43
+		name                          		"vbytes"
+		linkNode                      		[38 42 44]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		paramIndexForInitFromWorkspace		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"Inherit: Same as Simulink"
+	}
+
+	data {
+		id                            		44
+		name                          		"outvec"
+		linkNode                      		[38 43 45]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_UINT8_TYPE
+			}
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"uint8"
+	}
+
+	data {
+		id                            		45
+		name                          		"IsBigEndian"
+		linkNode                      		[38 44 0]
+		scope                         		PARAMETER_DATA
+		initFromWorkspace             		1
+		isNonTunable                  		1
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				primitive 		SF_BOOLEAN_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"boolean"
+	}
+
+	instance {
+		id     		46
+		name   		"UDP_Pack/udppack"
+		machine		1
+		chart  		38
+	}
+
+	target {
+		id                        		47
+		name                      		"sfun"
+		machine                   		1
+		linkNode                  		[1 0 48]
+	}
+
+	target {
+		id                        		48
+		name                      		"rtw"
+		codeFlags                 		" comments=1 statebitsets=1 databitsets=1 emitlogicalops=1 el"
+						"seifdetection=1 constantfolding=1 redundantloadelimination=0"
+						" preservenames=0 preservenameswithparent=0 exportcharts=0"
+		machine                   		1
+		linkNode                  		[1 47 0]
+	}
+}

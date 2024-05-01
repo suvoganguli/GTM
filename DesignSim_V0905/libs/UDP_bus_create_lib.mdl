@@ -1,0 +1,4554 @@
+Library {
+  Name			  "UDP_bus_create_lib"
+  Version		  7.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  Created		  "Tue Aug 25 14:45:39 2009"
+  Creator		  "cbuttril"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "gtmdev"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Dec 10 14:10:51 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "$LastChangedRevision: 1978 $"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.5.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.5.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.5.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.5.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.5.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.5.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.5.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 280, 135, 1160, 765 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "UDP_bus_create_lib"
+    Location		    [763, 86, 1803, 802]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [245, 22, 603, 117]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   " Developed using Matlab Release 2008b\n\nSVN:%<ModelVersion>\nLast modifed by %<LastMod"
+      "ifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      " Developed using Matlab Release 2008b\\n\\nSVN:$LastChangedRevision: 1978 $\\nLast modi"
+      "fed by gtmdev on 10-Dec-2009 14:10:37"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "UDP_bus_create_lib"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "UDP buses"
+      Ports		      [0, 3]
+      Position		      [335, 217, 445, 323]
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"UDP buses"
+	Location		[291, 190, 1238, 625]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Build Boolean Bus"
+	  Ports			  [1, 1]
+	  Position		  [510, 144, 610, 186]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Build Boolean Bus"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator"
+	      Ports		      [8, 1]
+	      Position		      [295, 93, 300, 132]
+	      ShowName		      off
+	      Inputs		      "8"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 8]
+	      Position		      [195, 93, 200, 132]
+	      ShowName		      off
+	      Outputs		      "8"
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"offset_landing_engage"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"TD_mark"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"ENG_mark"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"RES_mark"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"gear_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"handoff_switch"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"Fuel_Intg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"LinkInop"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      Name		      "offset_landing_engage"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "TD_mark"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "ENG_mark"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "RES_mark"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "gear_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "handoff_switch"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "Fuel_Intg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "LinkInop"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      8
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nCreator"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Build Double Bus"
+	  Ports			  [1, 1]
+	  Position		  [510, 34, 610, 76]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Build Double Bus"
+	    Location		    [789, 148, 1406, 886]
+	    Open		    on
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator"
+	      Ports		      [178, 1]
+	      Position		      [270, 15, 275, 900]
+	      ShowName		      off
+	      Inputs		      "178"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 178]
+	      Position		      [185, 15, 190, 900]
+	      ShowName		      off
+	      Outputs		      "178"
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"Timestamp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"vc"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"vt"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"keasl_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"keasr_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"hpicl_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"hpicr_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"gwest"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		9
+		Name			"vref"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		10
+		Name			"cg_mac"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		11
+		Name			"vstall_est_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		12
+		Name			"vc_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		13
+		Name			"alpha_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		14
+		Name			"beta_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		15
+		Name			"baro_alt"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		16
+		Name			"nz_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		17
+		Name			"vv_fpm_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		18
+		Name			"mag_heading_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		19
+		Name			"alt_gps_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		20
+		Name			"BUSMON1_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		21
+		Name			"BUSMON2_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		22
+		Name			"BUSMON3_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		23
+		Name			"BUSMON4_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		24
+		Name			"CPTV_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		25
+		Name			"BAROV_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		26
+		Name			"MAG3V_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		27
+		Name			"RSS_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		28
+		Name			"DL_RSS_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		29
+		Name			"numSats"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		30
+		Name			"fuel_rem"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		31
+		Name			"fuel_flow_l"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		32
+		Name			"fuel_flow_r"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		33
+		Name			"fuel_used"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		34
+		Name			"time_rem"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		35
+		Name			"rpm_left"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		36
+		Name			"rpm_right"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		37
+		Name			"rpml_ATcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		38
+		Name			"rpmr_ATcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		39
+		Name			"rpml_RPcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		40
+		Name			"rpmr_RPcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		41
+		Name			"rpml_SPcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		42
+		Name			"rpmr_SPcmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		43
+		Name			"vcdot"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		44
+		Name			"vgnav"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		45
+		Name			"windspd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		46
+		Name			"winddir"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		47
+		Name			"gammav"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		48
+		Name			"gndtrack"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		49
+		Name			"aildiff"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		50
+		Name			"elevave"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		51
+		Name			"rudave"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		52
+		Name			"SPLLOB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		53
+		Name			"SPLLIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		54
+		Name			"SPLRIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		55
+		Name			"SPLROB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		56
+		Name			"altimeter_setting"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		57
+		Name			"baro_alt_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		58
+		Name			"mag_heading_disp_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		59
+		Name			"gndtrack_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		60
+		Name			"psideg_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		61
+		Name			"latdeg_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		62
+		Name			"londeg_HUD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		63
+		Name			"ALPHAVL_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		64
+		Name			"ALPHAVR_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		65
+		Name			"BETAVL_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		66
+		Name			"BETAVR_disp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		67
+		Name			"EGTR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		68
+		Name			"EGTL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		69
+		Name			"SSCS"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		70
+		Name			"PSL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		71
+		Name			"PDL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		72
+		Name			"PSR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		73
+		Name			"PDR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		74
+		Name			"AILL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		75
+		Name			"AILR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		76
+		Name			"ELLOB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		77
+		Name			"ELLIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		78
+		Name			"ELROB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		79
+		Name			"ELRIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		80
+		Name			"RUDU"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		81
+		Name			"RUDL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		82
+		Name			"FLAPROB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		83
+		Name			"FLAPRIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		84
+		Name			"FLAPLIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		85
+		Name			"FLAPLOB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		86
+		Name			"XACCEL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		87
+		Name			"YACCEL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		88
+		Name			"ZACCEL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		89
+		Name			"XGYRO"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		90
+		Name			"YGYRO"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		91
+		Name			"ZGYRO"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		92
+		Name			"TEMPAMB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		93
+		Name			"PacketErrorIndPort0"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		94
+		Name			"PacketErrorIndPort1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		95
+		Name			"PacketErrorIndPort2"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		96
+		Name			"PacketErrorIndPort3"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		97
+		Name			"TimeStamp"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		98
+		Name			"pdeg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		99
+		Name			"qdeg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		100
+		Name			"rdeg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		101
+		Name			"nxbody"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		102
+		Name			"nybody"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		103
+		Name			"nzbody"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		104
+		Name			"phideg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		105
+		Name			"thetadeg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		106
+		Name			"psideg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		107
+		Name			"LAT_NAV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		108
+		Name			"LON_NAV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		109
+		Name			"MIDG_mode"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		110
+		Name			"spd_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		111
+		Name			"beta_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		112
+		Name			"alpha_trim_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		113
+		Name			"alpha_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		114
+		Name			"throttle_L"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		115
+		Name			"throttle_R"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		116
+		Name			"lon_stk"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		117
+		Name			"lat_stk"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		118
+		Name			"pedal"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		119
+		Name			"hat_lon"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		120
+		Name			"hat_lat"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		121
+		Name			"flap"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		122
+		Name			"spd_brake"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		123
+		Name			"Alpha_select"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		124
+		Name			"Beta_select"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		125
+		Name			"DynPress_select"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		126
+		Name			"StatPress_select"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		127
+		Name			"card_num"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		128
+		Name			"airspeed_bug"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		129
+		Name			"altitude_bug"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		130
+		Name			"ELLOBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		131
+		Name			"ELLIBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		132
+		Name			"ELROBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		133
+		Name			"ELRIBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		134
+		Name			"AILLC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		135
+		Name			"SPLLOBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		136
+		Name			"SPLLIBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		137
+		Name			"SPLRIBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		138
+		Name			"SPLROBC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		139
+		Name			"AILRC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		140
+		Name			"RUDUPC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		141
+		Name			"RUDLOC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		142
+		Name			"FLAPLOC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		143
+		Name			"FLAPLIC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		144
+		Name			"FLAPRIC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		145
+		Name			"FLAPROC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		146
+		Name			"GEARC"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		147
+		Name			"throttle_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		148
+		Name			"ail_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		149
+		Name			"ele_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		150
+		Name			"rud_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		151
+		Name			"flap_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		152
+		Name			"spdbrake_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		153
+		Name			"spllob_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		154
+		Name			"splrob_cmd"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		155
+		Name			"theta_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		156
+		Name			"theta_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		157
+		Name			"theta_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		158
+		Name			"phi_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		159
+		Name			"phi_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		160
+		Name			"phi_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		161
+		Name			"vel_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		162
+		Name			"vel_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		163
+		Name			"vel_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		164
+		Name			"alt_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		165
+		Name			"alt_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		166
+		Name			"alt_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		167
+		Name			"alpha_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		168
+		Name			"alpha_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		169
+		Name			"alpha_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		170
+		Name			"beta_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		171
+		Name			"beta_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		172
+		Name			"beta_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		173
+		Name			"psi_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		174
+		Name			"psi_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		175
+		Name			"psi_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		176
+		Name			"nz_targ"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		177
+		Name			"nz_des"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		178
+		Name			"nz_adq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      Name		      "Timestamp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "vc"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "vt"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "keasl_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "keasr_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "hpicl_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "hpicr_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "gwest"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      8
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "vref"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      9
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      9
+	    }
+	    Line {
+	      Name		      "cg_mac"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      10
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "vstall_est_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      11
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "vc_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      12
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      12
+	    }
+	    Line {
+	      Name		      "alpha_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      13
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      13
+	    }
+	    Line {
+	      Name		      "beta_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      14
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      14
+	    }
+	    Line {
+	      Name		      "baro_alt"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      15
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      15
+	    }
+	    Line {
+	      Name		      "nz_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      16
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      16
+	    }
+	    Line {
+	      Name		      "vv_fpm_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      17
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      17
+	    }
+	    Line {
+	      Name		      "mag_heading_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      18
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      18
+	    }
+	    Line {
+	      Name		      "alt_gps_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      19
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      19
+	    }
+	    Line {
+	      Name		      "BUSMON1_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      20
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      20
+	    }
+	    Line {
+	      Name		      "BUSMON2_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      21
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      21
+	    }
+	    Line {
+	      Name		      "BUSMON3_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      22
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      22
+	    }
+	    Line {
+	      Name		      "BUSMON4_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      23
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      23
+	    }
+	    Line {
+	      Name		      "CPTV_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      24
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      24
+	    }
+	    Line {
+	      Name		      "BAROV_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      25
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      25
+	    }
+	    Line {
+	      Name		      "MAG3V_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      26
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      26
+	    }
+	    Line {
+	      Name		      "RSS_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      27
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      27
+	    }
+	    Line {
+	      Name		      "DL_RSS_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      28
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      28
+	    }
+	    Line {
+	      Name		      "numSats"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      29
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      29
+	    }
+	    Line {
+	      Name		      "fuel_rem"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      30
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      30
+	    }
+	    Line {
+	      Name		      "fuel_flow_l"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      31
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      31
+	    }
+	    Line {
+	      Name		      "fuel_flow_r"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      32
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      32
+	    }
+	    Line {
+	      Name		      "fuel_used"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      33
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      33
+	    }
+	    Line {
+	      Name		      "time_rem"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      34
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      34
+	    }
+	    Line {
+	      Name		      "rpm_left"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      35
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      35
+	    }
+	    Line {
+	      Name		      "rpm_right"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      36
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      36
+	    }
+	    Line {
+	      Name		      "rpml_ATcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      37
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      37
+	    }
+	    Line {
+	      Name		      "rpmr_ATcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      38
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      38
+	    }
+	    Line {
+	      Name		      "rpml_RPcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      39
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      39
+	    }
+	    Line {
+	      Name		      "rpmr_RPcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      40
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      40
+	    }
+	    Line {
+	      Name		      "rpml_SPcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      41
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      41
+	    }
+	    Line {
+	      Name		      "rpmr_SPcmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      42
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      42
+	    }
+	    Line {
+	      Name		      "vcdot"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      43
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      43
+	    }
+	    Line {
+	      Name		      "vgnav"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      44
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      44
+	    }
+	    Line {
+	      Name		      "windspd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      45
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      45
+	    }
+	    Line {
+	      Name		      "winddir"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      46
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      46
+	    }
+	    Line {
+	      Name		      "gammav"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      47
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      47
+	    }
+	    Line {
+	      Name		      "gndtrack"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      48
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      48
+	    }
+	    Line {
+	      Name		      "aildiff"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      49
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      49
+	    }
+	    Line {
+	      Name		      "elevave"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      50
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      50
+	    }
+	    Line {
+	      Name		      "rudave"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      51
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      51
+	    }
+	    Line {
+	      Name		      "SPLLOB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      52
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      52
+	    }
+	    Line {
+	      Name		      "SPLLIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      53
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      53
+	    }
+	    Line {
+	      Name		      "SPLRIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      54
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      54
+	    }
+	    Line {
+	      Name		      "SPLROB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      55
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      55
+	    }
+	    Line {
+	      Name		      "altimeter_setting"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      56
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      56
+	    }
+	    Line {
+	      Name		      "baro_alt_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      57
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      57
+	    }
+	    Line {
+	      Name		      "mag_heading_disp_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      58
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      58
+	    }
+	    Line {
+	      Name		      "gndtrack_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      59
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      59
+	    }
+	    Line {
+	      Name		      "psideg_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      60
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      60
+	    }
+	    Line {
+	      Name		      "latdeg_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      61
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      61
+	    }
+	    Line {
+	      Name		      "londeg_HUD"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      62
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      62
+	    }
+	    Line {
+	      Name		      "ALPHAVL_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      63
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      63
+	    }
+	    Line {
+	      Name		      "ALPHAVR_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      64
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      64
+	    }
+	    Line {
+	      Name		      "BETAVL_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      65
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      65
+	    }
+	    Line {
+	      Name		      "BETAVR_disp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      66
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      66
+	    }
+	    Line {
+	      Name		      "EGTR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      67
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      67
+	    }
+	    Line {
+	      Name		      "EGTL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      68
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      68
+	    }
+	    Line {
+	      Name		      "SSCS"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      69
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      69
+	    }
+	    Line {
+	      Name		      "PSL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      70
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      70
+	    }
+	    Line {
+	      Name		      "PDL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      71
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      71
+	    }
+	    Line {
+	      Name		      "PSR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      72
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      72
+	    }
+	    Line {
+	      Name		      "PDR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      73
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      73
+	    }
+	    Line {
+	      Name		      "AILL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      74
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      74
+	    }
+	    Line {
+	      Name		      "AILR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      75
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      75
+	    }
+	    Line {
+	      Name		      "ELLOB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      76
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      76
+	    }
+	    Line {
+	      Name		      "ELLIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      77
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      77
+	    }
+	    Line {
+	      Name		      "ELROB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      78
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      78
+	    }
+	    Line {
+	      Name		      "ELRIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      79
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      79
+	    }
+	    Line {
+	      Name		      "RUDU"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      80
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      80
+	    }
+	    Line {
+	      Name		      "RUDL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      81
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      81
+	    }
+	    Line {
+	      Name		      "FLAPROB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      82
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      82
+	    }
+	    Line {
+	      Name		      "FLAPRIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      83
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      83
+	    }
+	    Line {
+	      Name		      "FLAPLIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      84
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      84
+	    }
+	    Line {
+	      Name		      "FLAPLOB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      85
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      85
+	    }
+	    Line {
+	      Name		      "XACCEL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      86
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      86
+	    }
+	    Line {
+	      Name		      "YACCEL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      87
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      87
+	    }
+	    Line {
+	      Name		      "ZACCEL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      88
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      88
+	    }
+	    Line {
+	      Name		      "XGYRO"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      89
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      89
+	    }
+	    Line {
+	      Name		      "YGYRO"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      90
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      90
+	    }
+	    Line {
+	      Name		      "ZGYRO"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      91
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      91
+	    }
+	    Line {
+	      Name		      "TEMPAMB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      92
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      92
+	    }
+	    Line {
+	      Name		      "PacketErrorIndPort0"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      93
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      93
+	    }
+	    Line {
+	      Name		      "PacketErrorIndPort1"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      94
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      94
+	    }
+	    Line {
+	      Name		      "PacketErrorIndPort2"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      95
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      95
+	    }
+	    Line {
+	      Name		      "PacketErrorIndPort3"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      96
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      96
+	    }
+	    Line {
+	      Name		      "TimeStamp"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      97
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      97
+	    }
+	    Line {
+	      Name		      "pdeg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      98
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      98
+	    }
+	    Line {
+	      Name		      "qdeg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      99
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      99
+	    }
+	    Line {
+	      Name		      "rdeg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      100
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      100
+	    }
+	    Line {
+	      Name		      "nxbody"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      101
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      101
+	    }
+	    Line {
+	      Name		      "nybody"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      102
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      102
+	    }
+	    Line {
+	      Name		      "nzbody"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      103
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      103
+	    }
+	    Line {
+	      Name		      "phideg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      104
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      104
+	    }
+	    Line {
+	      Name		      "thetadeg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      105
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      105
+	    }
+	    Line {
+	      Name		      "psideg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      106
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      106
+	    }
+	    Line {
+	      Name		      "LAT_NAV"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      107
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      107
+	    }
+	    Line {
+	      Name		      "LON_NAV"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      108
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      108
+	    }
+	    Line {
+	      Name		      "MIDG_mode"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      109
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      109
+	    }
+	    Line {
+	      Name		      "spd_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      110
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      110
+	    }
+	    Line {
+	      Name		      "beta_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      111
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      111
+	    }
+	    Line {
+	      Name		      "alpha_trim_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      112
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      112
+	    }
+	    Line {
+	      Name		      "alpha_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      113
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      113
+	    }
+	    Line {
+	      Name		      "throttle_L"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      114
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      114
+	    }
+	    Line {
+	      Name		      "throttle_R"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      115
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      115
+	    }
+	    Line {
+	      Name		      "lon_stk"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      116
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      116
+	    }
+	    Line {
+	      Name		      "lat_stk"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      117
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      117
+	    }
+	    Line {
+	      Name		      "pedal"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      118
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      118
+	    }
+	    Line {
+	      Name		      "hat_lon"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      119
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      119
+	    }
+	    Line {
+	      Name		      "hat_lat"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      120
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      120
+	    }
+	    Line {
+	      Name		      "flap"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      121
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      121
+	    }
+	    Line {
+	      Name		      "spd_brake"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      122
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      122
+	    }
+	    Line {
+	      Name		      "Alpha_select"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      123
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      123
+	    }
+	    Line {
+	      Name		      "Beta_select"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      124
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      124
+	    }
+	    Line {
+	      Name		      "DynPress_select"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      125
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      125
+	    }
+	    Line {
+	      Name		      "StatPress_select"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      126
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      126
+	    }
+	    Line {
+	      Name		      "card_num"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      127
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      127
+	    }
+	    Line {
+	      Name		      "airspeed_bug"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      128
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      128
+	    }
+	    Line {
+	      Name		      "altitude_bug"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      129
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      129
+	    }
+	    Line {
+	      Name		      "ELLOBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      130
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      130
+	    }
+	    Line {
+	      Name		      "ELLIBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      131
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      131
+	    }
+	    Line {
+	      Name		      "ELROBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      132
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      132
+	    }
+	    Line {
+	      Name		      "ELRIBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      133
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      133
+	    }
+	    Line {
+	      Name		      "AILLC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      134
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      134
+	    }
+	    Line {
+	      Name		      "SPLLOBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      135
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      135
+	    }
+	    Line {
+	      Name		      "SPLLIBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      136
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      136
+	    }
+	    Line {
+	      Name		      "SPLRIBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      137
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      137
+	    }
+	    Line {
+	      Name		      "SPLROBC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      138
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      138
+	    }
+	    Line {
+	      Name		      "AILRC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      139
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      139
+	    }
+	    Line {
+	      Name		      "RUDUPC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      140
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      140
+	    }
+	    Line {
+	      Name		      "RUDLOC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      141
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      141
+	    }
+	    Line {
+	      Name		      "FLAPLOC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      142
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      142
+	    }
+	    Line {
+	      Name		      "FLAPLIC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      143
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      143
+	    }
+	    Line {
+	      Name		      "FLAPRIC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      144
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      144
+	    }
+	    Line {
+	      Name		      "FLAPROC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      145
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      145
+	    }
+	    Line {
+	      Name		      "GEARC"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      146
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      146
+	    }
+	    Line {
+	      Name		      "throttle_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      147
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      147
+	    }
+	    Line {
+	      Name		      "ail_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      148
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      148
+	    }
+	    Line {
+	      Name		      "ele_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      149
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      149
+	    }
+	    Line {
+	      Name		      "rud_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      150
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      150
+	    }
+	    Line {
+	      Name		      "flap_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      151
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      151
+	    }
+	    Line {
+	      Name		      "spdbrake_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      152
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      152
+	    }
+	    Line {
+	      Name		      "spllob_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      153
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      153
+	    }
+	    Line {
+	      Name		      "splrob_cmd"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      154
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      154
+	    }
+	    Line {
+	      Name		      "theta_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      155
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      155
+	    }
+	    Line {
+	      Name		      "theta_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      156
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      156
+	    }
+	    Line {
+	      Name		      "theta_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      157
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      157
+	    }
+	    Line {
+	      Name		      "phi_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      158
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      158
+	    }
+	    Line {
+	      Name		      "phi_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      159
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      159
+	    }
+	    Line {
+	      Name		      "phi_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      160
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      160
+	    }
+	    Line {
+	      Name		      "vel_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      161
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      161
+	    }
+	    Line {
+	      Name		      "vel_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      162
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      162
+	    }
+	    Line {
+	      Name		      "vel_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      163
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      163
+	    }
+	    Line {
+	      Name		      "alt_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      164
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      164
+	    }
+	    Line {
+	      Name		      "alt_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      165
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      165
+	    }
+	    Line {
+	      Name		      "alt_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      166
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      166
+	    }
+	    Line {
+	      Name		      "alpha_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      167
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      167
+	    }
+	    Line {
+	      Name		      "alpha_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      168
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      168
+	    }
+	    Line {
+	      Name		      "alpha_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      169
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      169
+	    }
+	    Line {
+	      Name		      "beta_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      170
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      170
+	    }
+	    Line {
+	      Name		      "beta_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      171
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      171
+	    }
+	    Line {
+	      Name		      "beta_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      172
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      172
+	    }
+	    Line {
+	      Name		      "psi_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      173
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      173
+	    }
+	    Line {
+	      Name		      "psi_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      174
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      174
+	    }
+	    Line {
+	      Name		      "psi_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      175
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      175
+	    }
+	    Line {
+	      Name		      "nz_targ"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      176
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      176
+	    }
+	    Line {
+	      Name		      "nz_des"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      177
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      177
+	    }
+	    Line {
+	      Name		      "nz_adq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      178
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      178
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nCreator"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Build Uint32 Bus"
+	  Ports			  [1, 1]
+	  Position		  [510, 89, 610, 131]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "Build Uint32 Bus"
+	    Location		    [433, 403, 931, 703]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [110, 103, 140, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator"
+	      Ports		      [9, 1]
+	      Position		      [290, 90, 295, 130]
+	      ShowName		      off
+	      Inputs		      "9"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 9]
+	      Position		      [200, 90, 205, 130]
+	      ShowName		      off
+	      Outputs		      "9"
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"warning_word"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"caution_word"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"advisory_word"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"FCS_Engage"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"FCS_Arm"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"WT_profile"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"rFCL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"MTF_profile"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		9
+		Name			"StallTone"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [360, 103, 390, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      Name		      "warning_word"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "caution_word"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "advisory_word"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "FCS_Engage"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "FCS_Arm"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "WT_profile"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "rFCL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "MTF_profile"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      8
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "StallTone"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      9
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nCreator"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 3]
+	  Position		  [320, 27, 325, 193]
+	  ShowName		  off
+	  Outputs		  "[1424,36,8]"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  RateTransition
+	  Name			  "Rate Transition"
+	  Position		  [190, 89, 230, 131]
+	  OutPortSampleTime	  "Timestep"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "UDP Recv"
+	  Ports			  [0, 1]
+	  Position		  [25, 96, 120, 124]
+	  SourceBlock		  "UDP_lib/UDP Recv"
+	  SourceType		  "UDP_Send"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData off
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  UDP_Port		  "5500"
+	  MSG_Length		  "1468"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_dbl"
+	  Ports			  [1, 1]
+	  Position		  [380, 41, 465, 69]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes a uint8 bytestream and remaps to vector of doubles, with byteswaping if required"
+	  MaskPromptString	  "Native Byte Ordering is Big Endian (boolean)"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "IsBigEndian=@1;"
+	  MaskInitialization	  "\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0"
+	  System {
+	    Name		    "UDP_dbl"
+	    Location		    [-1857, 465, -720, 924]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "bytestream"
+	      Position		      [120, 98, 150, 112]
+	      IconDisplay	      "Port number"
+	      DataType		      "uint8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "uint8"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [25, 115, 90, 145]
+	      ShowName		      off
+	      Value		      "IsBigEndian"
+	      OutDataTypeMode	      "boolean"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function"
+	      Ports		      [2, 1]
+	      Position		      [215, 91, 400, 144]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('fcn');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "cvec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "IsBigEndian"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function UDP_bus_create_lib 3"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "dblvec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "dblvec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "dblvec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "dblvec"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IsBigEndian"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "cvec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "dbl"
+	      Position		      [485, 113, 515, 127]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "bytestream"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function"
+	      SrcPort		      1
+	      DstBlock		      "dbl"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "UDP_uint32"
+	  Ports			  [1, 1]
+	  Position		  [380, 96, 465, 124]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "UDPPacker"
+	  MaskDescription	  "Takes a uint8 bytestream and remaps to vector of doubles, with byteswaping if required\n"
+	  MaskPromptString	  "Native Byte Ordering is Big Endian (boolean)"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskToolTipString	  "on"
+	  MaskVariables		  "IsBigEndian=@1;"
+	  MaskInitialization	  "\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0"
+	  System {
+	    Name		    "UDP_uint32"
+	    Location		    [-1857, 465, -720, 924]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "bytestream"
+	      Position		      [120, 98, 150, 112]
+	      IconDisplay	      "Port number"
+	      DataType		      "uint8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "uint8"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [25, 115, 90, 145]
+	      ShowName		      off
+	      Value		      "IsBigEndian"
+	      OutDataTypeMode	      "boolean"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "boolean"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Embedded\nMATLAB Function"
+	      Ports		      [2, 1]
+	      Position		      [215, 91, 400, 144]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('fcn');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"Embedded\nMATLAB Function"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "cvec"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "IsBigEndian"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function UDP_bus_create_lib 4"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "u32vec"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "u32vec"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "u32vec"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "u32vec"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "IsBigEndian"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "cvec"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u32"
+	      Position		      [485, 113, 515, 127]
+	      IconDisplay	      "Port number"
+	      DataType		      "uint32"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "uint32"
+	    }
+	    Line {
+	      SrcBlock		      "bytestream"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Embedded\nMATLAB Function"
+	      SrcPort		      1
+	      DstBlock		      "u32"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Embedded\nMATLAB Function"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "UDP1"
+	  Position		  [660, 48, 690, 62]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "UDP2"
+	  Position		  [660, 103, 690, 117]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "UDP3"
+	  Position		  [660, 158, 690, 172]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "UDP Recv"
+	  SrcPort		  1
+	  DstBlock		  "Rate Transition"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "UDP_dbl"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "UDP_uint32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "UDP_dbl"
+	  SrcPort		  1
+	  DstBlock		  "Build Double Bus"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "UDP_uint32"
+	  SrcPort		  1
+	  DstBlock		  "Build Uint32 Bus"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "Build Boolean Bus"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Build Double Bus"
+	  SrcPort		  1
+	  DstBlock		  "UDP1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Build Uint32 Bus"
+	  SrcPort		  1
+	  DstBlock		  "UDP2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Build Boolean Bus"
+	  SrcPort		  1
+	  DstBlock		  "UDP3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Transition"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "UDP_double"
+      Position		      [505, 228, 535, 242]
+      IconDisplay	      "Port number"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "UDP_uint32"
+      Position		      [505, 263, 535, 277]
+      Port		      "2"
+      IconDisplay	      "Port number"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "UDP_bool"
+      Position		      [505, 298, 535, 312]
+      Port		      "3"
+      IconDisplay	      "Port number"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+    }
+    Line {
+      SrcBlock		      "UDP buses"
+      SrcPort		      1
+      DstBlock		      "UDP_double"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "UDP buses"
+      SrcPort		      2
+      DstBlock		      "UDP_uint32"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "UDP buses"
+      SrcPort		      3
+      DstBlock		      "UDP_bool"
+      DstPort		      1
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.1 (R2008a) dated Sep  3 2008, 03:53:58
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "UDP_bus_create_lib"
+    created		    "25-Aug-2009 14:47:57"
+    isLibrary		    1
+    firstTarget		    18
+    sfVersion		    71014000.000007
+  }
+  chart {
+    id			    2
+    name		    "UDP buses/UDP_dbl/Embedded\nMATLAB Function"
+    windowPosition	    [155.235 288.213 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1440 900 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    3
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function dblvec = fcn(cvec,IsBigEndian)\nNv=length(cvec);\ndblvec=zeros(Nv/8,1);\ncmat=uint8(zero"
+      "s(8,Nv/8));\n\n% Note matlab swapbytes() function doesn't autocode, going manual\ncmat=reshape(cvec,8,Nv/8);\nif"
+      " (~IsBigEndian)  % Little Endian, reorder\n  cmat=flipud(cmat);\nend\ncvec=cmat(:);\ndblvec=typecast(cvec,'doubl"
+      "e');\n\n\n \n\n"
+      editorLayout	      "100 M4x1[214 98 720 640]"
+      fimathForFiConstructors FimathMatlabFactoryDefault
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    6
+    ssIdNumber		    5
+    name		    "cvec"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    7
+    ssIdNumber		    6
+    name		    "IsBigEndian"
+    linkNode		    [2 6 8]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    8
+    ssIdNumber		    7
+    name		    "dblvec"
+    linkNode		    [2 7 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  instance {
+    id			    9
+    name		    "UDP buses/UDP_dbl/Embedded\nMATLAB Function"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    10
+    name		    "UDP buses/UDP_uint32/Embedded\nMATLAB Function"
+    windowPosition	    [165.781 276.494 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1440 900 1.333333333333333]
+    treeNode		    [0 11 0 0]
+    firstTransition	    13
+    firstJunction	    12
+    viewObj		    10
+    machine		    1
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    14
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    11
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    10
+    treeNode		    [10 0 0 0]
+    superState		    SUBCHART
+    subviewer		    10
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function u32vec = fcn(cvec,IsBigEndian)\nNv=length(cvec);\nu32vec=uint32(zeros(Nv/4,1));\ncmat=ui"
+      "nt8(zeros(4,Nv/4));\n\n% Note matlab swapbytes() function doesn't autocode, going manual\ncmat=reshape(cvec,4,Nv"
+      "/4);\nif (~IsBigEndian)  % Little Endian, reorder\n  cmat=flipud(cmat);\nend\ncvec=cmat(:);\nu32vec=typecast(cve"
+      "c,'uint32');\n\n\n \n\n"
+      editorLayout	      "100 M4x1[214 98 720 640]"
+      fimathForFiConstructors FimathMatlabFactoryDefault
+    }
+  }
+  junction {
+    id			    12
+    position		    [23.5747 49.5747 7]
+    chart		    10
+    linkNode		    [10 0 0]
+    subviewer		    10
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    13
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      12
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    10
+    linkNode		    [10 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    10
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  data {
+    id			    14
+    ssIdNumber		    5
+    name		    "cvec"
+    linkNode		    [10 0 15]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT8_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint8"
+  }
+  data {
+    id			    15
+    ssIdNumber		    6
+    name		    "IsBigEndian"
+    linkNode		    [10 14 16]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_BOOLEAN_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "boolean"
+  }
+  data {
+    id			    16
+    ssIdNumber		    7
+    name		    "u32vec"
+    linkNode		    [10 15 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	primitive		SF_UINT32_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "uint32"
+  }
+  instance {
+    id			    17
+    name		    "UDP buses/UDP_uint32/Embedded\nMATLAB Function"
+    machine		    1
+    chart		    10
+  }
+  target {
+    id			    18
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

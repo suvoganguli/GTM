@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\textwidth       6.5in
+\textheight      9.5in
+\footskip        0.5in
+\oddsidemargin  -.25in
+\evensidemargin -.25in
+\topmargin      -0.7in
+
+\begin{document}
+\begin{center}
+\ 
+\vfill
+\begin{tabular}{|l|l|}
+\hline
+{\bf Axis} & {\bf Sign Convention} \\
+\hline
+X-axis, body axes     & Positive: Forward \\
+Y-axis, body axes     & Positive: Right \\
+Z-axis, body axes     & Positive: Down\\
+\hline
+{\bf Surface} & {\bf Sign Convention} \\
+\hline
+L\_ail            &  Positive: Trailing Edge Down\\
+R\_ail		  &  Positive: Trailing Edge Down\\
+L\_spoiler	  &  Positive: Trailing Edge Up\\
+R\_spoiler	  &  Positive: Trailing Edge Up\\
+elevator	  &  Positive: Trailing Edge Down\\
+rudder		  &  Positive: Trailing Edge Left\\
+stab		  &  Positive: Trailing Edge Down \\
+flap		  &  Positive: Trailing Edge Down \\
+\hline
+{\bf Command} & {\bf Sign Convention} \\
+\hline
+Aileron Cmd, $\delta_a$ &  Positive: Right TE Down, Left TE Up, $\delta_a=(\delta_{a{\rm R}} - \delta_{a{\rm L}})$ \\
+Spoiler Cmd, $\delta_s$ &  Positive: Right TE  Up, Left TE Up, $\delta_s=(\delta_{s{\rm R}} + \delta_{s{\rm L}})$ \\
+Throttle Cmd & 0 $\Rightarrow$ Idle Thrust, 100 $\Rightarrow$ Full Thrust\\ 
+geardown	  &  0$\Rightarrow$gear stowed, 1$\Rightarrow$gear down\\
+\hline
+{\bf Wind Velocity}  & {\bf Sign Convention} \\
+\hline
+NorthWind    & Positive: From the North\\
+EastWind     & Positive: From the East\\
+VerticalWind & Positive: Rising Air\\
+\hline
+\end{tabular}
+\vfill
+\end{center}
+\end{document}

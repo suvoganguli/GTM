@@ -1,0 +1,2497 @@
+Library {
+  Name			  "S2_aero_lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue May 13 21:05:20 2008"
+  Creator		  "amurch"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Austin Murch"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jun 23 15:08:18 2008"
+  ModelVersionFormat	  "$LastChangedRevision: 911 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "S2_aero_lib"
+    Location		    [85, 103, 600, 682]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [125, 29, 403, 119]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "S2 Aerodynamic Model Library\n%<ModelVersion>\n"
+"Last modified by %<LastModifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      "S2 Aerodynamic Model Library\\n$LastChangedRevi"
+"sion: 705 $\\nLast modified by Austin Murch on 23-Jun-2008 15:07:20"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "S2_aero_lib"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "S2_aero"
+      Ports		      [13, 1]
+      Position		      [180, 180, 335, 510]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "Stateflow"
+      MaskDescription	      "Embedded MATLAB block"
+      MaskDisplay	      "disp('s2_aero');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"S2_aero"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "alpha"
+	  Position		  [20, 101, 40, 119]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "beta"
+	  Position		  [20, 136, 40, 154]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "p"
+	  Position		  [20, 171, 40, 189]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "q"
+	  Position		  [20, 206, 40, 224]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "r"
+	  Position		  [20, 246, 40, 264]
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Lele"
+	  Position		  [20, 281, 40, 299]
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Rele"
+	  Position		  [20, 316, 40, 334]
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "ail"
+	  Position		  [20, 351, 40, 369]
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rud"
+	  Position		  [20, 386, 40, 404]
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "flap"
+	  Position		  [20, 426, 40, 444]
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "vt"
+	  Position		  [20, 461, 40, 479]
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "bspan"
+	  Position		  [20, 496, 40, 514]
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "cbar"
+	  Position		  [20, 531, 40, 549]
+	  Port			  "13"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 400, 320, 440]
+	  Outputs		  "1"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function S2_aero_lib 13"
+	  Ports			  [13, 2]
+	  Position		  [180, 119, 230, 401]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[13 2]"
+	  Port {
+	    PortNumber		    2
+	    Name		    "C6"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 411, 480, 429]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "C6"
+	  Position		  [460, 101, 480, 119]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [0, 230]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "alpha"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "beta"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  DstBlock		  " SFunction "
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "p"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "q"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "r"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "Lele"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Rele"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "ail"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "rud"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  9
+	}
+	Line {
+	  SrcBlock		  "flap"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "vt"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  11
+	}
+	Line {
+	  SrcBlock		  "bspan"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  12
+	}
+	Line {
+	  SrcBlock		  "cbar"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "C6"
+	  Labels		  [0, 0]
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "C6"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.6 (R2007a) dated Jan 30 2007, 03:33:34
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"S2_aero_lib"
+		created              		"13-May-2008 21:21:18"
+		isLibrary            		1
+		firstTarget          		21
+		sfVersion            		66014000
+	}
+
+	chart {
+		id                                        		2
+		name                                      		"S2_aero"
+		windowPosition                            		[450.75 128.25 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 2560 1600 1.333333333333333]
+		treeNode                                  		[0 3 0 0]
+		firstTransition                           		5
+		firstJunction                             		4
+		viewObj                                   		2
+		machine                                   		1
+		toolbarMode                               		LIBRARY_TOOLBAR
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		6
+		chartFileNumber                           		13
+		disableImplicitCasting                    		1
+		eml {
+			name       		"s2_aero"
+		}
+	}
+
+	state {
+		id                           		3
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		2
+		treeNode                     		[2 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		2
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function C6 =s2_aero(alpha,beta,p,q,r,Lele,Rele,ail,rud,fla"
+						"p,vt,bspan,cbar)\n"
+						"%\n"
+						"%  S2_AERO  Computes non-dimensional aerodynamic coefficien"
+						"ts for the S2 aircraft.\n"
+						"%\n"
+						"%  Usage:\n"
+						"%  [C6]=s2_aero(alpha,beta,phat,qhat,rhat,throttle,ele,ail,"
+						"rud,flap);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the non-dimensional aerodynamic force and mom"
+						"ent\n"
+						"%    coefficients for the S2 single-engine L-1011 model air"
+						"craft \n"
+						"%    using frequency separation modeling and flight data fr"
+						"om \n"
+						"%    deployment 2007.02, September 2007.  \n"
+						"%\n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, deg.\n"
+						"%      beta = sideslip angle, deg.\n"
+						"%      phat = nondimensional roll rate (pb/2V), rad/sec.\n"
+						"%      qhat = nondimensional pitch rate (qc/2V), rad/sec.\n"
+						"%      rhat = nondimensional yaw rate (rb/2V), rad/sec.\n"
+						"%      Lele = left elevator deflection, deg.\n"
+						"%      Rele = right elevator deflection, deg.\n"
+						"%       ail = aileron deflection, deg.\n"
+						"%       rud = rudder deflection, deg.\n"
+						"%      flap = flap deflections, deg.\n"
+						"%        c = constants.\n"
+						"%            c.lim   = array of hard limits for the control"
+						"s.\n"
+						"\n"
+						"%  Output:\n"
+						"%\n"
+						"%     CX = body axis x force coefficient.\n"
+						"%     CY = body axis y force coefficient.\n"
+						"%     CZ = body axis z force coefficient.\n"
+						"%     C1 = rolling moment coefficient.\n"
+						"%     Cm = pitching moment coefficient.\n"
+						"%     Cn = yawing moment coefficient.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      s2_xo.m, s2_zo.m, s2_mo.m\n"
+						"%      s2_xd.m, s2_zd.m, s2_md.m\n"
+						"%      s2_yo.m, s2_1o.m, s2_no.m\n"
+						"%      s2_yd.m, s2_1d.m, s2_nd.m\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      18 Feb 2008 - Created and debugged, EAM.\n"
+						"%      13 May 2008 - Modified for use in Simulink, AMM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"c.lim = [0 100;-30 30;-20 20;-30 30;0 30];\n"
+						"dtr=pi/180;\n"
+						"betar=beta*dtr;\n"
+						"alphar=alpha*dtr;\n"
+						"Lelr=Lele*dtr;\n"
+						"Relr=Rele*dtr;\n"
+						"elr = 0.5*(Lelr + Relr);\n"
+						"ailr=ail*dtr;\n"
+						"rdrr=rud*dtr;\n"
+						"flpr=flap*dtr;\n"
+						"phat = p*bspan/(2*vt);\n"
+						"qhat = q*cbar/(2*vt);\n"
+						"rhat = r*bspan/(2*vt);\n"
+						"ele_loc =10/12; % ft, location of center of elevator relati"
+						"ve to butt line (approx)\n"
+						"\n"
+						"%\n"
+						"%  Get the base terms.  \n"
+						"%\n"
+						"CXo=s2_xo(alphar,elr,flpr,c);\n"
+						"CZo=s2_zo(alphar,elr,flpr,c);\n"
+						"Cmo=s2_mo(alphar,elr,flpr,c);\n"
+						"%\n"
+						"CYo=s2_yo(alphar,elr,flpr,c);\n"
+						"C1o=s2_1o(alphar,elr,flpr,c);\n"
+						"Cno=s2_no(alphar,elr,flpr,c);\n"
+						"%\n"
+						"%  Get the stability and control derivatives. \n"
+						"%\n"
+						"[CXa,CXq,CXel,CXflp]=s2_xd(alphar,elr,flpr,c);\n"
+						"[CZa,CZq,CZel,CZflp]=s2_zd(alphar,elr,flpr,c);\n"
+						"[Cma,Cmq,Cmel,Cmflp]=s2_md(alphar,elr,flpr,c);\n"
+						"%\n"
+						"[CYb,CYp,CYr,CYail,CYrdr]=s2_yd(alphar,elr,flpr,c);\n"
+						"[C1b,C1p,C1r,C1ail,C1rdr]=s2_1d(alphar,elr,flpr,c);\n"
+						"[Cnb,Cnp,Cnr,Cnail,Cnrdr]=s2_nd(alphar,elr,flpr,c);\n"
+						"%\n"
+						"%  Assemble the force and moment coefficients.\n"
+						"%\n"
+						"CX = CXo + CXq*qhat + CXflp*flpr + CXel*(Lelr + Relr)/2;\n"
+						"CZ = CZo + CZq*qhat + CZflp*flpr + CZel*(Lelr + Relr)/2;\n"
+						"Cm = Cmo + Cmq*qhat + Cmflp*flpr + Cmel*(Lelr + Relr)/2;\n"
+						"%\n"
+						"CY = CYo + CYb*betar + CYp*phat + CYr*rhat + CYail*ailr + C"
+						"Yrdr*rdrr;\n"
+						"C1 = C1o + C1b*betar + C1p*phat + C1r*rhat + C1ail*ailr + C"
+						"1rdr*rdrr + CZel*ele_loc*(Relr - Lelr)/2/bspan;\n"
+						"Cn = Cno + Cnb*betar + Cnp*phat + Cnr*rhat + Cnail*ailr + C"
+						"nrdr*rdrr + CXel*ele_loc*(Lelr - Relr)/2/bspan;\n"
+						"%\n"
+						"% Apply some sanity limits to the coefficients\n"
+						"%\n"
+						"C6 = max(min([CX CY CZ C1 Cm Cn],[3 2 4 2 4 4]),-[3 2 4 2 4"
+						" 4]);\n"
+						"\n"
+						"function [CXo] = s2_xo(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_XO  Computes the CX base aerodynamics.\n"
+						"%\n"
+						"%  Usage: CXo = s2_xo(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CX base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CXo = CX base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      comfun.m\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"dtr=pi/180;\n"
+						"x=[alpha,min(0,alpha-15*dtr)];\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt9, man6.  \n"
+						"%\n"
+						"% IPXo=[0,1,11,10]';\n"
+						"% PXo=[ -0.080800885759421;...\n"
+						"%        0.820366736327515;...\n"
+						"%      -10.010727396895621;...\n"
+						"%        3.057073727021578];\n"
+						"% IPXo=[1,0,11,10]';\n"
+						"% PXo=[  0.822422596042795\n"
+						"%       -0.089099684117894\n"
+						"%      -11.674020983809706\n"
+						"%        3.480804446726977];\n"
+						"IPXo=[1,0,4,3]';\n"
+						"PXo=[  0.384250553871670;...\n"
+						"      -0.055695436673931;...\n"
+						"     -38.087897257727697;...\n"
+						"      14.888723078459181];\n"
+						"% IPXo=[0,1,2]';\n"
+						"% PXo=[ -0.070197931596795;...\n"
+						"%        0.703156250629286;...\n"
+						"%        0.250092538873889];\n"
+						"CXo=comfun(x,PXo,IPXo);\n"
+						"%\n"
+						"%  Approach, flaps down, gear down, from flt9, man9.\n"
+						"%\n"
+						"IPXoa=[0,1,2,11]';\n"
+						"PXoa=[ -0.341975568896875;...\n"
+						"        2.311938939310571;...\n"
+						"       -2.634264867496561;...\n"
+						"       -3.328376671167995];\n"
+						"CXoa=comfun(x,PXoa,IPXoa);\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp/dtr,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"CXo=CXo + df*(CXoa-CXo);\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function [CXa,CXq,CXel,CXflp] = s2_xd(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_XD  Computes the CX stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [CXa,CXq,CXel,CXflp] = s2_xd(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CX stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CXa = CX stability derivative for angle of attack, "
+						"1/rad.  \n"
+						"%       CXq = CX stability derivative for non-dimensional p"
+						"itch rate.\n"
+						"%      CXel = CX control derivative for elevator deflection"
+						", 1/rad.\n"
+						"%     CXflp = CX control derivative for flap deflection, 1/"
+						"rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt13, man8a.\n"
+						"%\n"
+						"CXa=0.4215;\n"
+						"CXq=0;\n"
+						"CXel=0.0375;\n"
+						"CXflp=0;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"CXaa=0.4008;\n"
+						"CXqa=0;\n"
+						"CXela=0.0216;\n"
+						"CXflpa=0;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"CXa=CXa + df*(CXaa-CXa);\n"
+						"CXq=CXq + df*(CXqa-CXq);\n"
+						"CXel=CXel + df*(CXela-CXel);\n"
+						"CXflp=CXflp + df*(CXflpa-CXflp);\n"
+						"return\n"
+						"\n"
+						"function CYo = s2_yo(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_YO  Computes the CY base aerodynamics.\n"
+						"%\n"
+						"%  Usage: CYo = s2_yo(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CY base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CYo = CY base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"CYo=0;\n"
+						"return\n"
+						"\n"
+						"function [CYb,CYp,CYr,CYail,CYrdr] = s2_yd(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_YD  Computes the CY stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [CYb,CYp,CYr,CYail,CYrdr] = s2_yd(alpha,el,flp,c)"
+						";\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CY stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CYb = CY stability derivative for angle of sideslip"
+						", 1/rad.  \n"
+						"%       CYp = CY stability derivative for non-dimensional r"
+						"oll rate.\n"
+						"%       CYr = CY stability derivative for non-dimensional y"
+						"aw rate.\n"
+						"%     CYail = CY control derivative for aileron deflection,"
+						" 1/rad.\n"
+						"%     CYrdr = CY control derivative for rudder deflection, "
+						"1/rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt13, man8a.\n"
+						"%\n"
+						"CYb=-0.7891;\n"
+						"CYp=0;\n"
+						"CYr=0;\n"
+						"CYail=0;\n"
+						"CYrdr=0.1881;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"CYba=-1.0235;\n"
+						"CYpa=0;\n"
+						"CYra=0;\n"
+						"CYaila=0;\n"
+						"CYrdra=0.0835;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"CYb=CYb + df*(CYba-CYb);\n"
+						"CYp=CYp + df*(CYpa-CYp);\n"
+						"CYr=CYr + df*(CYra-CYr);\n"
+						"CYail=CYail + df*(CYaila-CYail);\n"
+						"CYrdr=CYrdr + df*(CYrdra-CYrdr);\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function CZo = s2_zo(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_ZO  Computes the CZ base aerodynamics.\n"
+						"%\n"
+						"%  Usage: CZo = s2_zo(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CZ base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CZo = CZ base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      comfun.m\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"dtr=pi/180;\n"
+						"x=[alpha,min(0,alpha-15*dtr)];\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt9, man6.  \n"
+						"%\n"
+						"IPZo=[0,1,2]';\n"
+						"% PZo=[ -0.111682396118792;...\n"
+						"%       -3.997734371310473;...\n"
+						"%        3.374110079651810];\n"
+						"PZo=[ -0.094822381825331;...\n"
+						"      -4.321563667693882;...\n"
+						"       4.493418862269570];\n"
+						"% PZo=[ -2.093533523556459;...\n"
+						"%       0.991146827699140;...\n"
+						"%      -0.115181510304119];\n"
+						"% PZo=[-2.083281853665540;...\n"
+						"%       1.010713686289819;...\n"
+						"%      -0.112960033630600];\n"
+						"CZo=comfun(x,PZo,IPZo);\n"
+						"%\n"
+						"%  Approach, flaps down, gear down, from flt9, man9.\n"
+						"%\n"
+						"IPZoa=[0,1,11,2]';\n"
+						"PZoa=[ -0.283418187922199;...\n"
+						"       -3.886455168753432;...\n"
+						"        3.243978698447330;...\n"
+						"        2.311648275529938];\n"
+						"CZoa=comfun(x,PZoa,IPZoa);\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp/dtr,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"CZo=CZo + df*(CZoa-CZo);\n"
+						"return\n"
+						"\n"
+						"function [CZa,CZq,CZel,CZflp] = s2_zd(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_ZD  Computes the CZ stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [CZa,CZq,CZel,CZflp] = s2_zd(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the CZ stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       CZa = CZ stability derivative for angle of attack, "
+						"1/rad.  \n"
+						"%       CZq = CZ stability derivative for non-dimensional p"
+						"itch rate.\n"
+						"%      CZel = CZ control derivative for elevator deflection"
+						", 1/rad.\n"
+						"%     CZflp = CZ control derivative for flap deflection, 1/"
+						"rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt13, man8a.\n"
+						"%\n"
+						"CZa=-4.286;\n"
+						"CZq=0;\n"
+						"CZel=-0.0396;\n"
+						"CZflp=0;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"CZaa=-4.354;\n"
+						"CZqa=0;\n"
+						"CZela=-0.2233;\n"
+						"CZflpa=0;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"CZa=CZa + df*(CZaa-CZa);\n"
+						"CZq=CZq + df*(CZqa-CZq);\n"
+						"CZel=CZel + df*(CZela-CZel);\n"
+						"CZflp=CZflp + df*(CZflpa-CZflp);\n"
+						"return\n"
+						"\n"
+						"function C1o = s2_1o(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_1O  Computes C1 base aerodynamics.\n"
+						"%\n"
+						"%  Usage: C1o = s2_1o(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes C1 base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       C1o = C1 base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"C1o=0;\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function [C1b,C1p,C1r,C1ail,C1rdr] = s2_1d(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_1D  Computes the C1 stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [C1b,C1p,C1r,C1ail,C1rdr] = s2_1d(alpha,el,flp,c)"
+						";\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the C1 stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       C1b = C1 stability derivative for angle of sideslip"
+						", 1/rad.  \n"
+						"%       C1p = C1 stability derivative for non-dimensional r"
+						"oll rate.\n"
+						"%       C1r = C1 stability derivative for non-dimensional y"
+						"aw rate.\n"
+						"%     C1ail = C1 control derivative for aileron deflection,"
+						" 1/rad.\n"
+						"%     C1rdr = C1 control derivative for rudder deflection, "
+						"1/rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up,from flt13, man8a.\n"
+						"%\n"
+						"C1b=-0.0874;\n"
+						"C1p=-0.3494;\n"
+						"C1r=0;\n"
+						"C1ail=-0.1106;\n"
+						"C1rdr=0.0222;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"C1ba=-0.0999;\n"
+						"C1pa=-0.3370;\n"
+						"C1ra=0.2481;\n"
+						"C1aila=-0.1153;\n"
+						"C1rdra=0.0290;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"C1b=C1b + df*(C1ba-C1b);\n"
+						"C1p=C1p + df*(C1pa-C1p);\n"
+						"C1r=C1r + df*(C1ra-C1r);\n"
+						"C1ail=C1ail + df*(C1aila-C1ail);\n"
+						"C1rdr=C1rdr + df*(C1rdra-C1rdr);\n"
+						"return\n"
+						"\n"
+						"function Cmo = s2_mo(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_MO  Computes the Cm base aerodynamics.\n"
+						"%\n"
+						"%  Usage: Cmo = s2_mo(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the Cm base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       Cmo = Cm base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      comfun.m\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"dtr=pi/180;\n"
+						"x=[alpha,min(0,alpha-15*dtr)];\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt9, man6.  \n"
+						"%\n"
+						"IPmo=[0,1,2,3]';\n"
+						"Pmo=[   0.115050347363051;...\n"
+						"       -3.747139267602230;...\n"
+						"       12.839049317550790;...\n"
+						"      -14.783755634585580];\n"
+						"% Pmo=[  0.090295231054901\n"
+						"%       -3.488208060494491\n"
+						"%       12.269780917782471\n"
+						"%      -15.073352650668282];\n"
+						"% IPmo=[1,0]';\n"
+						"% Pmo=[-0.075186283044130;...\n"
+						"%       0.016552669140252];\n"
+						"Cmo=comfun(x,Pmo,IPmo);\n"
+						"%\n"
+						"%  Approach, flaps down, gear down, from flt9, man9.\n"
+						"%\n"
+						"IPmoa=[1,0,2,3]';\n"
+						"Pmoa=[ -3.605802245160461\n"
+						"        0.189639137321186\n"
+						"       13.713160995340239\n"
+						"      -19.432849927441254];\n"
+						"Cmoa=comfun(x,Pmoa,IPmoa);\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp/dtr,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"Cmo=Cmo + df*(Cmoa-Cmo);\n"
+						"% %\n"
+						"% %  Stall model.\n"
+						"% %\n"
+						"% IPmos=[0,10,100]';\n"
+						"% Pmos=[ -0.304253041325711;...\n"
+						"%        -1.344781926737646;...\n"
+						"%       -50.714930712751745];\n"
+						"% Cmos=comfun(x,Pmos,IPmos);\n"
+						"% %\n"
+						"% %  Blend the stall model to avoid discontinuities.\n"
+						"% %\n"
+						"% %  Mean values and standard deviations \n"
+						"% %  for the longitudinal angle of attack subspace \n"
+						"% %  transition region.  \n"
+						"% %\n"
+						"% abar=[13,17]*dtr;\n"
+						"% asig=[ 2, 2]*dtr;\n"
+						"% % if alpha > abar(1,2)-4*asig(1,2) & alpha < abar(1,1)+4*"
+						"asig(1,1)\n"
+						"% %   gw1=gauss(alpha,abar(1,1),asig(1,1)^2,1);\n"
+						"% %   gw2=gauss(alpha,abar(1,2),asig(1,2)^2,1);\n"
+						"% %   w1=gw1/(gw1+gw2);\n"
+						"% %   w2=gw2/(gw1+gw2);\n"
+						"% %   Cmo=w1*Cmo+w2*Cmos;\n"
+						"% % elseif alpha >= abar(1,1)+4*asig(1,1)\n"
+						"% %   Cmo=Cmos;\n"
+						"% % end\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function [Cma,Cmq,Cmel,Cmflp] = s2_md(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_MD  Computes the Cm stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [Cma,Cmq,Cmel,Cmflp] = s2_md(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the Cm stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       Cma = Cm stability derivative for angle of attack, "
+						"1/rad.  \n"
+						"%       Cmq = Cm stability derivative for non-dimensional p"
+						"itch rate.\n"
+						"%      Cmel = Cm control derivative for elevator deflection"
+						", 1/rad.\n"
+						"%     Cmflp = Cm control derivative for flap deflection, 1/"
+						"rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt13, man8a.\n"
+						"%\n"
+						"Cma=-1.355;\n"
+						"Cmq=-26.01;\n"
+						"Cmel=-1.069;\n"
+						"Cmflp=0;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"Cmaa=-1.490;\n"
+						"Cmqa=-23.21;\n"
+						"Cmela=-1.112;\n"
+						"Cmflpa=0;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"Cma=Cma + df*(Cmaa-Cma);\n"
+						"Cmq=Cmq + df*(Cmqa-Cmq);\n"
+						"Cmel=Cmel + df*(Cmela-Cmel);\n"
+						"Cmflp=Cmflp + df*(Cmflpa-Cmflp);\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function Cno = s2_no(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_NO  Computes the Cn base aerodynamics.\n"
+						"%\n"
+						"%  Usage: Cno = s2_no(alpha,el,flp,c);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the Cn base aerodynamics\n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       Cno = Cn base aerodynamic term. \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"Cno=0;\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function [Cnb,Cnp,Cnr,Cnail,Cnrdr] = s2_nd(alpha,el,flp,c)\n"
+						"%\n"
+						"%  S2_ND  Computes the Cn stability and control derivatives"
+						".\n"
+						"%\n"
+						"%  Usage: [Cnb,Cnp,Cnr,Cnail,Cnrdr] = s2_nd(alpha,el,flp,c)"
+						";\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the Cn stability and control derivatives \n"
+						"%    for the S2 single-engine L-1011 model\n"
+						"%    aircraft nonlinear simulation.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%     alpha = angle of attack, rad.\n"
+						"%        el = elevator deflection, rad.\n"
+						"%       flp = flap deflection, rad.\n"
+						"%         c = c.c(1) through c.c(9) = inertia constants.\n"
+						"%             c.mass  = aircraft mass, slugs.\n"
+						"%             c.xcg   = longitudinal (MS) CG location, perc"
+						"ent MAC.\n"
+						"%             c.ycg   = lateral (BL) CG location, in.\n"
+						"%             c.zcg   = vertical (WL) CG location, in.\n"
+						"%             c.xcgr  = reference longitudinal (MS) CG loca"
+						"tion, percent MAC.\n"
+						"%             c.heng  = angular momentum for rotating mass "
+						"of the propulsion system.\n"
+						"%             c.sarea = wing reference area, ft2.\n"
+						"%             c.bspan = wing span, ft.\n"
+						"%             c.cbar  = wing MAC, ft.\n"
+						"%             c.lim   = array of hard limits for the contro"
+						"ls.\n"
+						"%             c.ac    = name of the aircraft.\n"
+						"%             c.xfree = vector indicating free states for t"
+						"rim:\n"
+						"%                       = 1 for free state\n"
+						"%                       = 0 for fixed state\n"
+						"%             c.xinit = initial state vector for trim, \n"
+						"%                       including fixed state values.\n"
+						"%             c.ufree = vector indicating free controls for"
+						" trim:\n"
+						"%                       = 1 for free control\n"
+						"%                       = 0 for fixed control\n"
+						"%             c.uinit = initial control vector for trim, \n"
+						"%                       including fixed control values.\n"
+						"%             c.gam   = flight path angle at trim, deg.\n"
+						"%             c.trate = turn rate at trim, deg/sec.\n"
+						"%             c.ltl   = trim or linearize flag\n"
+						"%                       =  1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 for linearization\n"
+						"%              c.ltrl = trim or linearize flag:\n"
+						"%                       = -1 for trim or steady condition\n"
+						"%                       =  0 for normal operation\n"
+						"%                       =  1 for linearization\n"
+						"%              c.lfi  = filter initialization flag:\n"
+						"%                       =  1 to initialize the filter\n"
+						"%                       =  0 for normal operation\n"
+						"%                       = -1 to skip the filtering (for num"
+						"erical integration steps)\n"
+						"%              c.dt   = time step, sec.\n"
+						"%              c.x0   = initial state vector.\n"
+						"%              c.u0   = initial control vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%       Cnb = Cn stability derivative for angle of sideslip"
+						", 1/rad.  \n"
+						"%       Cnp = Cn stability derivative for non-dimensional r"
+						"oll rate.\n"
+						"%       Cnr = Cn stability derivative for non-dimensional y"
+						"aw rate.\n"
+						"%     Cnail = Cn control derivative for aileron deflection,"
+						" 1/rad.\n"
+						"%     Cnrdr = Cn control derivative for rudder deflection, "
+						"1/rad.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      05 May  2008 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2008  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%  Cruise, flaps up, gear up, from flt13, man8a.\n"
+						"%\n"
+						"Cnb=0.1334;\n"
+						"Cnp=0;\n"
+						"Cnr=-0.3323;\n"
+						"Cnail=0.0153;\n"
+						"Cnrdr=-0.0805;\n"
+						"%\n"
+						"%  Approach, full flaps, gear down, from flt12, man6.\n"
+						"%\n"
+						"Cnba=0.1533;\n"
+						"Cnpa=0;\n"
+						"Cnra=-0.2846;\n"
+						"Cnaila=0.0177;\n"
+						"Cnrdra=-0.0765;\n"
+						"%\n"
+						"%  Compute df = fraction of full flap deflection.  \n"
+						"%\n"
+						"df=max(c.lim(5,1),min(flp*180/pi,c.lim(5,2)))/c.lim(5,2);\n"
+						"%\n"
+						"%  Schedule linearly based on flap deflection.\n"
+						"%\n"
+						"Cnb=Cnb + df*(Cnba-Cnb);\n"
+						"Cnp=Cnp + df*(Cnpa-Cnp);\n"
+						"Cnr=Cnr + df*(Cnra-Cnr);\n"
+						"Cnail=Cnail + df*(Cnaila-Cnail);\n"
+						"Cnrdr=Cnrdr + df*(Cnrdra-Cnrdr);\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function [y,xp] = comfun(x,ap,iap)\n"
+						"%\n"
+						"%  COMFUN  Computes the value of ordinary polynomial functi"
+						"ons.  \n"
+						"%\n"
+						"%  Usage: [y,xp] = comfun(x,ap,iap);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Computes the function y as an ordinary polynomial expa"
+						"nsion \n"
+						"%    with length(iap) terms.  Vector iap specifies the powe"
+						"rs of the \n"
+						"%    independent variables contained in columns of x, and v"
+						"ector ap \n"
+						"%    contains the parameter values.  The powers of the\n"
+						"%    independent variables contained in each element of vec"
+						"tor iap\n"
+						"%    from least significant digit to most significant digit"
+						" \n"
+						"%    correspond to the columns of matrix x in order.  \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%      x = matrix of independent variable vectors.\n"
+						"%     ap = vector of parameter values for each polynomial t"
+						"erm.\n"
+						"%    iap = vector of integers indicating powers of the inde"
+						"pendent \n"
+						"%          variables for each polynomial term.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%      y = polynomial function of the independent variables"
+						" in x.\n"
+						"%     xp = matrix of independent variable functions generat"
+						"ed\n"
+						"%          from x according to iap.  \n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      cvec.m\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      14 Nov 1995 - Created and debugged, EAM.\n"
+						"%      10 Dec 2000 - Vectorized and changed input/output, E"
+						"AM.\n"
+						"%\n"
+						"%  Copyright (C) 2006  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"[npts,nvar]=size(x);\n"
+						"nterms=length(iap);\n"
+						"ap=cvec(ap);\n"
+						"%\n"
+						"%  Generate the polynomial function matrix and the final mo"
+						"del\n"
+						"%  output based on the polynomial functions.\n"
+						"%\n"
+						"xp=ones(npts,nterms);\n"
+						"for i=1:nterms,\n"
+						"  indx=iap(i);\n"
+						"  for j=1:nvar,\n"
+						"    ji=round(rem(indx,10));\n"
+						"    if ji~=0\n"
+						"      xp(:,i)=xp(:,i).*(x(:,j).^ji);\n"
+						"    end\n"
+						"    indx=floor(indx/10);\n"
+						"  end\n"
+						"end\n"
+						"%\n"
+						"%  Compute the model output.\n"
+						"%\n"
+						"y=xp*ap(1:nterms);\n"
+						"return\n"
+						"\n"
+						"\n"
+						"function yc = cvec(y)\n"
+						"%\n"
+						"%  CVEC  Makes any input vector into a column vector.  \n"
+						"%\n"
+						"%  Usage: yc = cvec(y);\n"
+						"%\n"
+						"%  Description:\n"
+						"%\n"
+						"%    Makes y vector into a column vector. \n"
+						"%\n"
+						"%  Input:\n"
+						"%    \n"
+						"%    y = input vector.\n"
+						"%\n"
+						"%  Output:\n"
+						"%\n"
+						"%    yc = column vector with same elements as y.\n"
+						"%\n"
+						"\n"
+						"%\n"
+						"%    Calls:\n"
+						"%      None\n"
+						"%\n"
+						"%    Author:  Eugene A. Morelli\n"
+						"%\n"
+						"%    History:  \n"
+						"%      02 Mar 2000 - Created and debugged, EAM.\n"
+						"%\n"
+						"%  Copyright (C) 2006  Eugene A. Morelli\n"
+						"%\n"
+						"%  This program carries no warranty, not even the implied \n"
+						"%  warranty of merchantability or fitness for a particular "
+						"purpose.  \n"
+						"%\n"
+						"%  Please email bug reports or suggestions for improvements"
+						" to:\n"
+						"%\n"
+						"%      e.a.morelli@nasa.gov\n"
+						"%\n"
+						"[m,n]=size(y);\n"
+						"if n > m\n"
+						"  yc=y';\n"
+						"else\n"
+						"  yc=y;\n"
+						"end\n"
+						"yc=yc(:,1);\n"
+						"return\n"
+						""
+			editorLayout             		"100 M4x1[946 88 1539 1193]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		4
+		position   		[23.5747 49.5747 7]
+		chart      		2
+		linkNode   		[2 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		5
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		4
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		2
+		linkNode       		[2 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		2
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		6
+		name                          		"alpha"
+		linkNode                      		[2 0 7]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+			}
+			complexity           		SF_COMPLEX_INHERITED
+		}
+		dataType                      		"inherited"
+		fixptType {
+			slope   		1
+			baseType		SF_INT16_TYPE
+		}
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		7
+		name                          		"C6"
+		linkNode                      		[2 6 8]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"inherited"
+		fixptType {
+			slope   		1
+			baseType		SF_INT16_TYPE
+		}
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		8
+		name                          		"beta"
+		linkNode                      		[2 7 9]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		9
+		name                          		"p"
+		linkNode                      		[2 8 10]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		10
+		name                          		"q"
+		linkNode                      		[2 9 11]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		11
+		name                          		"r"
+		linkNode                      		[2 10 12]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		12
+		name                          		"Lele"
+		linkNode                      		[2 11 13]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		13
+		name                          		"Rele"
+		linkNode                      		[2 12 14]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		14
+		name                          		"ail"
+		linkNode                      		[2 13 15]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		15
+		name                          		"rud"
+		linkNode                      		[2 14 16]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		16
+		name                          		"flap"
+		linkNode                      		[2 15 17]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		17
+		name                          		"vt"
+		linkNode                      		[2 16 18]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		18
+		name                          		"bspan"
+		linkNode                      		[2 17 19]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		19
+		name                          		"cbar"
+		linkNode                      		[2 18 0]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+				primitive 		SF_DOUBLE_TYPE
+				isSigned  		1
+				wordLength		"16"
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_INHERITED
+		}
+		dataType                      		"inherited"
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	instance {
+		id     		20
+		name   		"S2_aero"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id                        		21
+		name                      		"sfun"
+		description               		"Default Simulink S-Function Target."
+		machine                   		1
+		linkNode                  		[1 0 0]
+	}
+}

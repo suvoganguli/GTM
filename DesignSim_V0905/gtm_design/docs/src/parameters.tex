@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\textwidth       6.5in
+\textheight      9.5in
+\footskip        0.5in
+\oddsidemargin  -.25in
+\evensidemargin -.25in
+\topmargin      -0.7in
+
+\begin{document}
+\begin{center}
+\ 
+\vfill
+\begin{tabular}{|l|l|l|l|}
+\multicolumn{4}{c}{{\bf GTM-T2} AircraftParameters}\\
+\multicolumn{4}{c}{{\em See slso ./libs/AC\_params\_T2.m}}\\
+\hline
+MWS Variable & Value & Name & Units\\
+\hline
+S      & 5.9018   & Wing Surface Area &ft$^2$ \\
+Cbar   & 0.9153   & Mean Aerodynamic Chord &ft\\
+b      & 6.8488   & Wingspan &ft \\
+mass   & 49.6/32.17405  & Vehicle Mass & Slugs \\
+CG     & [-0.25Cbar, 0, 0] & Center of Gravity  & ft\\
+CP     & [-0.25Cbar, 0, 0] & Aero Reference Point & ft\\
+Ixx    & 1.327              & Inertia X-axis   & lbf$\cdot$ft$^2$\\
+Iyy    & 4.254		    & Inertia Y-axis   & lbf$\cdot$ft$^2$\\
+Izz    & 5.454		    & Inertia Z-axis   & lbf$\cdot$ft$^2$\\
+Ixz    & 0.120              & Cross Inertia, XZ& lbf$\cdot$ft$^2$\\
+RtEng  & $[-0.25Cbar, +1.1, 0.275]$ & Right Engine Location& ft\\
+LfEng  & $[-0.25Cbar, -1.1, 0.275]$ & Left Engine Location& ft\\
+symmetric\_aero\_on & 1 & Symmetry Corrections & boolean\\
+StatesInp& $X_0$ & Initial Conditions,12x1 & {\em various}\\
+bias   & {\em structure} & Trim Offsets & {\em various}\\
+Aero   & {\em structure} & Aerodynamic Database & {\em various}\\
+\hline
+\end{tabular}
+
+
+\vfill
+\begin{tabular}{|l|l|l|}
+\multicolumn{3}{c}{{\bf MWS.Aero:} Aerodynamic Tables}\\
+\multicolumn{3}{c}{\em See slso ./libs/T2\_polynomial\_aerodatabase.mat}\\
+\hline
+Variable & Continuous Dimensions & Output Dimensions\\
+\hline
+C6\_bas  & $\alpha \times \beta$     & $\left[C_X,C_Y,C_Z,C_l,C_m,C_n\right]$\\
+dC6\_rud & $\alpha \times \beta \times {\rm rudder}  $ & $\left[C_X,C_Y,C_Z,C_l,C_m,C_n \right]$ \\
+dC6\_ail & $\alpha \times \beta \times {\rm aileron} $ & $\left[C_X,C_Y,C_Z,C_l,C_m,C_n \right]$ \\
+dC6\_spo & $\alpha \times \beta \times {\rm spoiler} $ & $\left[C_X,C_Y,C_Z,C_l,C_m,C_n \right]$ \\
+dC3\_ele & $\alpha \times \beta \times {\rm stab}  \times {\rm elevator} $ & $\left[C_X,C_Z,C_m\right]  $ \\
+dC3\_flp & $\alpha \times {\rm flap} $ & $\left[C_X,C_Z,C_m \right] $ \\
+dC3\_lgr & $\alpha \times {\rm geardown}$   & $\left[C_X,C_Z,C_m \right]$ \\
+dC3\_p   & $\alpha \times \hat{p_b}$ & $\left[ C_Y,C_l,C_n \right]$ \\
+dC3\_q   & $\alpha \times \hat{q_b}$ & $\left[ C_Y,C_l,C_n \right]$ \\
+dC3\_r   & $\alpha \times \hat{r_b}$ & $\left[ C_Y,C_l,C_n \right]$ \\
+dC6\_w   & $\alpha \times \hat{\omega} \times  \beta $ & $\left[C_X,C_Y,C_Z,C_l,C_m,C_n\right]$\\
+dC3\_sym & $\alpha \times \beta $ & $ \left[ C_Y,C_l,C_n\right]$\\
+\hline
+\end{tabular}
+\vfill
+
+\end{center}
+\end{document}

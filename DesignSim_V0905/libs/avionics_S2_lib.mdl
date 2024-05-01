@@ -1,0 +1,3870 @@
+Library {
+  Name			  "avionics_S2_lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Feb 15 12:11:14 2009"
+  Creator		  "amurch"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "amurch"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Feb 15 12:12:51 2009"
+  ModelVersionFormat	  "$LastChangedRevision: 1200 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusAssignment
+      AssignedSignals	      "signal1"
+    }
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "avionics_S2_lib"
+    Location		    [480, 93, 1016, 386]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "L1011_S2"
+      Ports		      [2, 2]
+      Position		      [215, 176, 315, 214]
+      BackgroundColor	      "cyan"
+      FontSize		      12
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"L1011_S2"
+	Location		[486, 609, 1812, 1117]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Sensors"
+	  Position		  [180, 114, 205, 126]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "UL"
+	  Position		  [120, 424, 145, 436]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ADC1"
+	  Ports			  [1, 1]
+	  Position		  [560, 64, 615, 86]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "ADC1"
+	    PropagatedSignals	    "ADC0, ADC1, AILL, FLAPLOB, FLAPLIB, ADC5,"
+" ADC6, AILR, FLAPROB, FLAPRIB, RUDU, RUDL, ELLOB, ELLIB, ELROB, ELRIB, Res0, "
+"ENGML, RPML, EGTL, ENGTL, PUMPLV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "ADC1"
+	    Location		    [923, 84, 1636, 816]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ADC1"
+	      Position		      [65, 348, 95, 362]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Air Data"
+	      Ports		      [22, 1]
+	      Position		      [530, 49, 535, 636]
+	      ShowName		      off
+	      Inputs		      "22"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      Position		      [435, 472, 450, 488]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"Res0"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      Position		      [430, 72, 455, 88]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC0"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      Position		      [430, 97, 455, 113]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      Position		      [430, 197, 455, 213]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC5"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant5"
+	      Position		      [430, 222, 455, 238]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC6"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant6"
+	      Position		      [430, 147, 455, 163]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"FLAPLOB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      Position		      [430, 172, 455, 188]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"FLAPLIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant8"
+	      Position		      [430, 272, 455, 288]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"FLAPROB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant9"
+	      Position		      [430, 297, 455, 313]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"FLAPRIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "SelectOutputs"
+	      Ports		      [1, 10]
+	      Position		      [145, 100, 150, 610]
+	      ShowName		      off
+	      OutputSignals	      "Pots.AILL,Pots.AILR,Pots.RUD,Pots.ELL,P"
+"ots.ELR,ECU.ENGM,ECU.RPM,ECU.EGT,ECU.ENGT,ECU.PUMPV"
+	      Port {
+		PortNumber		1
+		Name			"<AILL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<AILR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<RUD>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<ELL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"<ELR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"<ENGM>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"<RPM>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"<EGT>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		9
+		Name			"<ENGT>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		10
+		Name			"<PUMPV>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem1"
+	      Ports		      [1, 1]
+	      Position		      [430, 523, 450, 537]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"RPML"
+		PropagatedSignals	"RPM"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem10"
+	      Ports		      [1, 1]
+	      Position		      [430, 423, 450, 437]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ELROB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem10"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem11"
+	      Ports		      [1, 1]
+	      Position		      [430, 448, 450, 462]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ELRIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem11"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem2"
+	      Ports		      [1, 1]
+	      Position		      [430, 548, 450, 562]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"EGTL"
+		PropagatedSignals	"EGT"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem2"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem3"
+	      Ports		      [1, 1]
+	      Position		      [430, 498, 450, 512]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ENGML"
+		PropagatedSignals	"ENGM"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem3"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem4"
+	      Ports		      [1, 1]
+	      Position		      [430, 573, 450, 587]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ENGTL"
+		PropagatedSignals	"ENGT"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem4"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem5"
+	      Ports		      [1, 1]
+	      Position		      [430, 598, 450, 612]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"PUMPLV"
+		PropagatedSignals	"PUMPV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem5"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem6"
+	      Ports		      [1, 1]
+	      Position		      [430, 323, 450, 337]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"RUDU"
+		PropagatedSignals	"ELL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem6"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem7"
+	      Ports		      [1, 1]
+	      Position		      [430, 348, 450, 362]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"RUDL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem7"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem8"
+	      Ports		      [1, 1]
+	      Position		      [430, 373, 450, 387]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ELLOB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem8"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem9"
+	      Ports		      [1, 1]
+	      Position		      [430, 398, 450, 412]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ELLIB"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem9"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Data"
+	      Position		      [565, 338, 595, 352]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      PortDimensions	      "22"
+	    }
+	    Line {
+	      Name		      "Res0"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      17
+	    }
+	    Line {
+	      SrcBlock		      "Air Data"
+	      SrcPort		      1
+	      DstBlock		      "Data"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ADC1"
+	      SrcPort		      1
+	      DstBlock		      "SelectOutputs"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ADC0"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ADC1"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "ADC5"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "ADC6"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant5"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "<AILL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<AILR>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      2
+	      Points		      [260, 0; 0, 75]
+	      DstBlock		      "Air Data"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "<ENGM>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      6
+	      Points		      [180, 0; 0, 125]
+	      DstBlock		      "Subsystem3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<RPM>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      7
+	      Points		      [155, 0; 0, 100]
+	      DstBlock		      "Subsystem1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<EGT>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      8
+	      Points		      [130, 0; 0, 75]
+	      DstBlock		      "Subsystem2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<ENGT>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      9
+	      Points		      [110, 0; 0, 50]
+	      DstBlock		      "Subsystem4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<PUMPV>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      10
+	      Points		      [95, 0; 0, 25]
+	      DstBlock		      "Subsystem5"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ENGML"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem3"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      18
+	    }
+	    Line {
+	      Name		      "RPML"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem1"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      19
+	    }
+	    Line {
+	      Name		      "EGTL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem2"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      20
+	    }
+	    Line {
+	      Name		      "ENGTL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem4"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      21
+	    }
+	    Line {
+	      Name		      "PUMPLV"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem5"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      22
+	    }
+	    Line {
+	      Name		      "FLAPLOB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant6"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "FLAPLIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "FLAPROB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant8"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      9
+	    }
+	    Line {
+	      Name		      "FLAPRIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant9"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "RUDU"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem6"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "RUDL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem7"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      12
+	    }
+	    Line {
+	      Name		      "ELLOB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem8"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      13
+	    }
+	    Line {
+	      Name		      "ELLIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem9"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      14
+	    }
+	    Line {
+	      Name		      "ELROB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem10"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      15
+	    }
+	    Line {
+	      Name		      "ELRIB"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Subsystem11"
+	      SrcPort		      1
+	      DstBlock		      "Air Data"
+	      DstPort		      16
+	    }
+	    Line {
+	      Name		      "<RUD>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      3
+	      Points		      [230, 0; 0, 100]
+	      Branch {
+		DstBlock		"Subsystem6"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"Subsystem7"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "<ELL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      4
+	      Points		      [215, 0; 0, 100]
+	      Branch {
+		DstBlock		"Subsystem8"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"Subsystem9"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "<ELR>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "SelectOutputs"
+	      SrcPort		      5
+	      Points		      [200, 0; 0, 100]
+	      Branch {
+		DstBlock		"Subsystem10"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 25]
+		DstBlock		"Subsystem11"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      Name		      "Set dim 22"
+	      Position		      [573, 393]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ADC2"
+	  Ports			  [2, 1]
+	  Position		  [560, 111, 615, 144]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "ADC2"
+	    PropagatedSignals	    "PSL, PDL, PSR, PDR, BAROV, BUSMON3, BUSMO"
+"N4, CPTV, TEMPFCU, BUSMON1, BUSMON2, TEMPAMB, TEMPTRM, RSS, ADC30, ADC31, SSC"
+"S, ENGMR, RPMR, EGTR, ENGTR, PUMPRV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "ADC2"
+	    Location		    [1092, 180, 1881, 814]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ADC2"
+	      Position		      [130, 263, 160, 277]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "DIO"
+	      Position		      [110, 513, 140, 527]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Air Data1"
+	      Ports		      [22, 1]
+	      Position		      [490, 58, 495, 437]
+	      ShowName		      off
+	      Inputs		      "22"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 10]
+	      Position		      [190, 108, 195, 432]
+	      ShowName		      off
+	      OutputSignals	      "AirData.PSL,AirData.PDL,AirData.PSR,Air"
+"Data.PDR,AirData.TEMPAMB,ECU.ENGM,ECU.RPM,ECU.EGT,ECU.ENGT,ECU.PUMPV"
+	      Port {
+		PortNumber		1
+		Name			"<PSL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<PDL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<PSR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<PDR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"<TEMPAMB>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"<ENGM>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"<RPM>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"<EGT>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		9
+		Name			"<ENGT>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		10
+		Name			"<PUMPV>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      Position		      [360, 158, 390, 172]
+	      ShowName		      off
+	      Value		      "17.0"
+	      Port {
+		PortNumber		1
+		Name			"BUSMON3"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant10"
+	      Position		      [360, 262, 380, 278]
+	      ShowName		      off
+	      Value		      "73"
+	      Port {
+		PortNumber		1
+		Name			"TEMPTRM"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant11"
+	      Position		      [360, 277, 380, 293]
+	      ShowName		      off
+	      Value		      "4.5"
+	      Port {
+		PortNumber		1
+		Name			"RSS"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant12"
+	      Position		      [360, 292, 380, 308]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC30"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant13"
+	      Position		      [360, 307, 380, 323]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC31"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      Position		      [360, 143, 390, 157]
+	      ShowName		      off
+	      Value		      "5.02"
+	      Port {
+		PortNumber		1
+		Name			"BAROV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      Position		      [360, 187, 390, 203]
+	      ShowName		      off
+	      Value		      "4.99"
+	      Port {
+		PortNumber		1
+		Name			"CPTV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant6"
+	      Position		      [360, 173, 390, 187]
+	      ShowName		      off
+	      Value		      "5.01"
+	      Port {
+		PortNumber		1
+		Name			"BUSMON4"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      Position		      [360, 202, 380, 218]
+	      ShowName		      off
+	      Value		      "73"
+	      Port {
+		PortNumber		1
+		Name			"TEMPFCU"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant8"
+	      Position		      [360, 217, 380, 233]
+	      ShowName		      off
+	      Value		      "8.5"
+	      Port {
+		PortNumber		1
+		Name			"BUSMON1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant9"
+	      Position		      [360, 232, 385, 248]
+	      ShowName		      off
+	      Value		      "8.0"
+	      Port {
+		PortNumber		1
+		Name			"BUSMON2"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 2]
+	      Position		      [195, 501, 200, 539]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "2"
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"PortE"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Memory
+	      Name		      "Memory"
+	      Position		      [160, 510, 180, 530]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Pilot Flying"
+	      Ports		      [1, 1]
+	      Position		      [260, 494, 380, 526]
+	      ForegroundColor	      "blue"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('setSSCS');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      Port {
+		PortNumber		1
+		Name			"SSCS"
+		PropagatedSignals	"SSCS"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Pilot Flying"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "u"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 160, 320, 200]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function avionics_S2_li"
+"b 2"
+		  Ports			  [1, 2]
+		  Position		  [180, 100, 230, 160]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[1 2]"
+		  Port {
+		    PortNumber		    2
+		    Name		    "SSCS"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 171, 480, 189]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "SSCS"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 65]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "u"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "SSCS"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "SSCS"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem1"
+	      Ports		      [1, 1]
+	      Position		      [260, 308, 280, 322]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"RPMR"
+		PropagatedSignals	"RPM"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem1"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem2"
+	      Ports		      [1, 1]
+	      Position		      [260, 338, 280, 352]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"EGTR"
+		PropagatedSignals	"EGT"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem2"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem3"
+	      Ports		      [1, 1]
+	      Position		      [260, 278, 280, 292]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ENGMR"
+		PropagatedSignals	"ENGM"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem3"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem4"
+	      Ports		      [1, 1]
+	      Position		      [260, 368, 280, 382]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"ENGTR"
+		PropagatedSignals	"ENGT"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem4"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Subsystem5"
+	      Ports		      [1, 1]
+	      Position		      [260, 398, 280, 412]
+	      ShowName		      off
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"PUMPRV"
+		PropagatedSignals	"PUMPV"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Subsystem5"
+		Location		[433, 403, 931, 703]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	"[0.500000, 0.500000, 0.500000, 0.5000"
+"00]"
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [110, 103, 140, 117]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [360, 103, 390, 117]
+		  IconDisplay		  "Port number"
+		  BusOutputAsStruct	  off
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [215, 524, 225, 536]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Data"
+	      Position		      [535, 243, 565, 257]
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      PortDimensions	      "22"
+	    }
+	    Line {
+	      SrcBlock		      "Air Data1"
+	      SrcPort		      1
+	      DstBlock		      "Data"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ADC2"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<PSL>"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -45]
+	      DstBlock		      "Air Data1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<PDL>"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      2
+	      Points		      [45, 0; 0, -60]
+	      DstBlock		      "Air Data1"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "<PSR>"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      3
+	      Points		      [55, 0; 0, -75]
+	      DstBlock		      "Air Data1"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<PDR>"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      4
+	      Points		      [65, 0; 0, -90]
+	      DstBlock		      "Air Data1"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "<TEMPAMB>"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      5
+	      DstBlock		      "Air Data1"
+	      DstPort		      12
+	    }
+	    Line {
+	      Name		      "<ENGM>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      6
+	      DstBlock		      "Subsystem3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<RPM>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      7
+	      DstBlock		      "Subsystem1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<EGT>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      8
+	      DstBlock		      "Subsystem2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<PUMPV>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      10
+	      DstBlock		      "Subsystem5"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "BAROV"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "BUSMON3"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "BUSMON4"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant6"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "CPTV"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "TEMPFCU"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      9
+	    }
+	    Line {
+	      Name		      "BUSMON1"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant8"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "BUSMON2"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant9"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "TEMPTRM"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant10"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      13
+	    }
+	    Line {
+	      Name		      "RSS"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant11"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      14
+	    }
+	    Line {
+	      Name		      "ADC30"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant12"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      15
+	    }
+	    Line {
+	      Name		      "ADC31"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Constant13"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      16
+	    }
+	    Line {
+	      Name		      "SSCS"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Pilot Flying"
+	      SrcPort		      1
+	      Points		      [0, -180]
+	      DstBlock		      "Air Data1"
+	      DstPort		      17
+	    }
+	    Line {
+	      SrcBlock		      "DIO"
+	      SrcPort		      1
+	      DstBlock		      "Memory"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "PortE"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Pilot Flying"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Memory"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<ENGT>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      9
+	      DstBlock		      "Subsystem4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ENGMR"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Subsystem3"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, 60]
+	      DstBlock		      "Air Data1"
+	      DstPort		      18
+	    }
+	    Line {
+	      Name		      "RPMR"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Subsystem1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, 45]
+	      DstBlock		      "Air Data1"
+	      DstPort		      19
+	    }
+	    Line {
+	      Name		      "EGTR"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Subsystem2"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 30]
+	      DstBlock		      "Air Data1"
+	      DstPort		      20
+	    }
+	    Line {
+	      Name		      "ENGTR"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Subsystem4"
+	      SrcPort		      1
+	      Points		      [0, 15]
+	      DstBlock		      "Air Data1"
+	      DstPort		      21
+	    }
+	    Line {
+	      Name		      "PUMPRV"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Subsystem5"
+	      SrcPort		      1
+	      DstBlock		      "Air Data1"
+	      DstPort		      22
+	    }
+	    Annotation {
+	      Name		      "BUSMON2 (ECU battery voltage)\nchanged "
+"from 12.2 to 8.0 to\nmatch observations during engine test\nlast week of June"
+" 2008"
+	      Position		      [636, 142]
+	    }
+	    Annotation {
+	      Name		      "Set dim 22"
+	      Position		      [562, 302]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ADC3"
+	  Ports			  [2, 1]
+	  Position		  [560, 167, 615, 198]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "ADC3"
+	    PropagatedSignals	    "XMAG, YMAG, ZMAG, XGYRO, YGYRO, ZGYRO, XA"
+"CCEL, YACCEL, ZACCEL, XGYROT, MAG3V, ALPHAVL, BETAVL, ALPHAVR, BETAVR, ADC47,"
+" PortE, PortF"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "ADC3"
+	    Location		    [1193, 260, 1927, 658]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "cmds"
+	      Position		      [35, 288, 65, 302]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "ADC3"
+	      Position		      [125, 103, 155, 117]
+	      BackgroundColor	      "lightBlue"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "ADC3_bus"
+	      Ports		      [18, 1]
+	      Position		      [470, 40, 475, 295]
+	      Inputs		      "18"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      Ports		      [2, 1]
+	      Position		      [250, 254, 260, 341]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutScaling	      "2^-10"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"PortF"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 10]
+	      Position		      [310, 40, 315, 175]
+	      ShowName		      off
+	      OutputSignals	      "MAG3.XACCEL,MAG3.YACCEL,MAG3.ZACCEL,MAG"
+"3.XGYRO,MAG3.YGYRO,MAG3.ZGYRO,MAG3.XMAG,MAG3.YMAG,MAG3.ZMAG,MAG3.XGYROT"
+	      Port {
+		PortNumber		1
+		Name			"<XACCEL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<YACCEL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<ZACCEL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<XGYRO>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"<YGYRO>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"<ZGYRO>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		7
+		Name			"<XMAG>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		8
+		Name			"<YMAG>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		9
+		Name			"<ZMAG>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		10
+		Name			"<XGYROT>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector1"
+	      Ports		      [1, 4]
+	      Position		      [310, 197, 315, 258]
+	      ShowName		      off
+	      OutputSignals	      "Vanes.ALPHAVL,Vanes.BETAVL,Vanes.ALPHAV"
+"R,Vanes.BETAVR"
+	      Port {
+		PortNumber		1
+		Name			"<ALPHAVL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<BETAVL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<ALPHAVR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<BETAVR>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector2"
+	      Ports		      [1, 2]
+	      Position		      [110, 257, 115, 333]
+	      ShowName		      off
+	      OutputSignals	      "LINK0,LINK1"
+	      Port {
+		PortNumber		1
+		Name			"<LINK0>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<LINK1>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      Position		      [305, 273, 325, 287]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"PortE"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      Position		      [295, 182, 325, 198]
+	      ShowName		      off
+	      Value		      "5.04"
+	      Port {
+		PortNumber		1
+		Name			"MAG3V"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      Position		      [305, 258, 325, 272]
+	      ShowName		      off
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"ADC47"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "SetBit1"
+	      Position		      [170, 264, 230, 286]
+	      BackgroundColor	      "cyan"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "SetBit2"
+	      Position		      [170, 304, 230, 326]
+	      BackgroundColor	      "cyan"
+	      Gain		      "2"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Data"
+	      Position		      [540, 163, 570, 177]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	      PortDimensions	      "18"
+	    }
+	    Line {
+	      Name		      "PortF"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      18
+	    }
+	    Line {
+	      SrcBlock		      "cmds"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "PortE"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      17
+	    }
+	    Line {
+	      SrcBlock		      "ADC3_bus"
+	      SrcPort		      1
+	      DstBlock		      "Data"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "ADC3"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Bus\nSelector"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 120]
+		DstBlock		"Bus\nSelector1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "MAG3V"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "<ALPHAVL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      12
+	    }
+	    Line {
+	      Name		      "<BETAVL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      2
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      13
+	    }
+	    Line {
+	      Name		      "<ALPHAVR>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      3
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      14
+	    }
+	    Line {
+	      Name		      "<BETAVR>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      4
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      15
+	    }
+	    Line {
+	      Name		      "ADC47"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      16
+	    }
+	    Line {
+	      Name		      "<XGYROT>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      10
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      10
+	    }
+	    Line {
+	      Name		      "<XACCEL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<YACCEL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      2
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "<ZACCEL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      3
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<XGYRO>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      4
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "<YGYRO>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      5
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "<ZGYRO>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      6
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "<XMAG>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      7
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "<YMAG>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      8
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "<ZMAG>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      9
+	      DstBlock		      "ADC3_bus"
+	      DstPort		      9
+	    }
+	    Line {
+	      Name		      "<LINK0>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      1
+	      DstBlock		      "SetBit1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<LINK1>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      2
+	      DstBlock		      "SetBit2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SetBit1"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SetBit2"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Name		      "set dim 18"
+	      Position		      [556, 207]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Add1"
+	  Ports			  [2, 1]
+	  Position		  [435, 393, 450, 442]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Inputs		  "+-"
+	  CollapseMode		  "All dimensions"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Inherit via internal rule"
+	  OutScaling		  "2^-10"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "AntiAliasing"
+	  Ports			  [1, 1]
+	  Position		  [250, 106, 325, 134]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "AntiAliasing"
+	    Location		    [145, 169, 853, 773]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "I"
+	      Position		      [45, 279, 70, 291]
+	      BackgroundColor	      "lightBlue"
+	      FontSize		      12
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Anti-Aliasing Filter\n16 Hz"
+	      Ports		      [1, 1]
+	      Position		      [190, 262, 275, 308]
+	      BackgroundColor	      "cyan"
+	      SourceBlock	      "aeroutilslib/First Order Filter"
+	      SourceType	      "first order filter"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      tau		      "1/(32*pi)"
+	      timestep		      "Timestep"
+	    }
+	    Block {
+	      BlockType		      BusAssignment
+	      Name		      "Bus\nAssignment"
+	      Ports		      [25, 1]
+	      Position		      [405, 16, 525, 534]
+	      BackgroundColor	      "cyan"
+	      AssignedSignals	      "Vanes.ALPHAVL,Vanes.BETAVL,Vanes.ALPHAV"
+"R,Vanes.BETAVR,AirData.PDL,AirData.PSL,AirData.PDR,AirData.PSR,AirData.TEMPAM"
+"B,MAG3.XMAG,MAG3.YMAG,MAG3.ZMAG,MAG3.XGYRO,MAG3.YGYRO,MAG3.ZGYRO,MAG3.XACCEL,"
+"MAG3.YACCEL,MAG3.ZACCEL,MAG3.XGYROT,Pots.ELL,Pots.ELR,Pots.AILL,Pots.AILR,Pot"
+"s.RUD"
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 1]
+	      Position		      [140, 266, 145, 304]
+	      ShowName		      off
+	      OutputSignals	      "Vanes,AirData,MAG3,Pots"
+	      OutputAsBus	      on
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      Ports		      [1, 24]
+	      Position		      [310, 55, 315, 515]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "24"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "O"
+	      Position		      [600, 268, 630, 282]
+	      BackgroundColor	      "lightBlue"
+	      FontSize		      12
+	      IconDisplay	      "Port number"
+	      BusOutputAsStruct	      off
+	    }
+	    Line {
+	      SrcBlock		      "I"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		DstBlock		"Bus\nSelector"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -250]
+		DstBlock		"Bus\nAssignment"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      DstBlock		      "Anti-Aliasing Filter\n16 Hz"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Anti-Aliasing Filter\n16 Hz"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      5
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      6
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      7
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      8
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      9
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      10
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      10
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      11
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      11
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      12
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      12
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      13
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      13
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      14
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      14
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      15
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      15
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      16
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      16
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      17
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      17
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      18
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      18
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      19
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      19
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      20
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nAssignment"
+	      SrcPort		      1
+	      DstBlock		      "O"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      20
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      21
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      21
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      22
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      22
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      23
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      23
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      24
+	    }
+	    Line {
+	      SrcBlock		      "Demux"
+	      SrcPort		      24
+	      DstBlock		      "Bus\nAssignment"
+	      DstPort		      25
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator4"
+	  Ports			  [4, 1]
+	  Position		  [680, 42, 685, 273]
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector"
+	  Ports			  [1, 1]
+	  Position		  [575, 221, 580, 259]
+	  ShowName		  off
+	  OutputSignals		  "MIDG"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<MIDG>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "DLLatency"
+	  Ports			  [1, 1]
+	  Position		  [705, 147, 755, 173]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "aeroutilslib/Latency"
+	  SourceType		  "Latency "
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  Latency		  ".01"
+	  timestep		  "Timestep"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 4]
+	  Position		  [200, 379, 205, 476]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EngU2Cnt"
+	  Ports			  [1, 1]
+	  Position		  [885, 141, 975, 179]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Calibration_Lib/EngU2Cnt"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From1"
+	  Position		  [410, 165, 530, 185]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "cmds"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "From10"
+	  Position		  [410, 125, 530, 145]
+	  BackgroundColor	  "yellow"
+	  ShowName		  off
+	  CloseFcn		  "tagdialog Close"
+	  GotoTag		  "DigitalUplinkPorts"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto1"
+	  Position		  [460, 471, 590, 489]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  GotoTag		  "DigitalUplinkPorts"
+	  TagVisibility		  "global"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "Goto2"
+	  Position		  [890, 467, 945, 483]
+	  BackgroundColor	  "orange"
+	  ShowName		  off
+	  GotoTag		  "cmds"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Memory
+	  Name			  "Memory"
+	  Position		  [810, 405, 840, 435]
+	  BackgroundColor	  "cyan"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [2, 1]
+	  Position		  [960, 196, 965, 234]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [4, 1]
+	  Position		  [1170, 143, 1175, 202]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "PWM bias"
+	  Ports			  [0, 1]
+	  Position		  [365, 424, 405, 436]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Telemetry_Lib/PWM bias"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Pwm2Eng"
+	  Ports			  [1, 1]
+	  Position		  [470, 400, 570, 440]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Calibration_Lib/LoopTable"
+	  SourceType		  "VectorInterp"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  XTable		  "UpCals_Pwm"
+	  YTable		  "UpCals_Eng"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function2"
+	  Ports			  [4, 2]
+	  Position		  [255, 377, 355, 478]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  FunctionName		  "UplnkUnpak_mex"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "S-Function3"
+	  Ports			  [2, 4]
+	  Position		  [1020, 146, 1140, 199]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  FunctionName		  "DownlinkPacker_mex"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ULLatency"
+	  Ports			  [1, 1]
+	  Position		  [615, 408, 660, 432]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "aeroutilslib/Latency"
+	  SourceType		  "Latency "
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  Latency		  ".01"
+	  timestep		  "Timestep"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "downlink signal labels\nbefore pack"
+	  Ports			  [1, 1]
+	  Position		  [775, 148, 855, 172]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Telemetry_Lib/downlink signal labels\nbefor"
+"e pack"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "rate"
+	  Position		  [830, 198, 925, 212]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Value			  "Timestep"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "rate1"
+	  Position		  [830, 218, 925, 232]
+	  BackgroundColor	  "cyan"
+	  ShowName		  off
+	  Value			  "EngineID"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "uplink signal labels\nafter unpack"
+	  Ports			  [1, 1]
+	  Position		  [700, 411, 775, 429]
+	  BackgroundColor	  "cyan"
+	  SourceBlock		  "Telemetry_Lib/uplink signal labels\nafter u"
+"npack"
+	  SourceType		  "SubSystem"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "cmds"
+	  Position		  [880, 413, 910, 427]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  12
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "DL"
+	  Position		  [1230, 168, 1260, 182]
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Sensors"
+	  SrcPort		  1
+	  DstBlock		  "AntiAliasing"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EngU2Cnt"
+	  SrcPort		  1
+	  DstBlock		  "S-Function3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rate"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "rate1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "S-Function3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S-Function3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function3"
+	  SrcPort		  2
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "S-Function3"
+	  SrcPort		  3
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "S-Function3"
+	  SrcPort		  4
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "DL"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function2"
+	  SrcPort		  2
+	  Points		  [10, 0; 0, 25]
+	  DstBlock		  "Goto1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Pwm2Eng"
+	  SrcPort		  1
+	  DstBlock		  "ULLatency"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "uplink signal labels\nafter unpack"
+	  SrcPort		  1
+	  DstBlock		  "Memory"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "S-Function2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "S-Function2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  DstBlock		  "S-Function2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  DstBlock		  "S-Function2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "UL"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ADC1"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ADC1"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator4"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ADC2"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ADC2"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator4"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "ADC3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "ADC3"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator4"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "AntiAliasing"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "ADC1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "ADC2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    Branch {
+	      DstBlock		      "ADC3"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, 50]
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "<MIDG>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator4"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator4"
+	  SrcPort		  1
+	  DstBlock		  "DLLatency"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Memory"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "cmds"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Goto2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "ULLatency"
+	  SrcPort		  1
+	  DstBlock		  "uplink signal labels\nafter unpack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "downlink signal labels\nbefore pack"
+	  SrcPort		  1
+	  DstBlock		  "EngU2Cnt"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "DLLatency"
+	  SrcPort		  1
+	  DstBlock		  "downlink signal labels\nbefore pack"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "From10"
+	  SrcPort		  1
+	  DstBlock		  "ADC2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "From1"
+	  SrcPort		  1
+	  DstBlock		  "ADC3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "PWM bias"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Add1"
+	  SrcPort		  1
+	  DstBlock		  "Pwm2Eng"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "S-Function2"
+	  SrcPort		  1
+	  DstBlock		  "Add1"
+	  DstPort		  1
+	}
+	Annotation {
+	  Name			  "Uplink Path"
+	  Position		  [538, 343]
+	  FontSize		  16
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+	Annotation {
+	  Name			  "Downlink Path"
+	  Position		  [553, 28]
+	  FontSize		  16
+	  FontWeight		  "bold"
+	  FontAngle		  "italic"
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [125, 34, 403, 124]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "L1011 S2 Avionics Library\n%<ModelVersion>\nLas"
+" modified by %<LastModifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      "L1011 S2 Avionics Library\\n1.2\\nLas modified "
+"by amurch on 15-Feb-2009 12:12:23"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "avionics_S2_lib"
+      TagMaxNumber	      "20"
+    }
+  }
+}
+
+# Finite State Machines
+#
+#    Stateflow Version 6.6 (R2007a) dated Jan 30 2007, 03:33:34
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"avionics_S2_lib"
+		created              		"15-Feb-2009 12:11:18"
+		isLibrary            		1
+		firstTarget          		9
+		sfVersion            		66014000
+	}
+
+	chart {
+		id                                        		2
+		name                                      		"L1011_S2/ADC2/Pilot Flying"
+		windowPosition                            		[293.224 354 200.25 189.75]
+		viewLimits                                		[0 156.75 0 153.75]
+		screen                                    		[1 1 1280 800 1.333333333333333]
+		treeNode                                  		[0 3 0 0]
+		firstTransition                           		5
+		firstJunction                             		4
+		viewObj                                   		2
+		machine                                   		1
+		subviewS {
+		}
+		decomposition                             		CLUSTER_CHART
+		type                                      		EML_CHART
+		firstData                                 		6
+		chartFileNumber                           		2
+		disableImplicitCasting                    		1
+		eml {
+			name       		"setSSCS"
+		}
+	}
+
+	state {
+		id                           		3
+		labelString                  		"eML_blk_kernel()"
+		position                     		[18 64.5 118 66]
+		fontSize                     		12
+		chart                        		2
+		treeNode                     		[2 0 0 0]
+		superState                   		SUBCHART
+		subviewer                    		2
+		type                         		FUNC_STATE
+		decomposition                		CLUSTER_STATE
+		eml {
+			isEML                    		1
+			script                   		"function SSCS = setSSCS(u)\n"
+						"% This block supports an embeddable subset of the MATLAB la"
+						"nguage.\n"
+						"% See the help menu for details. \n"
+						"\n"
+						"SSCS = double(0);\n"
+						"RPf = uint8(0);\n"
+						"RPf = bitget(u,8);\n"
+						"if RPf==1\n"
+						"    SSCS = 6.0;  %research pilot flying (SSCS)\n"
+						"else\n"
+						"    SSCS = 4.0;  %safety pilot flying  (SSCS)\n"
+						"end"
+			editorLayout             		"100 M4x1[100 24 1415 1115]"
+			treatIntsAsFixpt         		0
+		}
+	}
+
+	junction {
+		id         		4
+		position   		[23.5747 49.5747 7]
+		chart      		2
+		linkNode   		[2 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		5
+		labelString    		"{eML_blk_kernel();}"
+		labelPosition  		[32.125 19.875 102.544 14.964]
+		fontSize       		12
+		src {
+			intersection		[0 0 1 0 23.5747 14.625 0 0]
+		}
+		dst {
+			id          		4
+			intersection		[7 0 -1 -1 23.5747 42.5747 0 0]
+		}
+		midPoint       		[23.5747 24.9468]
+		chart          		2
+		linkNode       		[2 0 0]
+		dataLimits     		[23.575 23.575 14.625 34.575]
+		subviewer      		2
+		drawStyle      		SMART
+		executionOrder 		1
+	}
+
+	data {
+		id                            		6
+		name                          		"u"
+		linkNode                      		[2 0 7]
+		scope                         		INPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+			}
+			complexity           		SF_COMPLEX_INHERITED
+		}
+		dataType                      		"inherited"
+		fixptType {
+			slope   		1
+			baseType		SF_INT16_TYPE
+		}
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	data {
+		id                            		7
+		name                          		"SSCS"
+		linkNode                      		[2 6 0]
+		scope                         		OUTPUT_DATA
+		machine                       		1
+		props {
+			array {
+				size      		"-1"
+			}
+			type {
+				method    		SF_INHERITED_TYPE
+			}
+			complexity           		SF_COMPLEX_INHERITED
+			frame                		SF_FRAME_NO
+		}
+		dataType                      		"inherited"
+		fixptType {
+			slope   		1
+			baseType		SF_INT16_TYPE
+		}
+		complexity                    		SF_COMPLEX_INHERITED
+	}
+
+	instance {
+		id     		8
+		name   		"L1011_S2/ADC2/Pilot Flying"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id                        		9
+		name                      		"sfun"
+		description               		"Default Simulink S-Function Target."
+		machine                   		1
+		linkNode                  		[1 0 0]
+	}
+}

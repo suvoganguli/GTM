@@ -1,0 +1,4211 @@
+Library {
+  Name			  "sensors_T2_design_lib"
+  Version		  7.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  Created		  "Wed Apr 15 10:55:48 2009"
+  Creator		  "amurch"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "la1032aw"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Nov 12 14:43:43 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "$LastChangedRevision: 2161 $"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks on
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.5.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.5.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	  SignalSizeVariationType "Allow only fixed size"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.5.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.5.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.5.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.5.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.5.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimUseLocalCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.5.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    6
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		17
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.5.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 840, 485, 1720, 1115 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      BusToVector
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "fixdt(1,16,0)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      InportShadow
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Quantizer
+      QuantizationInterval    "0.5"
+      LinearizeAsGain	      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RateTransition
+      Integrity		      on
+      Deterministic	      on
+      X0		      "0"
+      OutPortSampleTimeOpt    "Specify"
+      OutPortSampleTimeMultiple	"1"
+      OutPortSampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Operator		      ">="
+      InputSameDT	      on
+      LogicOutDataTypeMode    "Logical (see Configuration Parameters: Optimization)"
+      LogicDataType	      "uint(8)"
+      OutDataTypeStr	      "Inherit: Logical (see Configuration Parameters: Optimization)"
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
+  }
+  System {
+    Name		    "sensors_T2_design_lib"
+    Location		    [485, 124, 1065, 507]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "GTM_T2\ngtm_design"
+      Ports		      [6, 1]
+      Position		      [240, 183, 360, 322]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      System {
+	Name			"GTM_T2\ngtm_design"
+	Location		[254, 145, 1405, 994]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"124"
+	Block {
+	  BlockType		  Inport
+	  Name			  "EOM_State"
+	  Position		  [40, 168, 70, 182]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "EOM_Xdot"
+	  Position		  [180, 523, 210, 537]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "AC_Params"
+	  Position		  [180, 553, 210, 567]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "AuxVars"
+	  Position		  [100, 93, 130, 107]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "SurfacePos"
+	  Position		  [80, 338, 110, 352]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Engines"
+	  Position		  [80, 433, 110, 447]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Air Data"
+	  Ports			  [2, 1]
+	  Position		  [180, 40, 290, 75]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "AirData"
+	    PropagatedSignals	    "alpha_deg, beta_deg, qbar_psf, KTAS, TEMPAMB_degF, altitude_ft"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Air Data"
+	    Location		    [254, 123, 1381, 813]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "EOM_State"
+	      Position		      [30, 283, 60, 297]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "AuxVars"
+	      Position		      [25, 133, 55, 147]
+	      BackgroundColor	      "lightBlue"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "-50/+350"
+	      Position		      [425, 230, 445, 250]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "350"
+	      LowerLimit	      "-50"
+	      Port {
+		PortNumber		1
+		Name			"TEMPAMB_degF"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector1"
+	      Ports		      [1, 5]
+	      Position		      [110, 17, 115, 263]
+	      ShowName		      off
+	      OutputSignals	      "alpha,beta,qbar,tas,tratio"
+	      Port {
+		PortNumber		1
+		Name			"<alpha>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<beta>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<qbar>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<tas>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"<tratio>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector2"
+	      Ports		      [1, 1]
+	      Position		      [110, 282, 115, 298]
+	      ShowName		      off
+	      OutputSignals	      "altitude"
+	      Port {
+		PortNumber		1
+		Name			"<altitude>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "First Order Filter"
+	      Ports		      [1, 1]
+	      Position		      [175, 217, 260, 263]
+	      BackgroundColor	      "cyan"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "first order filter"
+	      MaskDescription	      "__1__\n tau s+1\n\nFirst order filter  transfer function\nwith integrator IC = input  at"
+	      " time=0\nIf tau < Simulation Timestep, input is passed through unchanged\nSimulation timestep must be a variabl"
+	      "e in the model/base workspace named\n\"Timestep\""
+	      MaskHelp		      "This block models a first order filter with the initial condition\non the integrator set to th"
+	      "e steady state value for constant input.\ntime constant is an input"
+	      MaskPromptString	      "Tau"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "tau=@1;"
+	      MaskDisplay	      "fprintf('  1\\n--------------\\n %2.1g s + 1', tau)\n\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "6"
+	      System {
+		Name			"First Order Filter"
+		Location		[1146, 307, 1847, 713]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In"
+		  Position		  [15, 123, 45, 137]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [75, 209, 150, 231]
+		  ShowName		  off
+		  Value			  "Timestep"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [75, 174, 150, 196]
+		  ShowName		  off
+		  Value			  "tau"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Enabled\nSubsystem"
+		  Ports			  [2, 1, 1]
+		  Position		  [195, 119, 295, 161]
+		  NamePlacement		  "alternate"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Enabled\nSubsystem"
+		    Location		    [421, 301, 919, 601]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "usletter"
+		    PaperUnits		    "inches"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "In"
+		    Position		    [30, 118, 60, 132]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "tau"
+		    Position		    [165, 143, 195, 157]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    EnablePort
+		    Name		    "Enable"
+		    Ports		    []
+		    Position		    [235, 20, 255, 40]
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Divide"
+		    Ports		    [2, 1]
+		    Position		    [255, 110, 275, 165]
+		    ShowName		    off
+		    Inputs		    "*/"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^-10"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    RndMeth		    "Floor"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "Ydot"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator"
+		    Ports		    [2, 1]
+		    Position		    [355, 113, 380, 217]
+		    InitialConditionSource  "external"
+		    UpperSaturationLimit    "POS_hi"
+		    LowerSaturationLimit    "POS_lo"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    Ports		    [2, 1]
+		    Position		    [100, 115, 120, 135]
+		    NamePlacement	    "alternate"
+		    ShowName		    off
+		    IconShape		    "round"
+		    Inputs		    "-+|"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    Port {
+		    PortNumber		    1
+		    Name		    "Error"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out"
+		    Position		    [435, 158, 465, 172]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    Name		    "Ydot"
+		    Labels		    [1, 0]
+		    SrcBlock		    "Divide"
+		    SrcPort		    1
+		    DstBlock		    "Integrator"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "tau"
+		    SrcPort		    1
+		    DstBlock		    "Divide"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "Y"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Integrator"
+		    SrcPort		    1
+		    Points		    [15, 0]
+		    Branch {
+		    Points		    [0, -100; -290, 0]
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Out"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "In"
+		    SrcPort		    1
+		    Points		    [10, 0]
+		    Branch {
+		    Points		    [0, 65]
+		    DstBlock		    "Integrator"
+		    DstPort		    2
+		    }
+		    Branch {
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    Name		    "Error"
+		    Labels		    [0, 0]
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Divide"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  RelationalOperator
+		  Name			  "Relational\nOperator"
+		  Position		  [170, 167, 200, 238]
+		  ShowName		  off
+		  Operator		  ">"
+		  InputSameDT		  off
+		  LogicOutDataTypeMode	  "boolean"
+		  OutDataTypeStr	  "boolean"
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "Switch"
+		  Position		  [345, 108, 375, 302]
+		  Threshold		  "0.5"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out"
+		  Position		  [435, 198, 465, 212]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Relational\nOperator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Relational\nOperator"
+		  SrcPort		  1
+		  Points		  [40, 0]
+		  Branch {
+		    DstBlock		    "Switch"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "Enabled\nSubsystem"
+		    DstPort		    enable
+		  }
+		}
+		Line {
+		  SrcBlock		  "In"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, 140]
+		    DstBlock		    "Switch"
+		    DstPort		    3
+		  }
+		  Branch {
+		    DstBlock		    "Enabled\nSubsystem"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Switch"
+		  SrcPort		  1
+		  DstBlock		  "Out"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Enabled\nSubsystem"
+		  SrcPort		  1
+		  DstBlock		  "Switch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  Points		  [0, 0]
+		  Branch {
+		    DstBlock		    "Relational\nOperator"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, -35]
+		    DstBlock		    "Enabled\nSubsystem"
+		    DstPort		    2
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain4"
+	      Position		      [275, 225, 310, 255]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "59"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel1"
+	      Ports		      [1, 1]
+	      Position		      [335, 76, 410, 104]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.beta.Std"
+	      seed		      "878224"
+	      bias		      "SensorNoise.beta.Bias"
+	      scf		      "SensorNoise.beta.Scf"
+	      Port {
+		PortNumber		1
+		Name			"beta_deg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel2"
+	      Ports		      [1, 1]
+	      Position		      [335, 176, 410, 204]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.KTAS.Std"
+	      seed		      "878654"
+	      bias		      "SensorNoise.KTAS.Bias"
+	      scf		      "SensorNoise.KTAS.Scf"
+	      Port {
+		PortNumber		1
+		Name			"KTAS"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel3"
+	      Ports		      [1, 1]
+	      Position		      [335, 126, 410, 154]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.dyn_press.Std"
+	      seed		      "848234"
+	      bias		      "SensorNoise.dyn_press.Bias"
+	      scf		      "SensorNoise.dyn_press.Scf"
+	      Port {
+		PortNumber		1
+		Name			"qbar_psf"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel4"
+	      Ports		      [1, 1]
+	      Position		      [335, 226, 410, 254]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.tempamb.Std"
+	      seed		      "878634"
+	      bias		      "SensorNoise.tempamb.Bias"
+	      scf		      "SensorNoise.tempamb.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel5"
+	      Ports		      [1, 1]
+	      Position		      [335, 26, 410, 54]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.alpha.Std"
+	      seed		      "278234"
+	      bias		      "SensorNoise.alpha.Bias"
+	      scf		      "SensorNoise.alpha.Scf"
+	      Port {
+		PortNumber		1
+		Name			"alpha_deg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel6"
+	      Ports		      [1, 1]
+	      Position		      [340, 276, 415, 304]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.baro_alt.Std"
+	      seed		      "878654"
+	      bias		      "SensorNoise.baro_alt.Bias"
+	      scf		      "SensorNoise.baro_alt.Scf"
+	      Port {
+		PortNumber		1
+		Name			"altitude_ft"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "pitot bus"
+	      Ports		      [6, 1]
+	      Position		      [550, 16, 555, 314]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Inputs		      "6"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "AirData"
+	      Position		      [605, 158, 635, 172]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "EOM_State"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "altitude_ft"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Sensor\nModel6"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "<altitude>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "AuxVars"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "KTAS"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Sensor\nModel2"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "<tas>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      4
+	      DstBlock		      "Sensor\nModel2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "beta_deg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Sensor\nModel1"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "alpha_deg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Sensor\nModel5"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<beta>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      2
+	      DstBlock		      "Sensor\nModel1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<alpha>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "First Order Filter"
+	      SrcPort		      1
+	      DstBlock		      "Gain4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "TEMPAMB_degF"
+	      Labels		      [1, 0]
+	      SrcBlock		      "-50/+350"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel4"
+	      SrcPort		      1
+	      DstBlock		      "-50/+350"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain4"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pitot bus"
+	      SrcPort		      1
+	      DstBlock		      "AirData"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<qbar>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      3
+	      DstBlock		      "Sensor\nModel3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "qbar_psf"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Sensor\nModel3"
+	      SrcPort		      1
+	      DstBlock		      "pitot bus"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<tratio>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector1"
+	      SrcPort		      5
+	      DstBlock		      "First Order Filter"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  InportShadow
+	  Name			  "AuxVars1"
+	  Position		  [105, 223, 135, 237]
+	  BackgroundColor	  "lightBlue"
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  LatchByDelayingOutsideSignal off
+	  LatchByCopyingInsideSignal off
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  Ports			  [5, 1]
+	  Position		  [390, 14, 395, 486]
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Engine ECU\n8 Hz"
+	  Ports			  [1, 1]
+	  Position		  [180, 425, 290, 455]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  SystemSampleTime	  "round(1/Timestep/8)*Timestep"
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Engines"
+	    PropagatedSignals	    "RPML, EGTL, RPMR, EGTR"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Engine ECU\n8 Hz"
+	    Location		    [231, 169, 1899, 1137]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Engines"
+	      Position		      [85, 153, 115, 167]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "4.6 deg C\nresolution"
+	      Position		      [265, 116, 285, 134]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "4.6"
+	      Port {
+		PortNumber		1
+		Name			"EGTL"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "4.6 deg C\nresolution1"
+	      Position		      [265, 256, 285, 274]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "4.6"
+	      Port {
+		PortNumber		1
+		Name			"EGTR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "500 RPM\nresolution"
+	      Position		      [265, 46, 285, 64]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "500"
+	      Port {
+		PortNumber		1
+		Name			"RPML"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "500 RPM\nresolution1"
+	      Position		      [265, 186, 285, 204]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "500"
+	      Port {
+		PortNumber		1
+		Name			"RPMR"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      ZeroOrderHold
+	      Name		      "8 Hz"
+	      Position		      [410, 145, 445, 175]
+	      BackgroundColor	      "cyan"
+	      SampleTime	      "round(1/Timestep/8)*Timestep"
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator"
+	      Ports		      [4, 1]
+	      Position		      [360, 20, 365, 300]
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 4]
+	      Position		      [170, 20, 175, 300]
+	      ShowName		      off
+	      OutputSignals	      "RPML,EGTL,THROTLC,PUMPVL"
+	      Port {
+		PortNumber		1
+		Name			"<RPML>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<EGTL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<THROTLC>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<PUMPVL>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      RateTransition
+	      Name		      "RT"
+	      Position		      [470, 150, 495, 170]
+	      BackgroundColor	      "cyan"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "ECUL"
+	      Position		      [540, 153, 570, 167]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      Name		      "EGTR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "4.6 deg C\nresolution1"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "<PUMPVL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      4
+	      DstBlock		      "4.6 deg C\nresolution1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "RPMR"
+	      Labels		      [0, 0]
+	      SrcBlock		      "500 RPM\nresolution1"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "<THROTLC>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      3
+	      DstBlock		      "500 RPM\nresolution1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Engines"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "EGTL"
+	      Labels		      [0, 0]
+	      SrcBlock		      "4.6 deg C\nresolution"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "RPML"
+	      Labels		      [0, 0]
+	      SrcBlock		      "500 RPM\nresolution"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<RPML>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      DstBlock		      "500 RPM\nresolution"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "RT"
+	      SrcPort		      1
+	      DstBlock		      "ECUL"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nCreator"
+	      SrcPort		      1
+	      DstBlock		      "8 Hz"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "8 Hz"
+	      SrcPort		      1
+	      DstBlock		      "RT"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<EGTL>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      2
+	      DstBlock		      "4.6 deg C\nresolution"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MAG3 IMU"
+	  Ports			  [2, 1]
+	  Position		  [180, 211, 285, 284]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "MAG3"
+	    PropagatedSignals	    "p_deg, q_deg, r_deg, Ax_g, Ay_g, Az_g"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "MAG3 IMU"
+	    Location		    [738, 151, 2406, 1119]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "AuxVars"
+	      Position		      [65, 228, 95, 242]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "EOM_State"
+	      Position		      [65, 93, 95, 107]
+	      BackgroundColor	      "lightBlue"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 10g"
+	      Position		      [380, 180, 400, 200]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "10"
+	      LowerLimit	      "-10"
+	      Port {
+		PortNumber		1
+		Name			"Ax_g"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 10g1"
+	      Position		      [380, 225, 400, 245]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "10"
+	      LowerLimit	      "-10"
+	      Port {
+		PortNumber		1
+		Name			"Ay_g"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 10g2"
+	      Position		      [380, 270, 400, 290]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "10"
+	      LowerLimit	      "-10"
+	      Port {
+		PortNumber		1
+		Name			"Az_g"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 600 deg/sec"
+	      Position		      [380, 47, 400, 63]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "600"
+	      LowerLimit	      "-600"
+	      Port {
+		PortNumber		1
+		Name			"p_deg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 600 deg/sec1"
+	      Position		      [380, 92, 400, 108]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "600"
+	      LowerLimit	      "-600"
+	      Port {
+		PortNumber		1
+		Name			"q_deg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "+/- 600 deg/sec2"
+	      Position		      [380, 137, 400, 153]
+	      BackgroundColor	      "cyan"
+	      UpperLimit	      "600"
+	      LowerLimit	      "-600"
+	      Port {
+		PortNumber		1
+		Name			"r_deg"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector2"
+	      Ports		      [1, 3]
+	      Position		      [160, 167, 165, 303]
+	      ShowName		      off
+	      OutputSignals	      "Ax,Ay,Az"
+	      Port {
+		PortNumber		1
+		Name			"<Ax>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<Ay>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<Az>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector3"
+	      Ports		      [1, 3]
+	      Position		      [160, 34, 165, 166]
+	      ShowName		      off
+	      OutputSignals	      "pb,qb,rb"
+	      Port {
+		PortNumber		1
+		Name			"<pb>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<qb>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<rb>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "MIDG\nbus"
+	      Ports		      [6, 1]
+	      Position		      [465, 32, 470, 303]
+	      ShowName		      off
+	      Inputs		      "6"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Radians\nto Degrees3"
+	      Ports		      [1, 1]
+	      Position		      [215, 46, 245, 64]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+	      SourceType	      "RadiansToDegrees"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Radians\nto Degrees4"
+	      Ports		      [1, 1]
+	      Position		      [215, 91, 245, 109]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+	      SourceType	      "RadiansToDegrees"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Radians\nto Degrees5"
+	      Ports		      [1, 1]
+	      Position		      [215, 136, 245, 154]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "simulink_extras/Transformations/Radians\nto Degrees"
+	      SourceType	      "RadiansToDegrees"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel1"
+	      Ports		      [1, 1]
+	      Position		      [285, 88, 325, 112]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.qdeg.Std"
+	      seed		      "871234"
+	      bias		      "SensorNoise.MAG3.qdeg.Bias"
+	      scf		      "SensorNoise.MAG3.qdeg.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel2"
+	      Ports		      [1, 1]
+	      Position		      [285, 133, 325, 157]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.rdeg.Std"
+	      seed		      "878134"
+	      bias		      "SensorNoise.MAG3.rdeg.Bias"
+	      scf		      "SensorNoise.MAG3.rdeg.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel3"
+	      Ports		      [1, 1]
+	      Position		      [285, 178, 325, 202]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.nxbody.Std"
+	      seed		      "878234"
+	      bias		      "SensorNoise.MAG3.nxbody.Bias"
+	      scf		      "SensorNoise.MAG3.nxbody.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel4"
+	      Ports		      [1, 1]
+	      Position		      [285, 223, 325, 247]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.nybody.Std"
+	      seed		      "8782345"
+	      bias		      "SensorNoise.MAG3.nybody.Bias"
+	      scf		      "SensorNoise.MAG3.nybody.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel5"
+	      Ports		      [1, 1]
+	      Position		      [285, 43, 325, 67]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.pdeg.Std"
+	      seed		      "878233"
+	      bias		      "SensorNoise.MAG3.pdeg.Bias"
+	      scf		      "SensorNoise.MAG3.pdeg.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel6"
+	      Ports		      [1, 1]
+	      Position		      [285, 268, 325, 292]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MAG3.nzbody.Std"
+	      seed		      "878236"
+	      bias		      "SensorNoise.MAG3.nzbody.Bias"
+	      scf		      "SensorNoise.MAG3.nzbody.Scf"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "MAG3"
+	      Position		      [505, 163, 535, 177]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "MIDG\nbus"
+	      SrcPort		      1
+	      DstBlock		      "MAG3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "AuxVars"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel5"
+	      SrcPort		      1
+	      DstBlock		      "+/- 600 deg/sec"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel6"
+	      SrcPort		      1
+	      DstBlock		      "+/- 10g2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel4"
+	      SrcPort		      1
+	      DstBlock		      "+/- 10g1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel3"
+	      SrcPort		      1
+	      DstBlock		      "+/- 10g"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel2"
+	      SrcPort		      1
+	      DstBlock		      "+/- 600 deg/sec2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel1"
+	      SrcPort		      1
+	      DstBlock		      "+/- 600 deg/sec1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Radians\nto Degrees5"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Radians\nto Degrees4"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Radians\nto Degrees3"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel5"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Az>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      3
+	      DstBlock		      "Sensor\nModel6"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Ay>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      2
+	      DstBlock		      "Sensor\nModel4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Ax>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector2"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<rb>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      3
+	      DstBlock		      "Radians\nto Degrees5"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<qb>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      2
+	      DstBlock		      "Radians\nto Degrees4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<pb>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      1
+	      DstBlock		      "Radians\nto Degrees3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "EOM_State"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector3"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "p_deg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 600 deg/sec"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "q_deg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 600 deg/sec1"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "r_deg"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 600 deg/sec2"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "Ax_g"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 10g"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "Ay_g"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 10g1"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "Az_g"
+	      Labels		      [0, 0]
+	      SrcBlock		      "+/- 10g2"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      6
+	    }
+	    Annotation {
+	      Position		      [307, 281]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "MIDG II 50 Hz"
+	  Ports			  [2, 1]
+	  Position		  [180, 114, 290, 196]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  SystemSampleTime	  "round(1/Timestep/50)*Timestep"
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "MIDG"
+	    PropagatedSignals	    "phi_deg, theta_deg, psi_deg, NAV_latitude_deg, NAV_longitude_deg, NAV_altitude_m, NAV_Vn_m"
+	    "ps, NAV_Ve_mps, NAV_Vu_mps"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "MIDG II 50 Hz"
+	    Location		    [318, 156, 1986, 1124]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "AuxVars"
+	      Position		      [15, 348, 45, 362]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "EOM_State"
+	      Position		      [15, 153, 45, 167]
+	      BackgroundColor	      "lightBlue"
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 deg \nResolution"
+	      Position		      [325, 35, 345, 55]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"phi"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 deg \nResolution1"
+	      Position		      [325, 80, 345, 100]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"theta"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 deg \nResolution2"
+	      Position		      [325, 125, 345, 145]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"psi"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 m\nResolution1"
+	      Position		      [240, 260, 260, 280]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"altitude"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 m/s\nResolution"
+	      Position		      [300, 305, 320, 325]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"Vn"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 m/s\nResolution1"
+	      Position		      [345, 350, 365, 370]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"Ve"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "0.01 m/s\nResolution2"
+	      Position		      [290, 395, 310, 415]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "0.01"
+	      Port {
+		PortNumber		1
+		Name			"Vu"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "1e-7 deg \nResolution2"
+	      Position		      [240, 170, 260, 190]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "1e-7"
+	      Port {
+		PortNumber		1
+		Name			"latitude"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Quantizer
+	      Name		      "1e-7 deg \nResolution3"
+	      Position		      [295, 215, 315, 235]
+	      BackgroundColor	      "cyan"
+	      QuantizationInterval    "1e-7"
+	      Port {
+		PortNumber		1
+		Name			"longitude"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector3"
+	      Ports		      [1, 6]
+	      Position		      [100, 21, 105, 294]
+	      ShowName		      off
+	      OutputSignals	      "phi,theta,psi,latitude,longitude,altitude"
+	      Port {
+		PortNumber		1
+		Name			"<phi>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<theta>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<psi>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"<latitude>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"<longitude>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"<altitude>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector8"
+	      Ports		      [1, 3]
+	      Position		      [100, 295, 105, 425]
+	      ShowName		      off
+	      OutputSignals	      "Vn,Ve,Vd"
+	      Port {
+		PortNumber		1
+		Name			"<Vn>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"<Ve>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"<Vd>"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      BusToVector
+	      Name		      "Bus to Vector"
+	      Position		      [545, 213, 560, 237]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain10"
+	      Position		      [170, 347, 190, 373]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "0.5144"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain11"
+	      Position		      [170, 392, 190, 418]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "-0.5144"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain12"
+	      Position		      [175, 257, 195, 283]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "0.3048"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain13"
+	      Position		      [150, 35, 170, 55]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "180/pi"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain14"
+	      Position		      [150, 80, 170, 100]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "180/pi"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain15"
+	      Position		      [145, 125, 165, 145]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "180/pi"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain16"
+	      Position		      [175, 170, 195, 190]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "180/pi"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain17"
+	      Position		      [175, 215, 195, 235]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "180/pi"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "Gain9"
+	      Position		      [170, 302, 190, 328]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      Gain		      "0.5144"
+	      ParameterDataTypeMode   "Inherit via internal rule"
+	      ParameterDataType	      "sfix(16)"
+	      ParameterScaling	      "2^0"
+	      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "MIDG\nLabels"
+	      Ports		      [1, 1]
+	      Position		      [820, 210, 850, 240]
+	      BackgroundColor	      "cyan"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"MIDG\nLabels"
+		Location		[231, 169, 1899, 1137]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [50, 178, 80, 192]
+		  BackgroundColor	  "lightBlue"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator"
+		  Ports			  [9, 1]
+		  Position		  [275, 33, 280, 337]
+		  ShowName		  off
+		  Inputs		  "9"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 9]
+		  Position		  [130, 33, 135, 337]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "9"
+		  DisplayOption		  "bar"
+		  Port {
+		    PortNumber		    1
+		    Name		    "phi_deg"
+		    PropagatedSignals	    "phi_deg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "theta_deg"
+		    PropagatedSignals	    "theta_deg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "psi_deg"
+		    PropagatedSignals	    "psi_deg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "NAV_latitude_deg"
+		    PropagatedSignals	    "NAV_latitude_deg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "NAV_longitude_deg"
+		    PropagatedSignals	    "NAV_longitude_deg"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "NAV_altitude_m"
+		    PropagatedSignals	    "NAV_altitude_m"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "NAV_Vn_mps"
+		    PropagatedSignals	    "NAV_Vn_mps"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    8
+		    Name		    "NAV_Ve_mps"
+		    PropagatedSignals	    "NAV_Ve_mps"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    9
+		    Name		    "NAV_Vu_mps"
+		    PropagatedSignals	    "NAV_Vu_mps"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [315, 177, 345, 193]
+		  BackgroundColor	  "lightBlue"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  Name			  "NAV_Vu_mps"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  9
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  9
+		}
+		Line {
+		  Name			  "NAV_Ve_mps"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  8
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  8
+		}
+		Line {
+		  Name			  "NAV_Vn_mps"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  7
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  7
+		}
+		Line {
+		  Name			  "NAV_altitude_m"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  6
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  6
+		}
+		Line {
+		  Name			  "NAV_longitude_deg"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  5
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "NAV_latitude_deg"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  4
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  4
+		}
+		Line {
+		  Name			  "phi_deg"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "psi_deg"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  3
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "theta_deg"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "MIDG\nbus"
+	      Ports		      [9, 1]
+	      Position		      [505, 21, 510, 429]
+	      ShowName		      off
+	      Inputs		      "9"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Map+/-180"
+	      Ports		      [1, 1]
+	      Position		      [410, 120, 445, 150]
+	      BackgroundColor	      "cyan"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"psi"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"Map+/-180"
+		Location		[502, 514, 1016, 789]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [25, 48, 55, 62]
+		  BackgroundColor	  "lightBlue"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [175, 111, 220, 139]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "-360"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [195, 175, 215, 195]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  Value			  "0"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [295, 45, 315, 65]
+		  BackgroundColor	  "cyan"
+		  ShowName		  off
+		  IconShape		  "round"
+		  Inputs		  "|++"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "if>180sub360"
+		  Position		  [265, 112, 295, 198]
+		  BackgroundColor	  "cyan"
+		  Threshold		  "180"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [400, 48, 430, 62]
+		  BackgroundColor	  "lightBlue"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "if>180sub360"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "if>180sub360"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  Points		  [95, 0]
+		  Branch {
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 100]
+		    DstBlock		    "if>180sub360"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "if>180sub360"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      RateTransition
+	      Name		      "Rate Transition"
+	      Position		      [760, 204, 800, 246]
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel7"
+	      Ports		      [1, 1]
+	      Position		      [235, 123, 275, 147]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MIDG.psi.Std"
+	      seed		      "878232"
+	      bias		      "SensorNoise.MIDG.psi.Bias"
+	      scf		      "SensorNoise.MIDG.psi.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel8"
+	      Ports		      [1, 1]
+	      Position		      [240, 78, 280, 102]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MIDG.theta.Std"
+	      seed		      "878231"
+	      bias		      "SensorNoise.MIDG.theta.Bias"
+	      scf		      "SensorNoise.MIDG.theta.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel9"
+	      Ports		      [1, 1]
+	      Position		      [240, 33, 280, 57]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.MIDG.phi.Std"
+	      seed		      "878230"
+	      bias		      "SensorNoise.MIDG.phi.Bias"
+	      scf		      "SensorNoise.MIDG.phi.Scf"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "TimeDelay with\n IC feedthrough"
+	      Ports		      [1, 1]
+	      Position		      [600, 216, 665, 234]
+	      SourceBlock	      "TransportDelay_lib/TimeDelay with\n IC feedthrough"
+	      SourceType	      "Unknown"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      TimeDelay		      "40e-3"
+	    }
+	    Block {
+	      BlockType		      ZeroOrderHold
+	      Name		      "Zero-Order\nHold"
+	      Position		      [690, 210, 725, 240]
+	      BackgroundColor	      "cyan"
+	      SampleTime	      "round(1/Timestep/50)*Timestep"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "MIDG"
+	      Position		      [875, 218, 905, 232]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Rate Transition"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nLabels"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Vu"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 m/s\nResolution2"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "MIDG\nLabels"
+	      SrcPort		      1
+	      DstBlock		      "MIDG"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "psi"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Map+/-180"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "AuxVars"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      DstBlock		      "Bus\nSelector8"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<altitude>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      6
+	      DstBlock		      "Gain12"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<longitude>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      5
+	      DstBlock		      "Gain17"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<latitude>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      4
+	      DstBlock		      "Gain16"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Vd>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector8"
+	      SrcPort		      3
+	      DstBlock		      "Gain11"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Ve>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector8"
+	      SrcPort		      2
+	      DstBlock		      "Gain10"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<Vn>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector8"
+	      SrcPort		      1
+	      DstBlock		      "Gain9"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain17"
+	      SrcPort		      1
+	      DstBlock		      "1e-7 deg \nResolution3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain16"
+	      SrcPort		      1
+	      DstBlock		      "1e-7 deg \nResolution2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain15"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain14"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel8"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain13"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel9"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Ve"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 m/s\nResolution1"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      8
+	    }
+	    Line {
+	      Name		      "Vn"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 m/s\nResolution"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Gain12"
+	      SrcPort		      1
+	      DstBlock		      "0.01 m\nResolution1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain11"
+	      SrcPort		      1
+	      DstBlock		      "0.01 m/s\nResolution2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain10"
+	      SrcPort		      1
+	      DstBlock		      "0.01 m/s\nResolution1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Gain9"
+	      SrcPort		      1
+	      DstBlock		      "0.01 m/s\nResolution"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "altitude"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 m\nResolution1"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "longitude"
+	      Labels		      [0, 0]
+	      SrcBlock		      "1e-7 deg \nResolution3"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      5
+	    }
+	    Line {
+	      Name		      "latitude"
+	      Labels		      [0, 0]
+	      SrcBlock		      "1e-7 deg \nResolution2"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "psi"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 deg \nResolution2"
+	      SrcPort		      1
+	      DstBlock		      "Map+/-180"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "theta"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 deg \nResolution1"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "phi"
+	      Labels		      [0, 0]
+	      SrcBlock		      "0.01 deg \nResolution"
+	      SrcPort		      1
+	      DstBlock		      "MIDG\nbus"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel9"
+	      SrcPort		      1
+	      DstBlock		      "0.01 deg \nResolution"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel8"
+	      SrcPort		      1
+	      DstBlock		      "0.01 deg \nResolution1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel7"
+	      SrcPort		      1
+	      DstBlock		      "0.01 deg \nResolution2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<psi>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      3
+	      DstBlock		      "Gain15"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<theta>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      2
+	      DstBlock		      "Gain14"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "<phi>"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nSelector3"
+	      SrcPort		      1
+	      DstBlock		      "Gain13"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "EOM_State"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Zero-Order\nHold"
+	      SrcPort		      1
+	      DstBlock		      "Rate Transition"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "MIDG\nbus"
+	      SrcPort		      1
+	      DstBlock		      "Bus to Vector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "TimeDelay with\n IC feedthrough"
+	      SrcPort		      1
+	      DstBlock		      "Zero-Order\nHold"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus to Vector"
+	      SrcPort		      1
+	      DstBlock		      "TimeDelay with\n IC feedthrough"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Surface Pots"
+	  Ports			  [1, 1]
+	  Position		  [180, 330, 290, 360]
+	  BackgroundColor	  "cyan"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "SurfacePos"
+	    PropagatedSignals	    "ELLOB, ELLIB, ELROB, ELRIB, AILL, AILR, RUDU, RUDL, FLAPLIB, FLAPLOB, FLAPRIB, FLAPROB"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Surface Pots"
+	    Location		    [686, 177, 1222, 555]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SurfacePos"
+	      Position		      [90, 118, 120, 132]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      BusSelector
+	      Name		      "Bus\nSelector"
+	      Ports		      [1, 1]
+	      Position		      [165, 106, 170, 144]
+	      ShowName		      off
+	      OutputSignals	      "ELLOB,ELLIB,ELROB,ELRIB,AILL,AILR,RUDU,RUDL,FLAPLIB,FLAPLOB,FLAPRIB,FLAPROB"
+	      OutputAsBus	      on
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Sensor\nModel5"
+	      Ports		      [1, 1]
+	      Position		      [210, 113, 290, 137]
+	      BackgroundColor	      "cyan"
+	      ShowName		      off
+	      SourceBlock	      "NoiseModel_lib/NoiseModel"
+	      SourceType	      "Sensor Model"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	      noise_on		      "SensorNoise.On"
+	      sigma		      "SensorNoise.pots.Std"
+	      seed		      "878239"
+	      bias		      "SensorNoise.pots.Bias"
+	      scf		      "SensorNoise.pots.Scf"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Surface\nLabels"
+	      Ports		      [1, 1]
+	      Position		      [325, 110, 355, 140]
+	      BackgroundColor	      "cyan"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Surface\nLabels"
+		Location		[713, 82, 1084, 776]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"85"
+		Block {
+		  BlockType		  Inport
+		  Name			  "I"
+		  Position		  [20, 413, 50, 427]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator"
+		  Ports			  [12, 1]
+		  Position		  [340, 36, 345, 799]
+		  ShowName		  off
+		  Inputs		  "12"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 12]
+		  Position		  [100, 29, 105, 806]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "12"
+		  DisplayOption		  "bar"
+		  Port {
+		    PortNumber		    1
+		    Name		    "ELLOB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "ELLIB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "ELROB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "ELRIB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "AILL"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "AILR"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    7
+		    Name		    "RUDU"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    8
+		    Name		    "RUDL"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    9
+		    Name		    "FLAPLIB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    10
+		    Name		    "FLAPLOB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    11
+		    Name		    "FLAPRIB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    12
+		    Name		    "FLAPROB"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "O"
+		  Position		  [385, 412, 415, 428]
+		  BackgroundColor	  "lightBlue"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  "I"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "ELLOB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "ELLIB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "ELROB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  3
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "ELRIB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  4
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  4
+		}
+		Line {
+		  Name			  "AILL"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  5
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "AILR"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  6
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  6
+		}
+		Line {
+		  Name			  "RUDU"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  7
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  7
+		}
+		Line {
+		  Name			  "RUDL"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  8
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  8
+		}
+		Line {
+		  Name			  "FLAPLIB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  9
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  9
+		}
+		Line {
+		  Name			  "FLAPLOB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  10
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  10
+		}
+		Line {
+		  Name			  "FLAPRIB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  11
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  11
+		}
+		Line {
+		  Name			  "FLAPROB"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  12
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  12
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator"
+		  SrcPort		  1
+		  DstBlock		  "O"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Pots"
+	      Position		      [385, 118, 415, 132]
+	      BackgroundColor	      "lightBlue"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Line {
+	      SrcBlock		      "Surface\nLabels"
+	      SrcPort		      1
+	      DstBlock		      "Pots"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sensor\nModel5"
+	      SrcPort		      1
+	      DstBlock		      "Surface\nLabels"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SurfacePos"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nSelector"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Bus\nSelector"
+	      SrcPort		      1
+	      DstBlock		      "Sensor\nModel5"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [245, 520, 265, 540]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  Position		  [245, 550, 265, 570]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Sensors"
+	  Position		  [570, 243, 600, 257]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Line {
+	  SrcBlock		  "AuxVars1"
+	  SrcPort		  1
+	  DstBlock		  "MAG3 IMU"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EOM_State"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, 0]
+	    Branch {
+	      Points		      [0, -125]
+	      DstBlock		      "Air Data"
+	      DstPort		      1
+	    }
+	    Branch {
+	      DstBlock		      "MIDG II 50 Hz"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 90]
+	    DstBlock		    "MAG3 IMU"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "AuxVars"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "MIDG II 50 Hz"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -35]
+	    DstBlock		    "Air Data"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "SurfacePos"
+	  SrcPort		  1
+	  DstBlock		  "Surface Pots"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Engines"
+	  SrcPort		  1
+	  DstBlock		  "Engine ECU\n8 Hz"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "MAG3"
+	  Labels		  [0, 0]
+	  SrcBlock		  "MAG3 IMU"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "Engines"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Engine ECU\n8 Hz"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "SurfacePos"
+	  Labels		  [1, 1]
+	  SrcBlock		  "Surface Pots"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "MIDG"
+	  Labels		  [0, 0]
+	  SrcBlock		  "MIDG II 50 Hz"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "AirData"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Air Data"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "Sensors"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "EOM_Xdot"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "AC_Params"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [150, 34, 428, 124]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   "Sensor Model Library\n%<ModelVersion>\nLas modified by %<LastModifiedBy> on %<LastModif"
+      "icationDate>"
+      MaskDisplayString	      "Sensor Model Library\\n$LastChangedRevision: 2161 $\\nLas modified by la1032aw on 12-No"
+      "v-2009 10:58:10"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "sensors_T2_design_lib"
+      TagMaxNumber	      "20"
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.1 (R2008a) dated Sep  2 2008, 22:10:19
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "sensors_T2_design_lib"
+    created		    "15-Apr-2009 10:55:55"
+    isLibrary		    1
+    firstTarget		    2
+    sfVersion		    71014000.000007
+  }
+  target {
+    id			    2
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

@@ -1,0 +1,110 @@
+# depslib dependency file v1.0
+1224272539 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\joystickdata.cpp
+	"JoystickData.h"
+
+1224272010 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\joystickdata.h
+	<map>
+	<string>
+	<assert.h>
+	<PCSBSocketUDP.h>
+	<XPLM/XPLMDataAccess.h>
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\networking\pcsbsocketudp.h
+	<Winsock2.h>
+	<Ws2tcpip.h>
+	<OpenTransport.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	<arpa/inet.h>
+	<sys/types.h>
+	<unistd.h>
+	<fcntl.h>
+	<errno.h>
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmdataaccess.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmdefs.h
+	<windows.h>
+
+1223580108 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\smlog.cpp
+	<ctime>
+	<iomanip>
+	"SMLog.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\smlog.h
+	<assert.h>
+	<string>
+	<fstream>
+	<iostream>
+
+1220484418 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\xplanedllbridge.win.cpp
+	<windows.h>
+	<stdio.h>
+
+1223580108 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\networking\pcsbsocketudp.win.cpp
+	"PCSBSocketUDP.h"
+
+1223580108 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\datamanager.cpp
+	"DataManager.h"
+	"netports.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\datamanager.h
+	<assert.h>
+	<PCSBSocketUDP.h>
+	<XPLM/XPLMDataAccess.h>
+
+1224081163 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\netports.h
+
+1224274932 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\xlconfig.cpp
+	<vector>
+	"XLConfig.h"
+	"SMLog.h"
+
+1224272561 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\xlconfig.h
+	<map>
+	<string>
+	<vector>
+	<fstream>
+
+1224274856 source:c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\xlink.cpp
+	<cstdlib>
+	<cstdio>
+	<cstring>
+	<string>
+	<cmath>
+	<map>
+	<XPLM/XPLMPlugin.h>
+	<XPLM/XPLMDisplay.h>
+	<XPLM/XPLMGraphics.h>
+	<XPLM/XPLMMenus.h>
+	<XPLM/XPLMUtilities.h>
+	<PCSBSocketUDP.h>
+	"SMLog.h"
+	"Xlink.h"
+	"XLConfig.h"
+	"netports.h"
+	"DataManager.h"
+	"JoystickData.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmplugin.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmdisplay.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmgraphics.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmmenus.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\sdk\cheaders\xplm\xplmutilities.h
+	"XPLMDefs.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\xlink.h
+	"dataPacket.h"
+
+1223580108 c:\documents and settings\drhill\my documents\xplane plugin\xlink\src\datapacket.h
+

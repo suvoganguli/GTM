@@ -1,0 +1,31 @@
+
+%% Trim Condition
+
+
+m       = 49.6;
+Iyy     = 4.254;
+S       =
+b       = 
+Cbar    = 
+
+CX      = 
+CZ      = 
+Cm      = 
+
+NDscl   = 0.5*rho*V0^2*S;
+
+
+
+
+
+
+% u, w, q, theta
+
+Alon  =  [ ...
+            [Xu         Xw        0       -m*g*cos(theta0)]/m;
+            [Zu         Zw     Zu+m*u0   -m*g*sin(theta0)]/(m-Zwdot);
+[Mu + Mwdot*Zu/(m-Zwdot)  Mw + Mwdot*Zw/(m-Zwdot) ...
+   Mq + Mwdot*(Zq + m*u0)/(m-Zwdot)  -Mwdot*m*g*sin(theta0)/(m-Zwdot)]/Iy;
+             [0          0        1         0];
+         ];
+       

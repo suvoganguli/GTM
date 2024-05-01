@@ -1,0 +1,494 @@
+Library {
+  Name			  "Cal_Loop_Table_lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Mar 16 17:33:28 2009"
+  Creator		  "cbuttril"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "cbuttril"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Mar 16 17:34:26 2009"
+  ModelVersionFormat	  "$LastChangedRevision: 1247 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Assignment
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      OutputInitialize	      "Initialize using input port <Y0>"
+      DiagnosticForDimensions "None"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      ForIterator
+      ResetStates	      "held"
+      IterationSource	      "internal"
+      IterationLimit	      "5"
+      ExternalIncrement	      off
+      ShowIterationPort	      on
+      IndexMode		      "One-based"
+      IterationVariableDataType	"int32"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Cal_Loop_Table_lib"
+    Location		    [-1089, -145, -553, 148]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "LoopTable"
+      Ports		      [1, 1]
+      Position		      [165, 150, 265, 190]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "VectorInterp"
+      MaskDescription	      "Blocks interpolates multiple input values accor"
+"ding to 1-D table lookup.  Each column of Break Point Table and Data Value Ta"
+"ble is an independent 1-D mapping.  The vector output represents a 1D lookup "
+"on corresponding columns of these tables.\n\nBreak Point data must be strictl"
+"y monotonic."
+      MaskPromptString	      "Break Point Table|Data Value Table"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "XTable=@1;YTable=@2;"
+      MaskInitialization      "\n% Table lookup requires breakpoint data be st"
+"rictly monotonically increasing.\n% Check breakpoint data for a negative slop"
+"e.\nbadcolumns = find(min(diff(XTable))<=0);\n\n% Try flipping the data over"
+"\nif ~isempty(badcolumns);\n    for i=badcolumns,\n        XTable(:,i) = flip"
+"ud(XTable(:,i));\n        YTable(:,i) = flipud(YTable(:,i));\n    end\nend\n"
+"\n% If breakpoing data still has negative slope, it's not monotonic - error o"
+"ut.\nbadcolumns = find(min(diff(XTable))<=0);\nif ~isempty(badcolumns);\n    "
+"errmsg=sprintf('Break-point data is not monotonic.  Check column(s): ');\n   "
+" errmsg=strcat(errmsg,sprintf(' %d ',badcolumns));\n    error(errmsg);\nend\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "UpCals_Pwm|UpCals_Eng"
+      MaskTabNameString	      ","
+      System {
+	Name			"LoopTable"
+	Location		[216, 335, 1077, 640]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "I"
+	  Position		  [30, 28, 60, 42]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Assignment
+	  Name			  "Assignment"
+	  Ports			  [3, 1]
+	  Position		  [625, 59, 710, 151]
+	  IndexMode		  "Zero-based"
+	  IndexOptions		  "Index vector (port)"
+	  Indices		  "1"
+	  OutputSizes		  "1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "BreakPtVec"
+	  Position		  [110, 83, 165, 107]
+	  ShowName		  off
+	  Value			  "XTable"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "CalTable"
+	  Position		  [260, 139, 310, 171]
+	  ShowName		  off
+	  Value			  "YTable"
+	}
+	Block {
+	  BlockType		  ForIterator
+	  Name			  "For Iterator"
+	  Ports			  [0, 1]
+	  Position		  [15, 240, 80, 270]
+	  IterationLimit	  "size(XTable,2)"
+	  IndexMode		  "Zero-based"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Lookup\nTable\nDynamic"
+	  Ports			  [3, 1]
+	  Position		  [405, 12, 490, 198]
+	  SourceBlock		  "simulink/Lookup\nTables/Lookup\nTable\nDyna"
+"mic"
+	  SourceType		  "Lookup Table Dynamic"
+	  LookUpMeth		  "Interpolation-Use End Values"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "float('double')"
+	  OutScaling		  "2^-10"
+	  LockScale		  off
+	  RndMeth		  "Floor"
+	  DoSatur		  off
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "U(i)"
+	  Ports			  [2, 1]
+	  Position		  [165, 26, 205, 64]
+	  IndexMode		  "Zero-based"
+	  IndexOptions		  "Index vector (port)"
+	  Indices		  "[1 3]"
+	  OutputSizes		  "1"
+	  InputPortWidth	  "size(XTable,2)"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "XTable(:,i)"
+	  Ports			  [2, 1]
+	  Position		  [195, 86, 235, 124]
+	  NumberOfDimensions	  "2"
+	  IndexMode		  "Zero-based"
+	  IndexOptions		  "Select all,Index vector (port)"
+	  Indices		  "[1 3],1"
+	  OutputSizes		  "1,1"
+	  InputPortWidth	  "size(Table,2)"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "YTable(:,i)"
+	  Ports			  [2, 1]
+	  Position		  [340, 146, 380, 184]
+	  NumberOfDimensions	  "2"
+	  IndexMode		  "Zero-based"
+	  IndexOptions		  "Select all,Index vector (port)"
+	  Indices		  "[1 3],1"
+	  OutputSizes		  "1,1"
+	  InputPortWidth	  "size(Table,2)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ZeroIC"
+	  Position		  [535, 60, 595, 90]
+	  Value			  "zeros(size(XTable,2),1)"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "O"
+	  Position		  [770, 98, 800, 112]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "XTable(:,i)"
+	  SrcPort		  1
+	  DstBlock		  "Lookup\nTable\nDynamic"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BreakPtVec"
+	  SrcPort		  1
+	  DstBlock		  "XTable(:,i)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "YTable(:,i)"
+	  SrcPort		  1
+	  DstBlock		  "Lookup\nTable\nDynamic"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "CalTable"
+	  SrcPort		  1
+	  DstBlock		  "YTable(:,i)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "U(i)"
+	  SrcPort		  1
+	  DstBlock		  "Lookup\nTable\nDynamic"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "I"
+	  SrcPort		  1
+	  DstBlock		  "U(i)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Lookup\nTable\nDynamic"
+	  SrcPort		  1
+	  DstBlock		  "Assignment"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Assignment"
+	  SrcPort		  1
+	  DstBlock		  "O"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ZeroIC"
+	  SrcPort		  1
+	  DstBlock		  "Assignment"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "For Iterator"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [65, 0]
+	    Branch {
+	      Points		      [0, -140]
+	      DstBlock		      "XTable(:,i)"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [155, 0]
+	      Branch {
+		Points			[290, 0]
+		DstBlock		"Assignment"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, -80]
+		DstBlock		"YTable(:,i)"
+		DstPort			2
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -200]
+	    DstBlock		    "U(i)"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Position		  [254, 288]
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [30, 17, 388, 112]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   " Developed using Matlab Release 2007a\n\nSVN:%<"
+"ModelVersion>\nLast modifed by %<LastModifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      " Developed using Matlab Release 2007a\\n\\nSVN:"
+"1.1\\nLast modifed by cbuttril on 16-Mar-2009 17:34:06"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "Cal_Loop_Table_lib"
+      TagMaxNumber	      "20"
+    }
+  }
+}

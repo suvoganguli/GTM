@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Xlink" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin\Plugin\Xlink\win.xpl" prefix_auto="1" extension_auto="0" />
+				<Option object_output="obj\Release\" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DIBM" />
+			<Add directory="src\SDK\CHeaders" />
+			<Add directory="src\networking" />
+		</Compiler>
+		<Linker>
+			<Add library=".\obj\WSOCK32.LIB" />
+			<Add library="src\SDK\Libraries\Win\XPLM.lib" />
+		</Linker>
+		<Unit filename="src\DataManager.cpp" />
+		<Unit filename="src\DataManager.h" />
+		<Unit filename="src\JoystickData.cpp" />
+		<Unit filename="src\JoystickData.h" />
+		<Unit filename="src\SMLog.cpp" />
+		<Unit filename="src\SMLog.h" />
+		<Unit filename="src\Xlink.cpp" />
+		<Unit filename="src\Xlink.h" />
+		<Unit filename="src\XplaneDllBridge.Win.cpp" />
+		<Unit filename="src\dataPacket.h" />
+		<Unit filename="src\netports.h" />
+		<Unit filename="src\networking\PCSBSocketUDP.h" />
+		<Unit filename="src\networking\PCSBSocketUDP.win.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

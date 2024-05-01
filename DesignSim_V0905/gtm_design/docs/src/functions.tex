@@ -1,0 +1,215 @@
+
+% This LaTeX was auto-generated from an M-file by MATLAB.
+% To make changes, update the M-file and republish this document.
+
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{color}
+\setcounter{tocdepth}{2}
+\sloppy
+\definecolor{lightgray}{gray}{0.5}
+\setlength{\parindent}{0pt}
+\textwidth       6.25in
+\textheight      8.75in
+\footskip        0.5in
+\oddsidemargin  -.25in
+\evensidemargin -.25in
+\topmargin      -0.5in
+\begin{document}
+
+\vspace{.5in}
+\centerline{\bf \Large gtm\_design: Mfile Documentation} 
+\vspace{1.0in}
+\tableofcontents
+
+\newpage
+
+\section*{function appendmws(MWS,model)}
+\addcontentsline{toc}{section}{appendmws(MWS,model)}
+ \begin{verbatim}
+  Appends model workspace with variables 
+  given by the fields of the structure MWS.  
+ 
+  ! Warning !  Will overwrite indentically named variables without warning!
+ 
+  Inputs:
+   MWS   - Model Workspace Structure, contains simulation parameters
+   model - Name of model to load into, default is 'gtm_design'
+\end{verbatim}
+\newpage
+
+\section*{function clearmws(model);}
+\addcontentsline{toc}{section}{clearmws(model);}
+\begin{verbatim}
+  Clears the current model workspace.
+   
+  Inputs:
+     model   - name of model, defaults to 'gtm_design'
+   
+\end{verbatim}
+\newpage
+
+\section*{function DCM = euler321(p);}
+\addcontentsline{toc}{section}{DCM = euler321(p);}
+\begin{verbatim} 
+  Creates directional cosine matrix for euler 321 rotation 
+  sequence. 
+  
+  Inputs:
+    p    - phi/theta/psi vector, in radians
+  
+  Outputs:
+    DCM  - Directional cosine matrix
+  	
+\end{verbatim}
+\newpage
+
+\section*{function expand(structure);}
+\addcontentsline{toc}{section}{expand(structure);}
+\begin{verbatim} 
+  Given a data structure this expands each field into
+  a separate named variable in the callers workspace
+\end{verbatim}
+\newpage
+
+\section*{function MWS = grabmws(model);}
+\addcontentsline{toc}{section}{MWS = grabmws(model);}
+\begin{verbatim} 
+  Grabs current model workspace and returns as
+  fields in a strucure
+  
+  Inputs:
+     model  - name of model, defaults to 'gtm_design'
+  
+  Outputs:
+     MWS    - simlation parameters from the model workspace
+  
+\end{verbatim}
+\newpage
+
+\section*{function MWS = init\_design(vehicle);}
+\addcontentsline{toc}{section}{MWS = init\_design(vehicle);}
+\begin{verbatim} 
+  Creates Model Workspace Structure for gtm_design simulation.
+ 
+  Inputs:
+    vehicle     - type of vehicle, either 'GTM' or 'S2' (default = 'GTM')
+    sensors_on  - flag for turning sensor models on  (default = 0)
+    noise_on    - flag for turning sensor noise models on  (default = 0)
+    fuelburn_on - flag for turning fuel burn model on  (default = 0)
+ 
+  Outputs:
+    MWS     - Simulation parameters, to be loaded into Model Workspace
+              with loadmws(MWS) or appendmws(MWS).
+ 
+\end{verbatim}
+\newpage
+
+\section*{function [sys,londyn,latdyn] = linmodel(MWS,vabflag,SplitSurf,Ts)}
+\addcontentsline{toc}{section}{[sys,londyn,latdyn] = linmodel(MWS,vabflag,SplitSurf,Ts)}
+\begin{verbatim} 
+ Linearize gtm_design simulation at current trim point
+
+ Inputs:
+  MWS     -  simulation parameters, defaults to pre-loaded model workspace
+  vabflag  - flag to get linear models in terms of V, alpha, beta (0 default)
+  SplitSurf- flag for returning independent control surface inputs rather
+             than grouped surfaces (0 default)
+  Ts       - Sample time, zero for continuous model (0 default)
+
+ Outputs:
+   sys    - 6dof system with control surface inputs/state outputs
+   londyn - Approximate (4th order) longitudinal dynamics
+   latdyn - Approximate (4th order) lateral dynamics
+
+\end{verbatim}
+\newpage
+
+\section*{function loadmws(MWS,model);}
+\addcontentsline{toc}{section}{loadmws(MWS,model);}
+\begin{verbatim} 
+  Clears model workspace and replaces with variables 
+  given by the fields of the structure MWS
+ 
+  Inputs:
+   MWS   - Model Workspace Structure, contains simulation parameters
+   model - Name of model to load into, default is 'gtm_design'
+ 
+\end{verbatim}
+\newpage
+
+\section*{function MWS\_out = seteomic(MWS,statename,value,...)}
+\addcontentsline{toc}{section}{MWS\_out = seteomic(MWS,statename,value,...)}
+\begin{verbatim}
+  This function allows the initial condtions of the gtm_design simulation's 
+  equation of motion (MWS.StatesInp) to be specified by named values. 
+ 
+  Specifically statename is one of:
+      tas   - total airspeed (knots)
+      alpha - angle of attack (deg)
+      beta  - sideslip (deg)
+      p     - body rate (deg/sec)
+      q     - body rate (deg/sec)
+      r     - body rate (deg/sec)
+      lat   - latitude (deg)
+      lon   - longitude (deg)
+      alt   - altitude (ft)
+      phi   - Euler angle (deg)
+      theta - Euler angle (deg)
+      psi   - Euler angle (deg)
+ 
+  Values not explictly specified remain at the value they had in MWS
+ 
+  Examples: 
+      MWS=seteomic(init_design(),'alt',3000);
+      MWS=seteomic(MWS,'tas',90,'beta',3,'p',15);  
+ 
+\end{verbatim}
+\newpage
+
+\section*{function [MWS,Xtrim,Trimcond,Err] = trimgtm(target,PitchSurf,verbose);}
+\addcontentsline{toc}{section}{[MWS,Xtrim,Trimcond,Err] = trimgtm(target,PitchSurf,verbose);}
+\begin{verbatim} 
+  Trims gtm_design simulation to target conditions.
+ 
+  Inputs:
+   Target is a structure which has some subset of the following fields:
+      eas          - Equivalent air speed (knots)
+      tas          - True airspeed (knots)
+      alpha        - Angle of attack (deg)
+      beta         - Sideslip (deg), defaults to zero
+      gamma        - Flight path angle (deg)
+      roll         - Roll angle (deg)
+      pitch        - Pitch angle (deg)
+      yaw          - Heading angle (0-360)
+      rollrate     - d/dt(phi) (deg/sec), defaults to zero
+      pitchrate    - d/dt(theta) (deg/sec), defaults to zero
+      yawrate      - d/dt(psi) (deg/sec), defaults to zero
+      pdeg         - Angular velocity (deg/sec)
+      qdeg         - Angular velocity (deg/sec)
+      rdeg         - Angular velocity (deg/sec)
+ 
+    PitchSurf    - 'elev' for elevator (default) or 'stab' for stabalizer
+    verbose      - 0(quiet), 1(soln disp), or 2(iterations), defaults to 2
+ 
+ Outputs:
+    MWS    - simulation parameter set, updated to be at trim condition
+    Xtrim    - simulation full-state, at trim
+    Trimcond - values of state and control surfaces at trim.
+    Err      - max error in trim condition
+ 
+  Unspecified variables are free, or defaulted to the values shown above.
+  To force a defaulted variable to be free define it with an empty matrix.
+  For example, by default beta=0  but "target.beta=[];" will allow beta
+  to be free in searching for a trim condition.
+ 
+  Examples:
+   MWS=trimAirSTAR(struct('eas',95,'gamma',0));
+   [MWS,Xt,Tc,Er]=trimAirSTAR(struct('alpha',3,'gamma',0,'yaw',120),1);
+   [MWS,Xt,Tc,Er]=trimAirSTAR(struct('tas',100,'gamma',3,'yawrate',10),0,0);
+\end{verbatim}
+
+
+
+\end{document}
+    

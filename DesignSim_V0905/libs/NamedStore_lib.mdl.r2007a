@@ -1,0 +1,387 @@
+Library {
+  Name			  "NamedStore_lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Mar 16 18:20:25 2009"
+  Creator		  "cbuttril"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "cbuttril"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Mar 16 18:21:17 2009"
+  ModelVersionFormat	  "$LastChangedRevision: 1247 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusSelector
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      BusToVector
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "NamedStore_lib"
+    Location		    [-1218, -163, -682, 130]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [65, 27, 423, 122]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   " Developed using Matlab Release 2007a\n\nSVN:%<"
+"ModelVersion>\nLast modifed by %<LastModifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      " Developed using Matlab Release 2007a\\n\\nSVN:"
+"1.1\\nLast modifed by cbuttril on 16-Mar-2009 18:20:58"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "NamedStore_lib"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "NamedStore"
+      Ports		      [1]
+      Position		      [220, 166, 270, 194]
+      BackgroundColor	      "cyan"
+      StopFcn		      "%                                              "
+"                                         \n% script: namedstore_stopfcn      "
+"                                                      \n%                    "
+"                                                                   \n% Worksp"
+"ace script called by NamedStore block as StopFcn callback.                   "
+"   \n%                                                                       "
+"                \n% This converts from fixed name array and  variable list   "
+"                             \n% into user names structure.   It also optiona"
+"lly expands fields of the                 \n% structure  into individual vari"
+"ables.                                                 \n                    "
+"                                                                    \nVarName"
+"=get_param(gcb,'VarName');                                                   "
+"    \n                                                                       "
+"                 \n                                                          "
+"                              \n% If data exists                             "
+"                                           \nif exist(strcat(VarName,'_mat'),"
+"'var');                                                 \n  % Grab field name"
+"s from diagram                                                       \n   sig"
+"nal_names=get_param(sprintf('%s/Names',gcb),'InputSignals');                 "
+"     \n                                                                      "
+"                  \n  % Only works for scalar signals...                     "
+"                               \n  % Doing vectors would require pre-compile "
+"of diagram,                                 \n  % and parsing of \"CompliedPo"
+"rtDimensions\" parameter.                                  \n  if length(sign"
+"al_names) ~=  eval(sprintf('size(%s_mat,2)',VarName));                  \n   "
+" fprintf(1,'Structure ''%s'' not formed, namedsore data remains in matrix for"
+"m\\n',...\n            VarName);                                             "
+"                      \n    error('NamedStore input contains non-scalar signa"
+"ls');                              \n  end                                   "
+"                                                \n                           "
+"                                                             \n  % Don't want"
+" to augment existing variable                                             \n "
+" eval(sprintf('clear %s',VarName));                                          "
+"          \n                                                                 "
+"                       \n  % Loop through each named variable, assign in stru"
+"cture;                              \n  for cnt=[1:length(signal_names)],    "
+"                                                 \n    eval(sprintf('%s.(sign"
+"al_names{cnt})=%s_mat(:,cnt);',...                            \n             "
+"    VarName,VarName));                                                     \n"
+"  end                                                                        "
+"           \n                                                                "
+"                        \n                                                   "
+"                                     \n                                      "
+"                                                  \n  % If selected, expand a"
+"ll fields.                                                     \n  if (strcmp"
+"(get_param(gcb,'expand'),'on' ))                                            "
+"\n    eval(sprintf('expand(%s);',VarName));                                  "
+"             \n  end                                                         "
+"                          \n % Delete tmp name variables from workspace      "
+"                                       \n  eval(sprintf('clear %s_mat',VarNam"
+"e));                                                \n  clear cnt VarName sig"
+"nal_names                                                        \n end      "
+"                                                                             "
+" "
+      FontName		      "helvetica"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      MaskType		      "Custom To Workspace Block"
+      MaskDescription	      "Saves simulation data to a workspace variable i"
+"n a structure format.\nInput is limited to uniquely named scalar signals.\nRe"
+"lies on a stop-fcn callback.\n"
+      MaskPromptString	      "Limit data points to last|Variable Name|Expand "
+"Variables in Base Workspace"
+      MaskStyleString	      "edit,edit,checkbox"
+      MaskTunableValueString  "on,off,on"
+      MaskCallbackString      "||"
+      MaskEnableString	      "on,on,on"
+      MaskVisibilityString    "on,on,on"
+      MaskToolTipString	      "on,on,on"
+      MaskVarAliasString      ",,"
+      MaskVariables	      "Npts=@1;VarName=&2;expand=@3;"
+      MaskInitialization      "set_param(sprintf('%s/To Workspace',gcb),'MaxDa"
+"taPoints',sprintf('%d',Npts));\nInSig=get_param(sprintf('%s/Names',gcb),'Inpu"
+"tSignals');\nset_param(sprintf('%s/Names',gcb),'OutputSignals',InSig{1});  % "
+"Gotta have one..\nset_param(sprintf('%s/To Workspace',gcb),'VariableName',str"
+"cat(VarName,'_mat'));\n\n\n\n% Check for duplicates, error out\n[uni,ndx]=uni"
+"que(InSig);\nif length(uni)~=length(InSig),\n dups=InSig(setdiff([1:length(In"
+"Sig)],ndx));\n dups\n error(sprintf('\\nDuplicate signal names in named_store"
+" block: %s',dups{:}));\nend\n"
+      MaskDisplay	      "port_label('input',1,VarName);"
+      MaskSelfModifiable      on
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "inf|sout|off"
+      MaskTabNameString	      ",,"
+      System {
+	Name			"NamedStore"
+	Location		[445, 297, 829, 482]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Named Store"
+	  Position		  [25, 33, 55, 47]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  BusToVector
+	  Name			  "Bus to Vector"
+	  Position		  [95, 23, 110, 57]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Names"
+	  Ports			  [1, 1]
+	  Position		  [160, 78, 165, 132]
+	  OutputSignals		  "eas"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<eas>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [215, 95, 235, 115]
+	}
+	Block {
+	  BlockType		  ToWorkspace
+	  Name			  "To Workspace"
+	  Position		  [130, 21, 235, 59]
+	  VariableName		  "sout_mat"
+	  MaxDataPoints		  "Inf"
+	  SampleTime		  "-1"
+	  SaveFormat		  "Array"
+	}
+	Line {
+	  SrcBlock		  "Bus to Vector"
+	  SrcPort		  1
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "<eas>"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Names"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Named Store"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "Bus to Vector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 65]
+	    DstBlock		    "Names"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+  }
+}

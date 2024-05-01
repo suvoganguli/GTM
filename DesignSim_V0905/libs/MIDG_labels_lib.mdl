@@ -1,0 +1,2028 @@
+Library {
+  Name			  "MIDG_labels_lib"
+  Version		  6.6
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Mar 16 10:10:28 2009"
+  Creator		  "cbuttril"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "cbuttril"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Mar 16 10:25:23 2009"
+  ModelVersionFormat	  "$LastChangedRevision: 1247 $"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelVerboseBuild	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "MIDG_labels_lib"
+    Location		    [452, 303, 988, 596]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "MIDG"
+      Ports		      [1, 1]
+      Position		      [200, 194, 255, 216]
+      BackgroundColor	      "cyan"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      System {
+	Name			"MIDG"
+	Location		[0, 93, 1158, 1056]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "MIDG"
+	  Position		  [15, 513, 45, 527]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  PortDimensions	  "99"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  Ports			  [1, 99]
+	  Position		  [70, 28, 75, 1012]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "99"
+	  Port {
+	    PortNumber		    1
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "NV_config_inv"
+	    PropagatedSignals	    "NV_config_inv"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "GPS_time_valid"
+	    PropagatedSignals	    "GPS_time_valid"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "DGPS"
+	    PropagatedSignals	    "DGPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "MIDG_mode"
+	    PropagatedSignals	    "MIDG_mode"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "int_temperature"
+	    PropagatedSignals	    "int_temperature"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    7
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    8
+	    Name		    "pdeg"
+	    PropagatedSignals	    "pdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    9
+	    Name		    "qdeg"
+	    PropagatedSignals	    "qdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    10
+	    Name		    "rdeg"
+	    PropagatedSignals	    "rdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    11
+	    Name		    "nxbody"
+	    PropagatedSignals	    "nxbody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    12
+	    Name		    "nybody"
+	    PropagatedSignals	    "nybody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    13
+	    Name		    "nzbody"
+	    PropagatedSignals	    "nzbody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    14
+	    Name		    "phideg"
+	    PropagatedSignals	    "phideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    15
+	    Name		    "thetadeg"
+	    PropagatedSignals	    "thetadeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    16
+	    Name		    "psideg"
+	    PropagatedSignals	    "psideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    17
+	    Name		    "IMU_flags"
+	    PropagatedSignals	    "IMU_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    18
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    19
+	    Name		    "phideg"
+	    PropagatedSignals	    "phideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    20
+	    Name		    "thetadeg"
+	    PropagatedSignals	    "thetadeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    21
+	    Name		    "psideg"
+	    PropagatedSignals	    "psideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    22
+	    Name		    "MAG_flags"
+	    PropagatedSignals	    "MAG_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    23
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    24
+	    Name		    "pdeg"
+	    PropagatedSignals	    "pdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    25
+	    Name		    "qdeg"
+	    PropagatedSignals	    "qdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    26
+	    Name		    "rdeg"
+	    PropagatedSignals	    "rdeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    27
+	    Name		    "nxbody"
+	    PropagatedSignals	    "nxbody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    28
+	    Name		    "nybody"
+	    PropagatedSignals	    "nybody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    29
+	    Name		    "nzbody"
+	    PropagatedSignals	    "nzbody"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    30
+	    Name		    "phideg"
+	    PropagatedSignals	    "phideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    31
+	    Name		    "thetadeg"
+	    PropagatedSignals	    "thetadeg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    32
+	    Name		    "psideg"
+	    PropagatedSignals	    "psideg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    33
+	    Name		    "QW"
+	    PropagatedSignals	    "QW"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    34
+	    Name		    "QX"
+	    PropagatedSignals	    "QX"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    35
+	    Name		    "QY"
+	    PropagatedSignals	    "QY"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    36
+	    Name		    "QZ"
+	    PropagatedSignals	    "QZ"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    37
+	    Name		    "NAV_SENSOR_flags"
+	    PropagatedSignals	    "NAV_SENSOR_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    38
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    39
+	    Name		    "XE_NAV"
+	    PropagatedSignals	    "XE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    40
+	    Name		    "YE_NAV"
+	    PropagatedSignals	    "YE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    41
+	    Name		    "ZE_NAV"
+	    PropagatedSignals	    "ZE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    42
+	    Name		    "LAT_NAV"
+	    PropagatedSignals	    "LAT_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    43
+	    Name		    "LON_NAV"
+	    PropagatedSignals	    "LON_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    44
+	    Name		    "HELIP_NAV"
+	    PropagatedSignals	    "HELIP_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    45
+	    Name		    "VXE_NAV"
+	    PropagatedSignals	    "VXE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    46
+	    Name		    "VYE_NAV"
+	    PropagatedSignals	    "VYE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    47
+	    Name		    "VZE_NAV"
+	    PropagatedSignals	    "VZE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    48
+	    Name		    "VEE_NAV"
+	    PropagatedSignals	    "VEE_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    49
+	    Name		    "VN_NAV"
+	    PropagatedSignals	    "VN_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    50
+	    Name		    "VH_NAV"
+	    PropagatedSignals	    "VH_NAV"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    51
+	    Name		    "Detail"
+	    PropagatedSignals	    "Detail"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    52
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    53
+	    Name		    "HPos"
+	    PropagatedSignals	    "HPos"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    54
+	    Name		    "VPos"
+	    PropagatedSignals	    "VPos"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    55
+	    Name		    "HVel"
+	    PropagatedSignals	    "HVel"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    56
+	    Name		    "VVel"
+	    PropagatedSignals	    "VVel"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    57
+	    Name		    "Att"
+	    PropagatedSignals	    "Att"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    58
+	    Name		    "Hdg"
+	    PropagatedSignals	    "Hdg"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    59
+	    Name		    "NAV_ACC_Flags"
+	    PropagatedSignals	    "NAV_ACC_Flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    60
+	    Name		    "GPS_ts"
+	    PropagatedSignals	    "GPS_ts"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    61
+	    Name		    "GPS_week"
+	    PropagatedSignals	    "GPS_week"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    62
+	    Name		    "GPS_Details"
+	    PropagatedSignals	    "GPS_Details"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    63
+	    Name		    "XE_GPS"
+	    PropagatedSignals	    "XE_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    64
+	    Name		    "YE_GPS"
+	    PropagatedSignals	    "YE_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    65
+	    Name		    "ZE_GPS"
+	    PropagatedSignals	    "ZE_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    66
+	    Name		    "LAT_GPS"
+	    PropagatedSignals	    "LAT_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    67
+	    Name		    "LON_GPS"
+	    PropagatedSignals	    "LON_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    68
+	    Name		    "HELIP_GPS"
+	    PropagatedSignals	    "HELIP_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    69
+	    Name		    "VX_ECEF"
+	    PropagatedSignals	    "VX_ECEF"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    70
+	    Name		    "VY_ECEF"
+	    PropagatedSignals	    "VY_ECEF"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    71
+	    Name		    "VZ_ECEF"
+	    PropagatedSignals	    "VZ_ECEF"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    72
+	    Name		    "VEE_GPS"
+	    PropagatedSignals	    "VEE_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    73
+	    Name		    "VN_GPS"
+	    PropagatedSignals	    "VN_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    74
+	    Name		    "VH_GPS"
+	    PropagatedSignals	    "VH_GPS"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    75
+	    Name		    "PDOP"
+	    PropagatedSignals	    "PDOP"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    76
+	    Name		    "PAcc"
+	    PropagatedSignals	    "PAcc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    77
+	    Name		    "VAcc"
+	    PropagatedSignals	    "VAcc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    78
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    79
+	    Name		    "GPS_NCh"
+	    PropagatedSignals	    "GPS_NCh"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    80
+	    Name		    "GPS_ChN"
+	    PropagatedSignals	    "GPS_ChN"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    81
+	    Name		    "GPS_SVID"
+	    PropagatedSignals	    "GPS_SVID"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    82
+	    Name		    "GPS_CNo"
+	    PropagatedSignals	    "GPS_CNo"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    83
+	    Name		    "GPS_SVI_flags"
+	    PropagatedSignals	    "GPS_SVI_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    84
+	    Name		    "GPS_QI"
+	    PropagatedSignals	    "GPS_QI"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    85
+	    Name		    "GPS_Elev"
+	    PropagatedSignals	    "GPS_Elev"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    86
+	    Name		    "GPS_Az"
+	    PropagatedSignals	    "GPS_Az"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    87
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    88
+	    Name		    "GPS_TAcc"
+	    PropagatedSignals	    "GPS_TAcc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    89
+	    Name		    "GPS_Year"
+	    PropagatedSignals	    "GPS_Year"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    90
+	    Name		    "GPS_Month"
+	    PropagatedSignals	    "GPS_Month"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    91
+	    Name		    "GPS_Day"
+	    PropagatedSignals	    "GPS_Day"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    92
+	    Name		    "GPS_Hour"
+	    PropagatedSignals	    "GPS_Hour"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    93
+	    Name		    "GPS_Min"
+	    PropagatedSignals	    "GPS_Min"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    94
+	    Name		    "GPS_Sec"
+	    PropagatedSignals	    "GPS_Sec"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    95
+	    Name		    "GPS_UTC_Valid"
+	    PropagatedSignals	    "GPS_UTC_Valid"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    96
+	    Name		    "TimeStamp"
+	    PropagatedSignals	    "TimeStamp"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    97
+	    Name		    "GPS_TTB"
+	    PropagatedSignals	    "GPS_TTB"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    98
+	    Name		    "GPS_DTB"
+	    PropagatedSignals	    "GPS_DTB"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    99
+	    Name		    "GPS_TimErr_flags"
+	    PropagatedSignals	    "GPS_TimErr_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG1"
+	  Ports			  [6, 1]
+	  Position		  [395, 22, 400, 88]
+	  Inputs		  "6"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_1"
+	    PropagatedSignals	    "TimeStamp, NV_config_inv, GPS_time_valid,"
+" DGPS, MIDG_mode, int_temperature"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG10"
+	  Ports			  [15, 1]
+	  Position		  [270, 244, 275, 396]
+	  Inputs		  "15"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_10"
+	    PropagatedSignals	    "TimeStamp, pdeg, qdeg, rdeg, nxbody, nybo"
+"dy, nzbody, phideg, thetadeg, psideg, QW, QX, QY, QZ, NAV_SENSOR_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG12"
+	  Ports			  [14, 1]
+	  Position		  [395, 394, 400, 536]
+	  Inputs		  "14"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_12"
+	    PropagatedSignals	    "TimeStamp, XE_NAV, YE_NAV, ZE_NAV, LAT_NA"
+"V, LON_NAV, HELIP_NAV, VXE_NAV, VYE_NAV, VZE_NAV, VEE_NAV, VN_NAV, VH_NAV, De"
+"tail"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG15"
+	  Ports			  [8, 1]
+	  Position		  [250, 536, 255, 614]
+	  Inputs		  "8"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_15"
+	    PropagatedSignals	    "TimeStamp, HPos, VPos, HVel, VVel, Att, H"
+"dg, NAV_ACC_Flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG2"
+	  Ports			  [11, 1]
+	  Position		  [250, 85, 255, 195]
+	  Inputs		  "11"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_2"
+	    PropagatedSignals	    "TimeStamp, pdeg, qdeg, rdeg, nxbody, nybo"
+"dy, nzbody, phideg, thetadeg, psideg, IMU_flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG20"
+	  Ports			  [18, 1]
+	  Position		  [395, 620, 400, 790]
+	  Inputs		  "18"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_20"
+	    PropagatedSignals	    "GPS_ts, GPS_week, GPS_Details, XE_GPS, YE"
+"_GPS, ZE_GPS, LAT_GPS, LON_GPS, HELIP_GPS, VX_ECEF, VY_ECEF, VZ_ECEF, VEE_GPS"
+", VN_GPS, VH_GPS, PDOP, PAcc, VAcc"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG21"
+	  Ports			  [9, 1]
+	  Position		  [240, 800, 245, 880]
+	  Inputs		  "9"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_21"
+	    PropagatedSignals	    "TimeStamp, GPS_NCh, GPS_ChN, GPS_SVID, GP"
+"S_CNo, GPS_SVI_flags, GPS_QI, GPS_Elev, GPS_Az"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG25"
+	  Ports			  [9, 1]
+	  Position		  [440, 885, 445, 975]
+	  Inputs		  "9"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_25"
+	    PropagatedSignals	    "TimeStamp, GPS_TAcc, GPS_Year, GPS_Month,"
+" GPS_Day, GPS_Hour, GPS_Min, GPS_Sec, GPS_UTC_Valid"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG26"
+	  Ports			  [4, 1]
+	  Position		  [250, 974, 255, 1016]
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_26"
+	    PropagatedSignals	    "TimeStamp, GPS_TTB, GPS_DTB, GPS_TimErr_f"
+"lags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "MSG3"
+	  Ports			  [5, 1]
+	  Position		  [395, 196, 400, 244]
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MSG_3"
+	    PropagatedSignals	    "TimeStamp, phideg, thetadeg, psideg, MAG_"
+"flags"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Port_3"
+	  Ports			  [10, 1]
+	  Position		  [1030, 43, 1035, 1037]
+	  Inputs		  "10"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Data"
+	  Position		  [1060, 533, 1090, 547]
+	  BackgroundColor	  "lightBlue"
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	  PortDimensions	  "99"
+	}
+	Line {
+	  SrcBlock		  "Port_3"
+	  SrcPort		  1
+	  DstBlock		  "Data"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  96
+	  DstBlock		  "MSG26"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "GPS_TTB"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  97
+	  DstBlock		  "MSG26"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "GPS_DTB"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  98
+	  DstBlock		  "MSG26"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "GPS_TimErr_flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  99
+	  DstBlock		  "MSG26"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "GPS_Sec"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  94
+	  DstBlock		  "MSG25"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "GPS_UTC_Valid"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  95
+	  DstBlock		  "MSG25"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "GPS_Min"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  93
+	  DstBlock		  "MSG25"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "GPS_Hour"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  92
+	  DstBlock		  "MSG25"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "GPS_Day"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  91
+	  DstBlock		  "MSG25"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "GPS_Month"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  90
+	  DstBlock		  "MSG25"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "GPS_Year"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  89
+	  DstBlock		  "MSG25"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "GPS_TAcc"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  88
+	  DstBlock		  "MSG25"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  87
+	  DstBlock		  "MSG25"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  78
+	  DstBlock		  "MSG21"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "GPS_Elev"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  85
+	  DstBlock		  "MSG21"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "GPS_NCh"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  79
+	  DstBlock		  "MSG21"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "GPS_ChN"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  80
+	  DstBlock		  "MSG21"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "GPS_SVID"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  81
+	  DstBlock		  "MSG21"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "GPS_CNo"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  82
+	  DstBlock		  "MSG21"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "GPS_SVI_flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  83
+	  DstBlock		  "MSG21"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "GPS_QI"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  84
+	  DstBlock		  "MSG21"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "GPS_Az"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  86
+	  DstBlock		  "MSG21"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "GPS_ts"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  60
+	  DstBlock		  "MSG20"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "GPS_week"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  61
+	  DstBlock		  "MSG20"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "GPS_Details"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  62
+	  DstBlock		  "MSG20"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "VAcc"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  77
+	  DstBlock		  "MSG20"
+	  DstPort		  18
+	}
+	Line {
+	  Name			  "PAcc"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  76
+	  DstBlock		  "MSG20"
+	  DstPort		  17
+	}
+	Line {
+	  Name			  "PDOP"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  75
+	  DstBlock		  "MSG20"
+	  DstPort		  16
+	}
+	Line {
+	  Name			  "VH_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  74
+	  DstBlock		  "MSG20"
+	  DstPort		  15
+	}
+	Line {
+	  Name			  "VN_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  73
+	  DstBlock		  "MSG20"
+	  DstPort		  14
+	}
+	Line {
+	  Name			  "VEE_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  72
+	  DstBlock		  "MSG20"
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "VZ_ECEF"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  71
+	  DstBlock		  "MSG20"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "VY_ECEF"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  70
+	  DstBlock		  "MSG20"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "VX_ECEF"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  69
+	  DstBlock		  "MSG20"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "HELIP_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  68
+	  DstBlock		  "MSG20"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "LON_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  67
+	  DstBlock		  "MSG20"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "LAT_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  66
+	  DstBlock		  "MSG20"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "ZE_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  65
+	  DstBlock		  "MSG20"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "YE_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  64
+	  DstBlock		  "MSG20"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "XE_GPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  63
+	  DstBlock		  "MSG20"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  52
+	  DstBlock		  "MSG15"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "NAV_ACC_Flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  59
+	  DstBlock		  "MSG15"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "HPos"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  53
+	  DstBlock		  "MSG15"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "VPos"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  54
+	  DstBlock		  "MSG15"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "HVel"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  55
+	  DstBlock		  "MSG15"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "VVel"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  56
+	  DstBlock		  "MSG15"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "Att"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  57
+	  DstBlock		  "MSG15"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "Hdg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  58
+	  DstBlock		  "MSG15"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "ZE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  41
+	  DstBlock		  "MSG12"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "LAT_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  42
+	  DstBlock		  "MSG12"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "LON_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  43
+	  DstBlock		  "MSG12"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "HELIP_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  44
+	  DstBlock		  "MSG12"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "VXE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  45
+	  DstBlock		  "MSG12"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "VYE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  46
+	  DstBlock		  "MSG12"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "VZE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  47
+	  DstBlock		  "MSG12"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "VEE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  48
+	  DstBlock		  "MSG12"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "VN_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  49
+	  DstBlock		  "MSG12"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "VH_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  50
+	  DstBlock		  "MSG12"
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "Detail"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  51
+	  DstBlock		  "MSG12"
+	  DstPort		  14
+	}
+	Line {
+	  Name			  "YE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  40
+	  DstBlock		  "MSG12"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "XE_NAV"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  39
+	  DstBlock		  "MSG12"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  38
+	  DstBlock		  "MSG12"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "NAV_SENSOR_flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  37
+	  DstBlock		  "MSG10"
+	  DstPort		  15
+	}
+	Line {
+	  Name			  "QZ"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  36
+	  DstBlock		  "MSG10"
+	  DstPort		  14
+	}
+	Line {
+	  Name			  "QY"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  35
+	  DstBlock		  "MSG10"
+	  DstPort		  13
+	}
+	Line {
+	  Name			  "QX"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  34
+	  DstBlock		  "MSG10"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "QW"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  33
+	  DstBlock		  "MSG10"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "MAG_flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  22
+	  DstBlock		  "MSG3"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "IMU_flags"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  17
+	  DstBlock		  "MSG2"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "MSG1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "NV_config_inv"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "MSG1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "GPS_time_valid"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  3
+	  DstBlock		  "MSG1"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "DGPS"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  4
+	  DstBlock		  "MSG1"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "MIDG_mode"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  5
+	  DstBlock		  "MSG1"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "int_temperature"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  6
+	  DstBlock		  "MSG1"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "MSG_21"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG21"
+	  SrcPort		  1
+	  Points		  [670, 0; 0, -50]
+	  DstBlock		  "Port_3"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "MSG_20"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG20"
+	  SrcPort		  1
+	  Points		  [525, 0; 0, -15]
+	  DstBlock		  "Port_3"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "MSG_10"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG10"
+	  SrcPort		  1
+	  Points		  [615, 0; 0, 70]
+	  DstBlock		  "Port_3"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "MSG_26"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG26"
+	  SrcPort		  1
+	  Points		  [0, -5]
+	  DstBlock		  "Port_3"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "MSG_25"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG25"
+	  SrcPort		  1
+	  Points		  [450, 0; 0, -40]
+	  DstBlock		  "Port_3"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "MSG_15"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG15"
+	  SrcPort		  1
+	  Points		  [660, 0; 0, 15]
+	  DstBlock		  "Port_3"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "MSG_12"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG12"
+	  SrcPort		  1
+	  Points		  [525, 0; 0, 25]
+	  DstBlock		  "Port_3"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "MSG_3"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG3"
+	  SrcPort		  1
+	  Points		  [490, 0; 0, 70]
+	  DstBlock		  "Port_3"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "MSG_2"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG2"
+	  SrcPort		  1
+	  Points		  [665, 0; 0, 50]
+	  DstBlock		  "Port_3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "MSG_1"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "MSG1"
+	  SrcPort		  1
+	  Points		  [550, 0; 0, 35]
+	  DstBlock		  "Port_3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  7
+	  DstBlock		  "MSG2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  8
+	  DstBlock		  "MSG2"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "qdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  9
+	  DstBlock		  "MSG2"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "rdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  10
+	  DstBlock		  "MSG2"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "nxbody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  11
+	  DstBlock		  "MSG2"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "nybody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  12
+	  DstBlock		  "MSG2"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "nzbody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  13
+	  DstBlock		  "MSG2"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "phideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  14
+	  DstBlock		  "MSG2"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "thetadeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  15
+	  DstBlock		  "MSG2"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "psideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  16
+	  DstBlock		  "MSG2"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  18
+	  DstBlock		  "MSG3"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "phideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  19
+	  DstBlock		  "MSG3"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "thetadeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  20
+	  DstBlock		  "MSG3"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "psideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  21
+	  DstBlock		  "MSG3"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "TimeStamp"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  23
+	  DstBlock		  "MSG10"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "pdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  24
+	  DstBlock		  "MSG10"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "qdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  25
+	  DstBlock		  "MSG10"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "rdeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  26
+	  DstBlock		  "MSG10"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "nxbody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  27
+	  DstBlock		  "MSG10"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "nybody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  28
+	  DstBlock		  "MSG10"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "nzbody"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  29
+	  DstBlock		  "MSG10"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "phideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  30
+	  DstBlock		  "MSG10"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "thetadeg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  31
+	  DstBlock		  "MSG10"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "psideg"
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  32
+	  DstBlock		  "MSG10"
+	  DstPort		  10
+	}
+	Line {
+	  SrcBlock		  "MIDG"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info"
+      Ports		      []
+      Position		      [50, 50, 408, 146]
+      ShowName		      off
+      SourceBlock	      "simulink/Model-Wide\nUtilities/Model Info"
+      SourceType	      "CMBlock"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      InitialBlockCM	      "None"
+      BlockCM		      "None"
+      Frame		      "on"
+      DisplayStringWithTags   " Developed using Matlab Release 2007a\n\nSVN:%<"
+"ModelVersion>\nLast modifed by %<LastModifiedBy> on %<LastModificationDate>"
+      MaskDisplayString	      " Developed using Matlab Release 2007a\\n\\nSVN:"
+"$LastChangedRevision: 1247 $\\nLast modifed by cbuttril on 16-Mar-2009 10:11:24"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "MIDG_lib"
+      TagMaxNumber	      "20"
+    }
+  }
+}
